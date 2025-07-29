@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// 基础变量
+$primary-color: #007BFF;
+$secondary-color: #343A40;
+$accent-color: #17A2B8;
+$text-color: #333;
+$light-color: #F8F9FA;
+$dark-color: #212529;
+
+// 响应式断点
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// 基础样式
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+// 工具类
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+// 导入其他样式文件
+// @import 'components/header';
+// @import 'pages/home';
+    
