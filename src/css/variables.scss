@@ -1,0 +1,88 @@
+// 扁平化设计色彩变量
+$primary-color: #2F6B4F; // 主色调 - logo背景色
+$primary-light: #4A8B6F; // 主色调浅色
+$primary-dark: #1E4A3A; // 主色调深色
+$primary-accent: #5CB85C; // 主色调强调色
+
+$secondary-color: #F8F9FA; // 次要色
+$secondary-light: #FFFFFF; // 次要色浅色
+$secondary-dark: #E9ECEF; // 次要色深色
+
+$accent-color: #17A2B8; // 强调色
+$accent-light: #20C997; // 强调色浅色
+
+$success-color: #28A745; // 成功色
+$warning-color: #FFC107; // 警告色
+$error-color: #DC3545; // 错误色
+
+$text-primary: #2C3E50; // 主要文字色
+$text-secondary: #6C757D; // 次要文字色
+$text-light: #FFFFFF; // 浅色文字
+$text-dark: #1A1A1A; // 深色文字
+$text-muted: #ADB5BD; // 静音文字色
+
+$background-light: #FFFFFF; // 浅色背景
+$background-dark: #F8F9FA; // 深色背景
+$background-muted: #E9ECEF; // 静音背景
+
+$border-color: #DEE2E6; // 边框色
+$border-light: #F1F3F4; // 浅色边框
+$border-dark: #CED4DA; // 深色边框
+
+$shadow-color: rgba(0, 0, 0, 0.08); // 阴影色
+$shadow-light: rgba(0, 0, 0, 0.04); // 浅色阴影
+
+// 字体变量
+$font-family-primary: 'Inter', 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-secondary: 'Georgia', serif;
+$font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+$font-size-5xl: 3rem; // 48px
+
+// 间距变量
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
+$spacing-3xl: 4rem; // 64px
+
+// 断点变量 - 使用CSS变量避免map-get
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// 动画变量
+$transition-fast: 0.15s ease-out;
+$transition-normal: 0.25s ease-out;
+$transition-slow: 0.4s ease-out;
+
+// 圆角变量 - 扁平化设计使用更小的圆角
+$border-radius-sm: 0.125rem; // 2px
+$border-radius-md: 0.25rem; // 4px
+$border-radius-lg: 0.5rem; // 8px
+$border-radius-xl: 1rem; // 16px
+
+// 阴影变量 - 扁平化设计使用更微妙的阴影
+$shadow-sm: 0 1px 2px 0 $shadow-light;
+$shadow-md: 0 2px 4px 0 $shadow-color;
+$shadow-lg: 0 4px 8px 0 $shadow-color;
+$shadow-xl: 0 8px 16px 0 $shadow-color;
+
+// 扁平化设计特有的变量
+$flat-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$flat-elevation-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$flat-elevation-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$flat-elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 

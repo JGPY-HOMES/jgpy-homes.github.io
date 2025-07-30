@@ -1,0 +1,171 @@
+@use '../../../css/variables' as *;
+
+.featured-projects {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  color: $text-light;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-3xl;
+  
+  .section-title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $text-light;
+    margin-bottom: $spacing-md;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $primary-light, $primary-accent);
+      border-radius: 2px;
+    }
+  }
+  
+  .section-description {
+    font-size: $font-size-lg;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: $spacing-xl;
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.project-card {
+  position: relative;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $flat-elevation-2;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $flat-elevation-4;
+    
+    .project-overlay {
+      opacity: 1;
+    }
+    
+    .project-image img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.project-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-normal;
+  }
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba($primary-color, 0.9), rgba($primary-dark, 0.9));
+  display: flex;
+  align-items: flex-end;
+  padding: $spacing-xl;
+  opacity: 0;
+  transition: opacity $transition-normal;
+}
+
+.overlay-content {
+  width: 100%;
+}
+
+.project-category {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: $spacing-sm;
+  
+  svg {
+    font-size: $font-size-base;
+  }
+}
+
+.project-title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  color: $text-light;
+}
+
+.project-description {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: $spacing-md;
+}
+
+.project-rating {
+  display: flex;
+  gap: $spacing-xs;
+  
+  .star-icon {
+    color: $primary-light;
+    font-size: $font-size-sm;
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .featured-projects {
+    padding: $spacing-2xl 0;
+  }
+  
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  .section-description {
+    font-size: $font-size-base;
+  }
+  
+  .project-image {
+    height: 220px;
+  }
+  
+  .project-overlay {
+    padding: $spacing-lg;
+  }
+  
+  .project-title {
+    font-size: $font-size-base;
+  }
+  
+  .project-description {
+    font-size: 12px;
+  }
+} 

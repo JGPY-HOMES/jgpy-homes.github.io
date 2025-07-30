@@ -1,0 +1,26 @@
+@use '../../../css/variables' as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero__carousel {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
+ 

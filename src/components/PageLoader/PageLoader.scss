@@ -1,0 +1,412 @@
+@use '../../css/variables' as *;
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.page-loader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+// 装修小房子动画
+.construction-house {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// 房子主体
+.house-body {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  z-index: 2;
+}
+
+.house-roof {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 40px solid #8B4513;
+  animation: roofShine 2s ease-in-out infinite;
+}
+
+.house-wall {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(45deg, $primary-light, $primary-accent);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: wallPaint 3s ease-in-out infinite;
+}
+
+.house-door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  background: #8B4513;
+  border-radius: 4px 4px 0 0;
+  animation: doorKnock 1.5s ease-in-out infinite;
+}
+
+.house-window {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #87CEEB;
+  border-radius: 50%;
+  border: 2px solid #4682B4;
+  
+  &--left {
+    top: 20px;
+    left: 20px;
+    animation: windowGlow 2s ease-in-out infinite;
+  }
+  
+  &--right {
+    top: 20px;
+    right: 20px;
+    animation: windowGlow 2s ease-in-out infinite 0.5s;
+  }
+}
+
+// 装修工具
+.construction-tools {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  z-index: 3;
+}
+
+.tool {
+  position: relative;
+  animation: toolFloat 2s ease-in-out infinite;
+  
+  &--hammer {
+    animation-delay: 0s;
+  }
+  
+  &--paintbrush {
+    animation-delay: 0.5s;
+  }
+  
+  &--saw {
+    animation-delay: 1s;
+  }
+}
+
+.hammer-handle {
+  width: 4px;
+  height: 20px;
+  background: #8B4513;
+  border-radius: 2px;
+}
+
+.hammer-head {
+  position: absolute;
+  top: -8px;
+  left: -2px;
+  width: 8px;
+  height: 8px;
+  background: #C0C0C0;
+  border-radius: 2px;
+}
+
+.paintbrush-handle {
+  width: 3px;
+  height: 18px;
+  background: #8B4513;
+  border-radius: 1.5px;
+}
+
+.paintbrush-bristles {
+  position: absolute;
+  top: -6px;
+  left: -1px;
+  width: 5px;
+  height: 6px;
+  background: $primary-accent;
+  border-radius: 2px 2px 0 0;
+  animation: paintSplash 1.5s ease-in-out infinite;
+}
+
+.saw-handle {
+  width: 4px;
+  height: 16px;
+  background: #8B4513;
+  border-radius: 2px;
+}
+
+.saw-blade {
+  position: absolute;
+  top: -4px;
+  left: -3px;
+  width: 10px;
+  height: 4px;
+  background: #C0C0C0;
+  border-radius: 1px;
+  animation: sawCut 1s ease-in-out infinite;
+}
+
+// 装饰元素
+.decorations {
+  position: absolute;
+  bottom: -20px;
+  left: -40px;
+  z-index: 1;
+}
+
+.flower {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: flowerBloom 3s ease-in-out infinite;
+  }
+  
+  &--1 {
+    top: 0;
+    left: 0;
+    &::before {
+      background: #FF69B4;
+      animation-delay: 0s;
+    }
+  }
+  
+  &--2 {
+    top: 10px;
+    left: 15px;
+    &::before {
+      background: $primary-light;
+      animation-delay: 0.5s;
+    }
+  }
+  
+  &--3 {
+    top: 5px;
+    left: 30px;
+    &::before {
+      background: #87CEEB;
+      animation-delay: 1s;
+    }
+  }
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  width: 20px;
+  height: 30px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 15px;
+    background: #8B4513;
+    border-radius: 2px;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #228B22;
+    animation: treeSway 2s ease-in-out infinite;
+  }
+}
+
+// 进度条
+.progress-bar {
+  width: 200px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: $spacing-lg;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, $primary-light, $primary-accent, $primary-color);
+  border-radius: 3px;
+  animation: progressFill 2s ease-in-out infinite;
+}
+
+// 加载文字
+.loading-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+  margin-top: $spacing-lg;
+  
+  &__main {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $text-light;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: textGlow 2s ease-in-out infinite;
+  }
+  
+  &__sub {
+    font-size: $font-size-sm;
+    color: rgba(255, 255, 255, 0.8);
+    animation: textFade 1.5s ease-in-out infinite;
+  }
+}
+
+// 页面内容
+.page-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all $transition-normal;
+  
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 动画定义
+@keyframes roofShine {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+@keyframes wallPaint {
+  0%, 100% { background: linear-gradient(45deg, $primary-light, $primary-accent); }
+  50% { background: linear-gradient(45deg, $primary-accent, $primary-light); }
+}
+
+@keyframes doorKnock {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+}
+
+@keyframes windowGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(135, 206, 235, 0.8); }
+}
+
+@keyframes toolFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(5deg); }
+}
+
+@keyframes paintSplash {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes sawCut {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes flowerBloom {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes treeSway {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  50% { transform: translateX(-50%) rotate(5deg); }
+}
+
+@keyframes progressFill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+  50% { text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5); }
+}
+
+@keyframes textFade {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .construction-house {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .house-body {
+    width: 90px;
+    height: 75px;
+  }
+  
+  .house-roof {
+    border-left-width: 45px;
+    border-right-width: 45px;
+    border-bottom-width: 30px;
+  }
+  
+  .house-wall {
+    width: 90px;
+    height: 60px;
+  }
+  
+  .construction-tools {
+    right: -40px;
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+  
+  .loading-text__main {
+    font-size: $font-size-base;
+  }
+} 

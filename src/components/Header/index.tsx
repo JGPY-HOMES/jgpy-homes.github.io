@@ -1,54 +1,129 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { FaBars, FaTimes, FaHome, FaTools, FaImages, FaInfoCircle, FaPhone, FaEnvelope } from 'react-icons/fa';
 import logo from '../../assets/images/logo.jpg';
+import './Header.scss';
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+  // 监听滚动事件
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 关闭菜单
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
+  // 导航项配置
+  const navItems = [
+    { path: '/', label: '首页', icon: FaHome },
+    { path: '/services', label: '服务', icon: FaTools },
+    { path: '/projects', label: '案例', icon: FaImages },
+    { path: '/about', label: '关于我们', icon: FaInfoCircle },
+    { path: '/contact', label: '联系我们', icon: FaPhone },
+  ];
+
   return (
-    <header className="header bg-white shadow-md fixed w-full z-50 transition-all duration-300">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center">
-          <NavLink to="/" className="flex items-center">
-            <img src={logo} alt="河南交个朋友装饰有限公司logo" className="h-10 w-auto" />
-            <span className="ml-2 text-xl font-bold text-primary">河南交个朋友装饰</span>
+    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
+      <div className="header__container">
+        {/* Logo */}
+        <div className="header__logo">
+          <NavLink to="/" className="logo-link" onClick={closeMenu}>
+            <img src={logo} alt="河南交个朋友装饰有限公司logo" className="header__logo-img" />
+            <div className="logo-text">
+              <span className="logo-text__chinese">河南交个朋友装饰</span>
+              <span className="logo-text__english">Make a good home</span>
+            </div>
           </NavLink>
         </div>
 
-        {/* 桌面导航 */}
-        <nav className="hidden md:flex space-x-8">
-          <NavLink to="/" className={({ isActive }) => isActive ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary transition-colors'}>首页</NavLink>
-          <NavLink to="/services" className={({ isActive }) => isActive ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary transition-colors'}>服务</NavLink>
-          <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary transition-colors'}>案例</NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary transition-colors'}>关于我们</NavLink>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-primary font-medium' : 'text-gray-700 hover:text-primary transition-colors'}>联系我们</NavLink>
+        {/* 桌面端导航 */}
+        <nav className="header__nav">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) => 
+                  `nav-link ${isActive ? 'nav-link--active' : ''}`
+                }
+                onClick={closeMenu}
+              >
+                <Icon className="nav-link__icon" />
+                <span className="nav-link__text">{item.label}</span>
+              </NavLink>
+            );
+          })}
         </nav>
 
         {/* 移动端菜单按钮 */}
         <button 
-          className="md:hidden text-gray-700 focus:outline-none"
-          onClick={toggleMenu}
+          className="header__menu-btn"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+          aria-label="切换菜单"
         >
-          <i className="fas fa-bars text-2xl"></i>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {/* 移动端导航菜单 */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full">
-          <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
-            <NavLink to="/" className={({ isActive }) => isActive ? 'text-primary font-medium py-2' : 'text-gray-700 hover:text-primary py-2 transition-colors'} onClick={toggleMenu}>首页</NavLink>
-            <NavLink to="/services" className={({ isActive }) => isActive ? 'text-primary font-medium py-2' : 'text-gray-700 hover:text-primary py-2 transition-colors'} onClick={toggleMenu}>服务</NavLink>
-            <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-primary font-medium py-2' : 'text-gray-700 hover:text-primary py-2 transition-colors'} onClick={toggleMenu}>案例</NavLink>
-            <NavLink to="/about" className={({ isActive }) => isActive ? 'text-primary font-medium py-2' : 'text-gray-700 hover:text-primary py-2 transition-colors'} onClick={toggleMenu}>关于我们</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-primary font-medium py-2' : 'text-gray-700 hover:text-primary py-2 transition-colors'} onClick={toggleMenu}>联系我们</NavLink>
+      <div className={`mobile-menu ${isMenuOpen ? 'mobile-menu--open' : ''}`}>
+        <div className="mobile-menu__overlay" onClick={closeMenu}></div>
+        <div className="mobile-menu__content">
+          <div className="mobile-menu__header">
+                         <div className="mobile-menu__logo">
+               <img src={logo} alt="河南交个朋友装饰有限公司logo" className="mobile-menu__logo-img" />
+               <span className="mobile-menu__title">河南交个朋友装饰</span>
+             </div>
+            <button className="mobile-menu__close" onClick={closeMenu}>
+              <FaTimes />
+            </button>
+          </div>
+          
+          <nav className="mobile-menu__nav">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) => 
+                    `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`
+                  }
+                  onClick={closeMenu}
+                >
+                  <Icon className="mobile-nav-link__icon" />
+                  <span className="mobile-nav-link__text">{item.label}</span>
+                </NavLink>
+              );
+            })}
+          </nav>
+
+          <div className="mobile-menu__footer">
+            <div className="mobile-menu__contact">
+              <div className="contact-item">
+                <FaPhone className="contact-item__icon" />
+                <span className="contact-item__text">400-123-4567</span>
+              </div>
+              <div className="contact-item">
+                <FaEnvelope className="contact-item__icon" />
+                <span className="contact-item__text">contact@hnjygpzs.com</span>
+              </div>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };

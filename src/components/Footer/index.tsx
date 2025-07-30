@@ -1,74 +1,144 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import { 
+  FaPhone, 
+  FaEnvelope, 
+  FaMapMarkerAlt, 
+  FaWeixin, 
+  FaWeibo, 
+  FaQq,
+  FaHome,
+  FaTools,
+  FaImages,
+  FaInfoCircle,
+  FaPaintBrush,
+  FaBuilding,
+  FaCouch,
+  FaTree,
+  FaHammer
+} from 'react-icons/fa';
 import logo from '../../assets/images/logo.jpg';
+import './Footer.scss';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { path: '/', label: '首页', icon: FaHome },
+    { path: '/services', label: '服务', icon: FaTools },
+    { path: '/projects', label: '案例', icon: FaImages },
+    { path: '/about', label: '关于我们', icon: FaInfoCircle },
+    { path: '/contact', label: '联系我们', icon: FaPhone },
+  ];
+
+  const services = [
+    { label: '家装设计', icon: FaHome },
+    { label: '工装设计', icon: FaBuilding },
+    { label: '软装搭配', icon: FaCouch },
+    { label: '园林景观', icon: FaTree },
+    { label: '装修施工', icon: FaHammer },
+  ];
+
+  const socialLinks = [
+    { icon: FaWeixin, label: '微信', href: '#', color: '#07C160' },
+    { icon: FaWeibo, label: '微博', href: '#', color: '#E6162D' },
+    { icon: FaQq, label: 'QQ', href: '#', color: '#12B7F5' },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <img src={logo} alt="河南交个朋友装饰有限公司logo" className="h-10 w-auto" />
-              <span className="ml-2 text-xl font-bold">河南交个朋友装饰</span>
+    <footer className="footer">
+      <div className="footer__container">
+        {/* 主要内容区域 */}
+        <div className="footer__main">
+          {/* 公司信息 */}
+          <div className="footer__section">
+            <div className="footer__logo">
+              <img src={logo} alt="交个朋友装饰logo" className="footer__logo-img" />
+              <div className="footer__company-info">
+                <h3 className="footer__company-name">交个朋友装饰</h3>
+                <p className="footer__company-desc">专业室内外装修设计服务提供商，为您打造理想空间。</p>
+              </div>
             </div>
-            <p className="text-gray-400 mb-4">专业室内外装修设计服务提供商，为您打造理想空间。</p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <i className="fab fa-weixin text-xl"></i>
+            
+            <div className="footer__social">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="social-link"
+                  style={{ '--social-color': social.color } as React.CSSProperties}
+                  aria-label={social.label}
+                >
+                  <social.icon />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <i className="fab fa-weibo text-xl"></i>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <i className="fab fa-qq text-xl"></i>
-              </a>
+              ))}
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">快速链接</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">首页</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">服务</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">案例</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">关于我们</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
-            </ul>
+          {/* 快速链接 */}
+          <div className="footer__section">
+            <h4 className="footer__section-title">快速链接</h4>
+            <nav className="footer__nav">
+              {quickLinks.map((link, index) => (
+                <NavLink
+                  key={index}
+                  to={link.path}
+                  className="footer__nav-link"
+                >
+                  <link.icon className="footer__nav-icon" />
+                  <span>{link.label}</span>
+                </NavLink>
+              ))}
+            </nav>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">服务项目</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">家装设计</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">工装设计</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">软装搭配</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">园林景观</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">装修施工</a></li>
-            </ul>
+          {/* 服务项目 */}
+          <div className="footer__section">
+            <h4 className="footer__section-title">服务项目</h4>
+            <nav className="footer__nav">
+              {services.map((service, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="footer__nav-link"
+                >
+                  <service.icon className="footer__nav-icon" />
+                  <span>{service.label}</span>
+                </a>
+              ))}
+            </nav>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">联系我们</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <FaMapMarkerAlt className="mt-1 mr-3 text-gray-400" />
-                <span className="text-gray-400">河南省郑州市金水区花园路126号</span>
-              </li>
-              <li className="flex items-center">
-                <FaPhone className="mr-3 text-gray-400" />
-                <span className="text-gray-400">400-123-4567</span>
-              </li>
-              <li className="flex items-center">
-                <FaEnvelope className="mr-3 text-gray-400" />
-                <span className="text-gray-400">contact@hnjygpzs.com</span>
-              </li>
-            </ul>
+                            {/* 公司资质 */}
+                  <div className="footer__section">
+                    <h4 className="footer__section-title">公司资质</h4>
+                    <div className="footer__qualifications">
+                      <div className="qualification-item">
+                        <FaBuilding className="qualification-item__icon" />
+                        <span className="qualification-item__text">建筑装饰工程专业承包</span>
+                      </div>
+                      <div className="qualification-item">
+                        <FaTools className="qualification-item__icon" />
+                        <span className="qualification-item__text">室内装饰设计资质</span>
+                      </div>
+                      <div className="qualification-item">
+                        <FaCouch className="qualification-item__icon" />
+                        <span className="qualification-item__text">软装设计服务认证</span>
+                      </div>
+                    </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p>© 2025 河南交个朋友装饰有限公司. 保留所有权利.</p>
+        {/* 底部版权信息 */}
+        <div className="footer__bottom">
+          <div className="footer__copyright">
+            <p>© {currentYear} 河南交个朋友装饰有限公司. 保留所有权利.</p>
+          </div>
+          <div className="footer__links">
+            <a href="#" className="footer__link">隐私政策</a>
+            <a href="#" className="footer__link">服务条款</a>
+            <a href="#" className="footer__link">网站地图</a>
+          </div>
         </div>
       </div>
     </footer>

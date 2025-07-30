@@ -1,50 +1,279 @@
+@use 'variables' as *;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// 基础变量
-$primary-color: #007BFF;
-$secondary-color: #343A40;
-$accent-color: #17A2B8;
-$text-color: #333;
-$light-color: #F8F9FA;
-$dark-color: #212529;
-
-// 响应式断点
-$breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-
-// 基础样式
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.6;
-  color: $text-color;
+// 基础样式重置 - 扁平化设计
+* {
+  box-sizing: border-box;
 }
 
-// 工具类
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family-primary;
+  line-height: 1.6;
+  color: $text-primary;
+  background-color: $background-light;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 扁平化容器类
 .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: $spacing-xs;
+  padding-right: $spacing-xs;
+  
+  @media (min-width: $breakpoint-md) {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+  }
 }
 
-.text-center {
-  text-align: center;
+// 扁平化工具类
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+// 间距工具类
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-4 { margin-top: $spacing-md; }
+.mt-6 { margin-top: $spacing-lg; }
+.mt-8 { margin-top: $spacing-xl; }
+
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-4 { margin-bottom: $spacing-md; }
+.mb-6 { margin-bottom: $spacing-lg; }
+.mb-8 { margin-bottom: $spacing-xl; }
+
+.p-1 { padding: $spacing-xs; }
+.p-2 { padding: $spacing-sm; }
+.p-4 { padding: $spacing-md; }
+.p-6 { padding: $spacing-lg; }
+.p-8 { padding: $spacing-xl; }
+
+// 扁平化按钮样式
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  border-radius: $border-radius-md;
+  font-size: $font-size-base;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  box-shadow: $flat-elevation-1;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $flat-elevation-2;
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: $flat-elevation-1;
+  }
+  
+  &--primary {
+    background-color: $primary-color;
+    color: $text-light;
+    
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+  
+  &--secondary {
+    background-color: $secondary-color;
+    color: $text-primary;
+    border: 1px solid $border-color;
+    
+    &:hover {
+      background-color: $secondary-dark;
+    }
+  }
+  
+  &--outline {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    box-shadow: none;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $text-light;
+      box-shadow: $flat-elevation-1;
+    }
+  }
+  
+  &--flat {
+    background-color: transparent;
+    color: $text-primary;
+    box-shadow: none;
+    
+    &:hover {
+      background-color: $background-muted;
+    }
+  }
 }
 
-.mt-4 {
-  margin-top: 1rem;
+// 扁平化卡片样式
+.card {
+  background-color: $background-light;
+  border-radius: $border-radius-lg;
+  box-shadow: $flat-elevation-1;
+  padding: $spacing-lg;
+  transition: all $transition-normal;
+  border: 1px solid $border-light;
+  
+  &:hover {
+    box-shadow: $flat-elevation-2;
+    transform: translateY(-2px);
+  }
 }
 
-// 导入其他样式文件
-// @import 'components/header';
-// @import 'pages/home';
+// 扁平化标题样式
+.title {
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-primary;
+  
+  &--h1 {
+    font-size: $font-size-4xl;
+    font-weight: 700;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: $font-size-5xl;
+    }
+  }
+  
+  &--h2 {
+    font-size: $font-size-3xl;
+    font-weight: 600;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: $font-size-4xl;
+    }
+  }
+  
+  &--h3 {
+    font-size: $font-size-2xl;
+    font-weight: 600;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: $font-size-3xl;
+    }
+  }
+}
+
+// 扁平化动画类
+.fade-in {
+  animation: fadeIn $transition-slow ease-out;
+}
+
+.slide-up {
+  animation: slideUp $transition-slow ease-out;
+}
+
+.scale-in {
+  animation: scaleIn $transition-normal ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// 扁平化分割线
+.divider {
+  height: 1px;
+  background-color: $border-color;
+  margin: $spacing-lg 0;
+}
+
+// 扁平化标签
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-xs $spacing-sm;
+  background-color: $background-muted;
+  color: $text-secondary;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  
+  &--primary {
+    background-color: $primary-color;
+    color: $text-light;
+  }
+  
+  &--success {
+    background-color: $success-color;
+    color: $text-light;
+  }
+  
+  &--warning {
+    background-color: $warning-color;
+    color: $text-primary;
+  }
+  
+  &--error {
+    background-color: $error-color;
+    color: $text-light;
+  }
+}
     
