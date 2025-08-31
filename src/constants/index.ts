@@ -23,7 +23,7 @@ export const SERVICES = [
     icon: '🏠',
     subtitle: '专业的装修设计服务，为您打造理想的生活空间',
     description: '我们提供从设计到施工的一站式服务，涵盖家装、工装、软装、园林景观等全方位装修需求',
-    image: '/src/images/services/3.jpg',
+    image: '/src/images/services/1.jpg',
     features: []
   },
   {
@@ -32,7 +32,7 @@ export const SERVICES = [
     icon: '🏡',
     subtitle: '个性化家居设计',
     description: '专业的家装设计服务，根据您的需求和预算，为您量身定制温馨舒适的家居环境。从户型分析、风格定位到施工监理，我们提供全流程的专业服务。',
-    image: '/src/images/services/3.jpg',
+    image: '/src/images/services/2.jpg',
     features: [
       '个性化设计方案',
       '专业施工团队',
@@ -60,7 +60,7 @@ export const SERVICES = [
     icon: '🛋️',
     subtitle: '软装设计与搭配',
     description: '专业的软装设计服务，通过家具、灯具、布艺、装饰品等软装元素的精心搭配，为您的空间增添温馨与美感，打造舒适宜人的生活环境。',
-    image: '/src/images/services/3.jpg',
+    image: '/src/images/services/4.jpg',
     features: [
       '色彩搭配方案',
       '家具选配指导',
@@ -74,7 +74,7 @@ export const SERVICES = [
     icon: '🌳',
     subtitle: '景观设计与施工',
     description: '专业的园林景观设计服务，结合自然生态与人文美学，为您打造独特的户外空间。从庭院设计到公共景观，我们注重环保与美观的和谐统一。',
-    image: '/src/images/services/3.jpg',
+    image: '/src/images/services/5.jpg',
     features: [
       '庭院景观设计',
       '植物配置方案',
