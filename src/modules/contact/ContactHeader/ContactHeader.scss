@@ -1,0 +1,26 @@
+@use '../../../css/variables' as *;
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 0;
+
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .page-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}

@@ -61,13 +61,14 @@ export const ContactForm: React.FC = () => {
   const isFormValid = formData.name && formData.phone && formData.message;
 
   return (
-    <div className="contact-form">
-      <div className="contact-form__header">
-        <h3 className="contact-form__title">在线留言</h3>
-        <p className="contact-form__subtitle">
-          填写以下信息，我们会尽快与您联系
-        </p>
-      </div>
+    <section className="contact-form-section">
+      <div className="contact-form">
+        <div className="contact-form__header">
+          <h3 className="contact-form__title">在线留言</h3>
+          <p className="contact-form__subtitle">
+            填写以下信息，我们会尽快与您联系
+          </p>
+        </div>
 
       <form onSubmit={handleSubmit} className="contact-form__form">
         <div className="form-row">
@@ -189,6 +190,7 @@ export const ContactForm: React.FC = () => {
           </div>
         )}
       </form>
-    </div>
+      </div>
+    </section>
   );
 };

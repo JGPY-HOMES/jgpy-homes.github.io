@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ContactForm, ContactInfo, ContactHero } from '../../modules/contact';
-import { BaiduMap } from '../../components/BaiduMap';
+import { ContactForm, ContactInfo, ContactHero, ContactHeader, ContactMapSection } from '../../modules/contact';
 import { PageLoader } from '../../components/PageLoader';
 import './Contact.scss';
 
@@ -33,27 +32,16 @@ export const Contact: React.FC = () => {
 
         <div className="container">
           {/* 页面标题 */}
-          <div className="page-header">
-            <h1 className="page-title">联系我们</h1>
-            <p className="page-description">
-              如果您有任何装修需求或疑问，欢迎随时联系我们，我们期待为您提供专业的服务
-            </p>
-          </div>
+          <ContactHeader />
 
           {/* 联系信息部分 - 上方 */}
-          <section className="contact-info-section">
-            <ContactInfo />
-          </section>
+          <ContactInfo />
 
           {/* 百度地图部分 - 中间 */}
-          <section className="contact-map-section">
-            <BaiduMap />
-          </section>
+          <ContactMapSection />
 
           {/* 留言表单部分 - 下方 */}
-          <section className="contact-form-section">
-            <ContactForm />
-          </section>
+          <ContactForm />
         </div>
       </div>
     </PageLoader>
