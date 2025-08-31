@@ -44,10 +44,7 @@ export const Home: React.FC = () => {
         
         {/* 5. 精选案例 - 主题色背景 */}
         <FeaturedProjects />
-        
-        {/* 6. 经营范围 - 白色背景 */}
-        <BusinessScope />
-        
+               
         {/* 7. 关于我们 - 白色背景 */}
         <AboutUs />
         
