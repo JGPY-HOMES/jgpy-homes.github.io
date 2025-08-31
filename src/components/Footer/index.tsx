@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   FaPhone, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
   FaWeixin, 
   FaWeibo, 
   FaQq,
@@ -11,17 +9,20 @@ import {
   FaTools,
   FaImages,
   FaInfoCircle,
-  FaPaintBrush,
   FaBuilding,
   FaCouch,
   FaTree,
   FaHammer
 } from 'react-icons/fa';
 import logo from '../../assets/images/logo.jpg';
+import weixinQR from '../../assets/images/contact/weixin.jpg';
+import sinaQR from '../../assets/images/contact/sina.jpg';
+import qqQR from '../../assets/images/contact/qq.jpg';
 import './Footer.scss';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const [hoveredSocial, setHoveredSocial] = useState<string | null>(null);
 
   const quickLinks = [
     { path: '/', label: '首页', icon: FaHome },
@@ -40,9 +41,30 @@ export const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: FaWeixin, label: '微信', href: '#', color: '#07C160' },
-    { icon: FaWeibo, label: '微博', href: '#', color: '#E6162D' },
-    { icon: FaQq, label: 'QQ', href: '#', color: '#12B7F5' },
+    { 
+      icon: FaWeixin, 
+      label: '微信', 
+      href: '#', 
+      color: '#07C160',
+      qrCode: weixinQR,
+      key: 'weixin'
+    },
+    { 
+      icon: FaWeibo, 
+      label: 'sina', 
+      href: '#', 
+      color: '#E6162D',
+      qrCode: sinaQR,
+      key: 'sina'
+    },
+    { 
+      icon: FaQq, 
+      label: 'QQ', 
+      href: '#', 
+      color: '#12B7F5',
+      qrCode: qqQR,
+      key: 'qq'
+    },
   ];
 
   const scrollToAnchor = (anchor: string) => {
@@ -94,15 +116,30 @@ export const Footer: React.FC = () => {
             
             <div className="footer__social">
               {socialLinks.map((social, index) => (
-                <a
+                <div
                   key={index}
-                  href={social.href}
-                  className="social-link"
-                  style={{ '--social-color': social.color } as React.CSSProperties}
-                  aria-label={social.label}
+                  className="social-link-container"
+                  onMouseEnter={() => setHoveredSocial(social.key)}
+                  onMouseLeave={() => setHoveredSocial(null)}
                 >
-                  <social.icon />
-              </a>
+                  <a
+                    href={social.href}
+                    className="social-link"
+                    style={{ '--social-color': social.color } as React.CSSProperties}
+                    aria-label={social.label}
+                  >
+                    <social.icon />
+                  </a>
+                  {hoveredSocial === social.key && (
+                    <div className="social-qr-code">
+                      <img 
+                        src={social.qrCode} 
+                        alt={`${social.label}二维码`} 
+                        className="qr-code-image"
+                      />
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>

@@ -107,6 +107,10 @@
   gap: $spacing-md;
 }
 
+.social-link-container {
+  position: relative;
+}
+
 .social-link {
   display: flex;
   align-items: center;
@@ -119,12 +123,136 @@
   font-size: $font-size-lg;
   text-decoration: none;
   transition: all $transition-normal;
+  position: relative;
+  overflow: hidden;
+  
+  // 添加微妙的背景渐变
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity $transition-normal;
+  }
   
   &:hover {
     background-color: var(--social-color);
-    transform: translateY(-2px);
-    box-shadow: $flat-elevation-2;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    
+    &::before {
+      opacity: 1;
+    }
   }
+  
+  // 添加点击效果
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: transform 0.1s ease-out;
+  }
+}
+
+.social-qr-code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: $spacing-md;
+  background-color: $background-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // 添加更精致的箭头，类似图片中的样式
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid $background-white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  // 添加微妙的边框阴影
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $border-radius-lg;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+  }
+  
+  // 确保在小屏幕上也能正常显示
+  @media (max-width: $breakpoint-sm) {
+    left: 0;
+    transform: none;
+    width: 140px;
+    height: 140px;
+    padding: $spacing-md;
+    
+    &::after {
+      left: 24px;
+      transform: none;
+    }
+  }
+  
+  // 超小屏幕的额外优化
+  @media (max-width: 480px) {
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    padding: $spacing-sm;
+    
+    &::after {
+      left: 30px;
+    }
+  }
+  
+  // 添加进入动画
+  animation: qrCodeFadeIn 0.3s ease-out;
+}
+
+// 二维码进入动画
+@keyframes qrCodeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.qr-code-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: $border-radius-md;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 // 导航区域
