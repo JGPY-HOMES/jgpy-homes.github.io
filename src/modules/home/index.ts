@@ -1,6 +1,5 @@
 // 导出home模块中的所有组件
-export { Hero } from './Hero';
-export { Carousel } from './Carousel';
+export { HomeHero } from './HomeHero';
 export { Services } from './Services';
 export { CompanyIntro } from './CompanyIntro';
 export { BusinessScope } from './BusinessScope';

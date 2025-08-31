@@ -11,14 +11,6 @@
   // 轮播图部分
   .contact-hero {
     margin-bottom: 60px;
-
-    &__carousel {
-      height: 500px;
-      
-      @media (max-width: 768px) {
-        height: 300px;
-      }
-    }
   }
 
   // 页面标题
