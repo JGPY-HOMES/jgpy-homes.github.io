@@ -21,6 +21,37 @@ export const Services: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // 处理锚点滚动
+    if (!isLoading) {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          // 延迟滚动，确保页面完全渲染
+          setTimeout(() => {
+            // 动态计算头部高度
+            const header = document.querySelector('.header');
+            const headerHeight = header ? header.getBoundingClientRect().height : 80;
+            
+            // 考虑服务模块的padding和视觉空间
+            const servicePadding = 64; // $spacing-3xl = 64px
+            const additionalOffset = 30; // 额外的视觉空间，确保标题完全可见
+            
+            // 计算目标滚动位置，让锚点位置在视窗中更合适
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerHeight - additionalOffset;
+            
+            // 平滑滚动到目标位置
+            window.scrollTo({
+              top: Math.max(0, elementPosition),
+              behavior: 'smooth'
+            });
+          }, 100);
+        }
+      }
+    }
+  }, [isLoading]);
+
   const handleLoadComplete = () => {
     console.log('Services 页面加载完成');
   };

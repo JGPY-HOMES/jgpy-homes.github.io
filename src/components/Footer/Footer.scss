@@ -142,6 +142,11 @@
   padding: $spacing-xs 0;
   transition: all $transition-normal;
   border-radius: $border-radius-sm;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
   
   &:hover {
     color: $text-light;

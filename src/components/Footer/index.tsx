@@ -32,11 +32,11 @@ export const Footer: React.FC = () => {
   ];
 
   const services = [
-    { label: '家装设计', icon: FaHome },
-    { label: '工装设计', icon: FaBuilding },
-    { label: '软装搭配', icon: FaCouch },
-    { label: '园林景观', icon: FaTree },
-    { label: '装修施工', icon: FaHammer },
+    { label: '家装设计', icon: FaHome, anchor: 'home-decoration' },
+    { label: '工装设计', icon: FaBuilding, anchor: 'commercial-decoration' },
+    { label: '软装搭配', icon: FaCouch, anchor: 'soft-furnishing' },
+    { label: '园林景观', icon: FaTree, anchor: 'landscape-design' },
+    { label: '装修施工', icon: FaHammer, anchor: 'construction-services' },
   ];
 
   const socialLinks = [
@@ -44,6 +44,38 @@ export const Footer: React.FC = () => {
     { icon: FaWeibo, label: '微博', href: '#', color: '#E6162D' },
     { icon: FaQq, label: 'QQ', href: '#', color: '#12B7F5' },
   ];
+
+  const scrollToAnchor = (anchor: string) => {
+    const element = document.getElementById(anchor);
+    if (element) {
+      // 动态计算头部高度
+      const header = document.querySelector('.header');
+      const headerHeight = header ? header.getBoundingClientRect().height : 80;
+      
+      // 考虑服务模块的padding和视觉空间
+      const servicePadding = 64; // $spacing-3xl = 64px
+      const additionalOffset = 30; // 额外的视觉空间，确保标题完全可见
+      
+      // 计算目标滚动位置，让锚点位置在视窗中更合适
+      const elementPosition = element.offsetTop - headerHeight - additionalOffset;
+      
+      // 平滑滚动到目标位置
+      window.scrollTo({
+        top: Math.max(0, elementPosition),
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const handleServiceClick = (anchor: string) => {
+    // 如果当前在服务页面，直接滚动到锚点
+    if (window.location.pathname === '/services') {
+      scrollToAnchor(anchor);
+    } else {
+      // 如果不在服务页面，先跳转到服务页面，然后滚动到锚点
+      window.location.href = `/services#${anchor}`;
+    }
+  };
 
   return (
     <footer className="footer">
@@ -97,14 +129,15 @@ export const Footer: React.FC = () => {
             <h4 className="footer__section-title">服务项目</h4>
             <nav className="footer__nav">
               {services.map((service, index) => (
-                <a
+                <button
                   key={index}
-                  href="#"
+                  onClick={() => handleServiceClick(service.anchor)}
                   className="footer__nav-link"
+                  type="button"
                 >
                   <service.icon className="footer__nav-icon" />
                   <span>{service.label}</span>
-                </a>
+                </button>
               ))}
             </nav>
           </div>
