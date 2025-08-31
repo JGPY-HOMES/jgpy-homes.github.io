@@ -47,6 +47,27 @@
   }
 }
 
+// 移动端隐藏快速链接和服务项目
+@media (max-width: $breakpoint-md) {
+  .footer__quick-links,
+  .footer__services {
+    display: none;
+  }
+  
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+  
+  .footer__company-section {
+    grid-column: 1 / -1;
+  }
+  
+  .footer__qualifications-section {
+    grid-column: 1 / -1;
+  }
+}
+
 .footer__logo {
   display: flex;
   align-items: flex-start;
@@ -225,10 +246,11 @@
 
 .footer__links {
   display: flex;
-  gap: $spacing-lg;
+  gap: $spacing-md;
+  align-items: center;
+  justify-content: center;
   
   @media (max-width: $breakpoint-sm) {
-    flex-direction: column;
     gap: $spacing-sm;
   }
 }
@@ -238,6 +260,7 @@
   text-decoration: none;
   font-size: $font-size-sm;
   transition: color $transition-normal;
+  position: relative;
   
   &:hover {
     color: $text-light;

@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
         {/* 主要内容区域 */}
         <div className="footer__main">
           {/* 公司信息 */}
-          <div className="footer__section">
+          <div className="footer__section footer__company-section">
             <div className="footer__logo">
               <img src={logo} alt="交个朋友装饰logo" className="footer__logo-img" />
               <div className="footer__company-info">
@@ -108,7 +108,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* 快速链接 */}
-          <div className="footer__section">
+          <div className="footer__section footer__quick-links">
             <h4 className="footer__section-title">快速链接</h4>
             <nav className="footer__nav">
               {quickLinks.map((link, index) => (
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* 服务项目 */}
-          <div className="footer__section">
+          <div className="footer__section footer__services">
             <h4 className="footer__section-title">服务项目</h4>
             <nav className="footer__nav">
               {services.map((service, index) => (
@@ -142,23 +142,23 @@ export const Footer: React.FC = () => {
             </nav>
           </div>
 
-                            {/* 公司资质 */}
-                  <div className="footer__section">
-                    <h4 className="footer__section-title">公司资质</h4>
-                    <div className="footer__qualifications">
-                      <div className="qualification-item">
-                        <FaBuilding className="qualification-item__icon" />
-                        <span className="qualification-item__text">建筑装饰工程专业承包</span>
-                      </div>
-                      <div className="qualification-item">
-                        <FaTools className="qualification-item__icon" />
-                        <span className="qualification-item__text">室内装饰设计资质</span>
-                      </div>
-                      <div className="qualification-item">
-                        <FaCouch className="qualification-item__icon" />
-                        <span className="qualification-item__text">软装设计服务认证</span>
-                      </div>
-                    </div>
+          {/* 公司资质 */}
+          <div className="footer__section footer__qualifications-section">
+            <h4 className="footer__section-title">公司资质</h4>
+            <div className="footer__qualifications">
+              <div className="qualification-item">
+                <FaBuilding className="qualification-item__icon" />
+                <span className="qualification-item__text">建筑装饰工程专业承包</span>
+              </div>
+              <div className="qualification-item">
+                <FaTools className="qualification-item__icon" />
+                <span className="qualification-item__text">室内装饰设计资质</span>
+              </div>
+              <div className="qualification-item">
+                <FaCouch className="qualification-item__icon" />
+                <span className="qualification-item__text">软装设计服务认证</span>
+              </div>
+            </div>
           </div>
         </div>
 
