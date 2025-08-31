@@ -1,13 +1,15 @@
+@use '../../css/variables' as *;
+
 .baidu-map {
-  background: white;
+  background: $background-white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: $shadow-xl;
   margin-bottom: 40px;
 
   &__header {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    color: white;
+    background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+    color: $text-light;
     padding: 24px;
     text-align: center;
 
@@ -15,14 +17,14 @@
       font-size: 1.4rem;
       font-weight: 600;
       margin: 0 0 8px 0;
-      color: white;
+      color: $text-light;
     }
 
     .baidu-map__subtitle {
       font-size: 1rem;
       margin: 0;
       opacity: 0.9;
-      color: white;
+      color: $text-light;
     }
   }
 
@@ -34,11 +36,11 @@
     // 百度地图容器样式
     .BMap_bubble_title {
       font-weight: 600;
-      color: #2c3e50;
+      color: $text-primary;
     }
 
     .BMap_bubble_content {
-      color: #34495e;
+      color: $text-secondary;
     }
   }
 
@@ -48,8 +50,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    color: #2c3e50;
+    background: linear-gradient(135deg, $background-light 0%, $background-muted 100%);
+    color: $text-primary;
 
     &__content {
       text-align: center;
@@ -59,31 +61,31 @@
       h3 {
         font-size: 1.2rem;
         margin: 0 0 12px 0;
-        color: #3498db;
+        color: $primary-color;
       }
 
       p {
         margin: 0 0 16px 0;
-        color: #7f8c8d;
+        color: $text-muted;
         line-height: 1.5;
       }
 
       .map-fallback__info {
-        background: white;
+        background: $background-white;
         padding: 16px;
         border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: $shadow-md;
 
         h4 {
           font-size: 1.1rem;
           margin: 0 0 12px 0;
-          color: #2c3e50;
+          color: $text-primary;
         }
 
         p {
           margin: 0 0 8px 0;
           font-size: 0.9rem;
-          color: #34495e;
+          color: $text-secondary;
 
           &:last-child {
             margin-bottom: 0;

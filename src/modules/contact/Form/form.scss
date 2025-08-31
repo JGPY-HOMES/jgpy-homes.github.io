@@ -1,8 +1,11 @@
+@use '../../../css/variables' as *;
+@use 'sass:color';
+
 .contact-form {
-  background: white;
+  background: $background-white;
   border-radius: 12px;
   padding: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: $shadow-xl;
   width: 100%;
   margin: 0 auto;
 
@@ -13,12 +16,12 @@
     .contact-form__title {
       font-size: 2rem;
       font-weight: 600;
-      color: #2c3e50;
+      color: $text-primary;
       margin-bottom: 12px;
     }
 
     .contact-form__subtitle {
-      color: #7f8c8d;
+      color: $text-muted;
       font-size: 1.1rem;
       line-height: 1.5;
     }
@@ -46,11 +49,11 @@
         gap: 8px;
         font-size: 0.95rem;
         font-weight: 500;
-        color: #2c3e50;
+        color: $text-primary;
         margin-bottom: 8px;
 
         &__icon {
-          color: #3498db;
+          color: $primary-color;
           font-size: 0.9rem;
         }
       }
@@ -59,21 +62,21 @@
       .form-textarea {
         width: 100%;
         padding: 14px 18px;
-        border: 2px solid #e9ecef;
+        border: 2px solid $border-light;
         border-radius: 8px;
         font-size: 1rem;
         transition: all 0.3s ease;
-        background: #f8f9fa;
+        background: $background-light;
 
         &:focus {
           outline: none;
-          border-color: #3498db;
-          background: white;
-          box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+          border-color: $primary-color;
+          background: $background-white;
+          box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
         }
 
         &::placeholder {
-          color: #bdc3c7;
+          color: $text-muted;
         }
       }
 
@@ -102,17 +105,17 @@
         text-decoration: none;
 
         &--primary {
-          background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-          color: white;
+          background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+          color: $text-light;
 
           &:hover:not(:disabled) {
-            background: linear-gradient(135deg, #2980b9 0%, #1f5f8b 100%);
+            background: linear-gradient(135deg, $primary-dark 0%, color.adjust($primary-dark, $lightness: -10%) 100%);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 6px 20px rgba($primary-color, 0.3);
           }
 
           &:disabled {
-            background: #bdc3c7;
+            background: $text-muted;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
@@ -142,15 +145,15 @@
       font-weight: 500;
 
       &--success {
-        background: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
+        background: rgba($success-color, 0.1);
+        color: $success-color;
+        border: 1px solid rgba($success-color, 0.3);
       }
 
       &--error {
-        background: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
+        background: rgba($error-color, 0.1);
+        color: $error-color;
+        border: 1px solid rgba($error-color, 0.3);
       }
     }
   }

@@ -3,38 +3,38 @@
 .services {
   padding: $spacing-3xl 0;
   background-color: $background-light;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: $spacing-3xl;
   
-  .section-title {
-    font-size: $font-size-3xl;
-    font-weight: 700;
-    color: $primary-color;
-    margin-bottom: $spacing-md;
-    position: relative;
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
     
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, $primary-color, $primary-accent);
-      border-radius: 2px;
+    .section-title {
+      font-size: $font-size-3xl;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-color, $primary-accent);
+        border-radius: 2px;
+      }
     }
-  }
-  
-  .section-description {
-    font-size: $font-size-lg;
-    color: #2C3E50;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+    
+    .section-description {
+      font-size: $font-size-lg;
+      color: #2C3E50;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
   }
 }
 
