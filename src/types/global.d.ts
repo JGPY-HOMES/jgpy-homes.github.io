@@ -23,5 +23,8 @@ declare module '*.svg' {
 interface Window {
   // 扩展window对象
   _hmt: any[];
+  // 百度地图API
+  BMap: any;
+  initBaiduMap: () => void;
 }
     

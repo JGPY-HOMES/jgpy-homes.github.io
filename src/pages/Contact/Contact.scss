@@ -1,0 +1,76 @@
+.contact-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  // 轮播图部分
+  .contact-hero {
+    margin-bottom: 60px;
+
+    &__carousel {
+      height: 500px;
+      
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+    }
+  }
+
+  // 页面标题
+  .page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .page-description {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  // 联系信息部分 - 上方
+  .contact-info-section {
+    margin-bottom: 60px;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  // 百度地图部分 - 中间
+  .contact-map-section {
+    margin-bottom: 60px;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  // 留言表单部分 - 下方
+  .contact-form-section {
+    margin-bottom: 80px;
+    
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
+}

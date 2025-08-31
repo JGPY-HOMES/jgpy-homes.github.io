@@ -1,8 +1,15 @@
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWeixin, FaQq } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWeixin, FaQq, FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './ContactUs.scss';
 
 export const ContactUs: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleContactPageClick = () => {
+    navigate('/contact');
+  };
+
   const contactData = {
     title: '联系我们',
     subtitle: '如果您有任何装修需求或疑问，欢迎随时联系我们',
@@ -87,7 +94,7 @@ export const ContactUs: React.FC = () => {
             </div>
             
             {/* 右侧地图 */}
-            <div className="map-section">
+            <div className="map-section" onClick={handleContactPageClick}>
               <div className="map-placeholder">
                 <div className="map-info">
                   <FaMapMarkerAlt className="map-icon" />
@@ -99,6 +106,7 @@ export const ContactUs: React.FC = () => {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>

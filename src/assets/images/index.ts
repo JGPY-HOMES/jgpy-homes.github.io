@@ -14,6 +14,13 @@ export const heroImages = {
   hero12: '/src/assets/images/hero/23.jpg',
 };
 
+// 联系页面轮播图
+export const contactImages = {
+  contact1: '/src/assets/images/contact/contact-hero-1.jpg',
+  contact2: '/src/assets/images/contact/contact-hero-2.jpg',
+  contact3: '/src/assets/images/contact/contact-hero-3.jpg',
+};
+
 // 服务图片
 export const serviceImages = {
   service1: '/src/assets/images/services/3.jpg',
@@ -28,6 +35,7 @@ export const logoImages = {
 // 所有图片资源
 export const images = {
   hero: heroImages,
+  contact: contactImages,
   services: serviceImages,
   logo: logoImages,
 }; 
