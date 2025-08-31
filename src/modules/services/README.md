@@ -104,7 +104,7 @@ export const SERVICES = [
     icon: '🏡',
     subtitle: '个性化家居设计',
     description: '专业的家装设计服务...',
-    image: '/src/images/services/3.jpg',
+    image: '/src/assets/images/services/3.jpg',
     features: ['个性化设计方案', '专业施工团队', ...]
   }
 ];
