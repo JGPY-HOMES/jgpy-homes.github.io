@@ -1,19 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { ContactForm, ContactInfo, ContactHero, ContactHeader, ContactMapSection } from '../../modules/contact';
 import { PageLoader } from '../../components/PageLoader';
+import { ContactApi } from '../../api/contact.api';
+import type { ContactPageData } from '../../entities/contact.entity';
 import './Contact.scss';
 
 export const Contact: React.FC = () => {
   // 页面加载状态
   const [isLoading, setIsLoading] = useState(true);
+  // 联系页面数据
+  const [contactData, setContactData] = useState<ContactPageData | null>(null);
 
-  // 模拟页面加载过程
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  // 获取联系页面数据
+  const fetchContactData = async () => {
+    try {
+      const data = await ContactApi.getContactInfo();
+      setContactData(data);
+    } catch (error) {
+      console.error('获取联系页面数据失败:', error);
+    } finally {
       setIsLoading(false);
-    }, 2000); // 2秒后完成加载
+    }
+  };
 
-    return () => clearTimeout(timer);
+  // 组件挂载时获取数据
+  useEffect(() => {
+    fetchContactData();
   }, []);
 
   // 加载完成回调
@@ -28,14 +40,14 @@ export const Contact: React.FC = () => {
     >
       <div className="contact-page">
         {/* 轮播图部分 */}
-        <ContactHero />
+        <ContactHero carousels={contactData?.carousels} />
 
         <div className="container">
           {/* 页面标题 */}
           <ContactHeader />
 
           {/* 联系信息部分 - 上方 */}
-          <ContactInfo />
+          <ContactInfo contactInfo={contactData?.contact} />
 
           {/* 百度地图部分 - 中间 */}
           <ContactMapSection />

@@ -26,4 +26,13 @@ export const truncateText = (text: string, maxLength: number = 100): string => {
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength) + '...';
 };
+
+/**
+ * 根据图标name获取图标地址
+ * @param icon 图标name
+ * @returns 图标地址
+ */
+export const getIconById = (icon: string): string => {
+  return `/src/assets/icons/${icon}.svg`;
+};
     
