@@ -15,15 +15,6 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 $spacing-lg;
-    
-    @media (max-width: $breakpoint-md) {
-      padding: 0 $spacing-md;
-    }
-    
-    @media (max-width: $breakpoint-sm) {
-      padding: 0 $spacing-sm;
-    }
   }
   
   // 统一的标题样式
@@ -192,22 +183,5 @@
     animation: scaleIn $transition-normal ease-out;
   }
   
-  // 统一的响应式断点
-  @media (max-width: $breakpoint-lg) {
-    .container {
-      padding: 0 $spacing-md;
-    }
-  }
-  
-  @media (max-width: $breakpoint-md) {
-    .container {
-      padding: 0 $spacing-sm;
-    }
-  }
-  
-  @media (max-width: $breakpoint-sm) {
-    .container {
-      padding: 0 $spacing-xs;
-    }
-  }
+
 }
