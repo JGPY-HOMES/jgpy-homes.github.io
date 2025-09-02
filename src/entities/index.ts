@@ -15,3 +15,21 @@ export type {
   Service,
   ServicesPageData
 } from './services.entity';
+
+// About types
+export type {
+  AboutPageData,
+  TeamIntro,
+  TeamExpansion,
+  DevelopmentHistory,
+  CompanyValues,
+  Carousel as AboutCarousel,
+  TeamStat,
+  TeamFeature,
+  Position,
+  TrainingProgram,
+  CompanyValue,
+  BenefitCategory,
+  HistoryItem,
+  ValueItem
+} from './about.entity';

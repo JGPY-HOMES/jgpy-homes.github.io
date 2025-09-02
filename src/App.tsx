@@ -5,7 +5,7 @@ import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { Loading } from './components/Loading';
+import { About } from './pages/About';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
             {/* 其他路由配置 */}
           </Routes>
         </main>

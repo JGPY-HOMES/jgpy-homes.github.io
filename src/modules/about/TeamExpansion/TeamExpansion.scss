@@ -1,0 +1,612 @@
+@use '../../../css/variables' as *;
+
+.team-expansion {
+  padding: 60px 0;
+  background: $background-dark;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .expansion-header {
+    text-align: center;
+    margin-bottom: 48px;
+
+    .expansion-title {
+      font-size: $font-size-4xl;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: $primary-color;
+        border-radius: $border-radius-sm;
+      }
+    }
+
+    .expansion-subtitle {
+      font-size: $font-size-lg;
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+      font-weight: 500;
+    }
+
+    .expansion-description {
+      font-size: $font-size-base;
+      color: $text-secondary;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  .expansion-content {
+    .tab-navigation {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      background: $background-light;
+      border-radius: $border-radius-lg;
+      padding: $spacing-sm;
+      box-shadow: $flat-elevation-1;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+
+      .tab-button {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: $spacing-md $spacing-lg;
+        border: none;
+        background: transparent;
+        border-radius: $border-radius-md;
+        cursor: pointer;
+        transition: all $transition-normal;
+        font-size: $font-size-base;
+        font-weight: 500;
+        color: $text-secondary;
+
+        .tab-icon {
+          font-size: $font-size-lg;
+        }
+
+        &:hover {
+          background: $background-muted;
+          color: $primary-color;
+        }
+
+        &.active {
+          background: $primary-color;
+          color: $text-light;
+          box-shadow: $flat-elevation-1;
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-panel {
+        background: $background-light;
+        border-radius: $border-radius-lg;
+        padding: $spacing-xl;
+        box-shadow: $flat-elevation-1;
+        border: 1px solid $border-light;
+
+        .panel-title {
+          font-size: $font-size-3xl;
+          font-weight: 600;
+          color: $text-primary;
+          margin-bottom: $spacing-md;
+          text-align: center;
+        }
+
+        .panel-description {
+          font-size: $font-size-base;
+          color: $text-secondary;
+          line-height: 1.7;
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        // 职位列表样式
+        .positions-list {
+          display: grid;
+          gap: $spacing-lg;
+
+          .position-card {
+            border: 1px solid $border-color;
+            border-radius: $border-radius-md;
+            padding: $spacing-xl;
+            transition: all $transition-normal;
+            background: $background-light;
+
+            &:hover {
+              border-color: $primary-color;
+              box-shadow: $flat-elevation-1;
+            }
+
+            .position-title {
+              font-size: $font-size-xl;
+              font-weight: 600;
+              color: $text-primary;
+              margin-bottom: $spacing-lg;
+              padding-bottom: $spacing-sm;
+              border-bottom: 2px solid $border-light;
+            }
+
+            .position-details {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: $spacing-lg;
+
+              h5 {
+                font-size: $font-size-lg;
+                font-weight: 600;
+                color: $primary-color;
+                margin-bottom: $spacing-md;
+              }
+
+              ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                  padding: $spacing-sm 0;
+                  color: $text-secondary;
+                  position: relative;
+                  padding-left: $spacing-lg;
+
+                  &::before {
+                    content: '•';
+                    color: $primary-color;
+                    position: absolute;
+                    left: 0;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // 培训项目样式
+        .training-programs {
+          display: grid;
+          gap: 30px;
+
+          .program-card {
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              border-color: #667eea;
+              box-shadow: 0 5px 20px rgba(102, 126, 234, 0.1);
+            }
+
+            .program-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 15px;
+
+              .program-title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #2c3e50;
+              }
+
+              .program-duration {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                font-weight: 500;
+              }
+            }
+
+            .program-description {
+              color: #5a6c7d;
+              margin-bottom: 20px;
+              line-height: 1.6;
+            }
+
+            .program-content {
+              list-style: none;
+              padding: 0;
+
+              li {
+                padding: 8px 0;
+                color: #5a6c7d;
+                position: relative;
+                padding-left: 20px;
+
+                &::before {
+                  content: '✓';
+                  color: #28a745;
+                  position: absolute;
+                  left: 0;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+
+        // 企业价值观样式
+        .company-values {
+          margin-bottom: 40px;
+
+          .values-section-title {
+            font-size: $font-size-xl;
+            font-weight: 600;
+            color: $text-primary;
+            text-align: center;
+            margin-bottom: $spacing-lg;
+            padding-bottom: $spacing-sm;
+            border-bottom: 2px solid $border-light;
+          }
+
+          .value-card {
+            text-align: center;
+            padding: $spacing-xl $spacing-lg;
+            border-radius: $border-radius-lg;
+            background: $background-light;
+            transition: all $transition-normal;
+            border: 1px solid $border-light;
+            box-shadow: $flat-elevation-1;
+
+            &:hover {
+              transform: translateY(-4px);
+              box-shadow: $flat-elevation-2;
+              border-color: $primary-color;
+            }
+
+            .value-icon {
+              font-size: 3rem;
+              margin-bottom: $spacing-lg;
+              color: $primary-color;
+            }
+
+            .value-title {
+              font-size: $font-size-lg;
+              font-weight: 600;
+              color: $text-primary;
+              margin-bottom: $spacing-md;
+            }
+
+            .value-description {
+              color: $text-secondary;
+              line-height: 1.6;
+            }
+          }
+        }
+
+        // 企业文化理念样式
+        .culture-principles {
+          margin-bottom: 40px;
+
+          .principles-section-title {
+            font-size: $font-size-xl;
+            font-weight: 600;
+            color: $text-primary;
+            text-align: center;
+            margin-bottom: $spacing-lg;
+            padding-bottom: $spacing-sm;
+            border-bottom: 2px solid $border-light;
+          }
+
+          .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: $spacing-lg;
+
+            .principle-item {
+              background: $background-light;
+              border-radius: $border-radius-lg;
+              padding: $spacing-xl $spacing-lg;
+              text-align: center;
+              border: 1px solid $border-light;
+              box-shadow: $flat-elevation-1;
+              transition: all $transition-normal;
+
+              &:hover {
+                transform: translateY(-4px);
+                box-shadow: $flat-elevation-2;
+                border-color: $primary-color;
+              }
+
+              h5 {
+                font-size: $font-size-lg;
+                font-weight: 600;
+                color: $primary-color;
+                margin-bottom: $spacing-md;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -8px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 40px;
+                  height: 2px;
+                  background: $primary-color;
+                  border-radius: $border-radius-sm;
+                }
+              }
+
+              p {
+                color: $text-secondary;
+                line-height: 1.6;
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        // 企业文化特色样式
+        .culture-features {
+          .features-section-title {
+            font-size: $font-size-xl;
+            font-weight: 600;
+            color: $text-primary;
+            text-align: center;
+            margin-bottom: $spacing-lg;
+            padding-bottom: $spacing-sm;
+            border-bottom: 2px solid $border-light;
+          }
+
+          .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: $spacing-lg;
+
+            .feature-item {
+              background: $background-light;
+              border-radius: $border-radius-lg;
+              padding: $spacing-xl $spacing-lg;
+              text-align: center;
+              border: 1px solid $border-light;
+              box-shadow: $flat-elevation-1;
+              transition: all $transition-normal;
+
+              &:hover {
+                transform: translateY(-4px);
+                box-shadow: $flat-elevation-2;
+                border-color: $primary-color;
+              }
+
+              h5 {
+                font-size: $font-size-lg;
+                font-weight: 600;
+                color: $primary-color;
+                margin-bottom: $spacing-md;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -8px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 40px;
+                  height: 2px;
+                  background: $primary-color;
+                  border-radius: $border-radius-sm;
+                }
+              }
+
+              p {
+                color: $text-secondary;
+                line-height: 1.6;
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        // 价值观实践样式
+        .values-practice {
+          .practice-section-title {
+            font-size: $font-size-xl;
+            font-weight: 600;
+            color: $text-primary;
+            text-align: center;
+            margin-bottom: $spacing-lg;
+            padding-bottom: $spacing-sm;
+            border-bottom: 2px solid $border-light;
+          }
+
+          .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: $spacing-lg;
+
+            .practice-item {
+              background: $background-light;
+              border-radius: $border-radius-lg;
+              padding: $spacing-xl $spacing-lg;
+              text-align: center;
+              border: 1px solid $border-light;
+              box-shadow: $flat-elevation-1;
+              transition: all $transition-normal;
+
+              &:hover {
+                transform: translateY(-4px);
+                box-shadow: $flat-elevation-2;
+                border-color: $primary-color;
+              }
+
+              h5 {
+                font-size: $font-size-lg;
+                font-weight: 600;
+                color: $primary-color;
+                margin-bottom: $spacing-md;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -8px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 40px;
+                  height: 2px;
+                  background: $primary-color;
+                  border-radius: $border-radius-sm;
+                }
+              }
+
+              p {
+                color: $text-secondary;
+                line-height: 1.6;
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        // 福利网格样式 - 符合项目主题色
+        .benefits-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+
+          .benefit-category {
+            background: $background-light; // 白色卡片背景
+            border-radius: 12px;
+            padding: 30px 25px;
+            transition: all 0.3s ease;
+            box-shadow: $flat-elevation-1;
+            border: 1px solid $border-light;
+
+            &:hover {
+              transform: translateY(-5px);
+              box-shadow: $flat-elevation-2;
+              border-color: $primary-color;
+            }
+
+            .benefit-category-title {
+              font-size: 1.3rem;
+              font-weight: 600;
+              color: $text-primary; // 主要文字色
+              margin-bottom: 20px;
+              text-align: center;
+              padding-bottom: 10px;
+              border-bottom: 2px solid $primary-color; // 使用项目主色调
+            }
+
+            .benefit-items {
+              list-style: none;
+              padding: 0;
+
+              li {
+                padding: 8px 0;
+                color: $text-primary; // 主要文字色
+                position: relative;
+                padding-left: 20px;
+
+                &::before {
+                  content: '🎁';
+                  position: absolute;
+                  left: 0;
+                  color: $primary-color; // 使用项目主色调
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .expansion-header {
+      margin-bottom: 40px;
+
+      .expansion-title {
+        font-size: 2rem;
+      }
+
+      .expansion-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .expansion-description {
+        font-size: 1rem;
+      }
+    }
+
+    .expansion-content {
+      .tab-navigation {
+        flex-direction: column;
+        align-items: center;
+
+        .tab-button {
+          width: 100%;
+          max-width: 300px;
+          justify-content: center;
+        }
+      }
+
+      .tab-content {
+        .tab-panel {
+          padding: 30px 20px;
+
+          .panel-title {
+            font-size: 1.6rem;
+          }
+
+          .position-details {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          .company-values {
+            grid-template-columns: 1fr;
+          }
+
+          .benefits-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 0;
+
+
+
+    .expansion-content {
+      .tab-content {
+        .tab-panel {
+          padding: 25px 15px;
+
+          .panel-title {
+            font-size: 1.4rem;
+          }
+
+          .panel-description {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -218,6 +218,9 @@
     }
   }
   
+  // 添加进入动画
+  animation: qrCodeFadeIn 0.3s ease-out;
+  
   // 超小屏幕的额外优化
   @media (max-width: 480px) {
     left: -20px;
@@ -229,9 +232,6 @@
       left: 30px;
     }
   }
-  
-  // 添加进入动画
-  animation: qrCodeFadeIn 0.3s ease-out;
 }
 
 // 二维码进入动画

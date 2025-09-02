@@ -26,12 +26,8 @@ export const CompanyIntro: React.FC = () => {
             
             <div className="intro-stats">
               {introData.stats.map((stat, index) => {
-                const Icon = stat.icon;
                 return (
                   <div key={index} className="stat-item">
-                    <div className="stat-icon">
-                      <Icon />
-                    </div>
                     <div className="stat-content">
                       <span className="stat-number">{stat.number}</span>
                       <span className="stat-label">{stat.label}</span>
