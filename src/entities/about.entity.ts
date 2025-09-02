@@ -16,7 +16,8 @@ export interface TeamStat {
 
 export interface TeamFeature {
   id: string;
-  title: string;
+  name: string;
+  position: string;
   description: string;
   image: string;
 }

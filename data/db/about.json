@@ -65,27 +65,31 @@
     ],
     "features": [
       {
-        "id": "design-team",
-        "title": "设计团队",
-        "description": "拥有资深室内设计师，擅长现代简约、中式、欧式等多种风格设计",
+        "id": "member-1",
+        "name": "张明",
+        "position": "首席设计师",
+        "description": "拥有10年室内设计经验，擅长现代简约和北欧风格设计，曾获得多项设计大奖，致力于为客户创造舒适美观的居住空间。",
         "image": "/src/assets/images/about/team/1.jpg"
       },
       {
-        "id": "construction-team",
-        "title": "施工团队",
-        "description": "技术精湛的施工队伍，严格按标准施工，确保工程质量",
+        "id": "member-2",
+        "name": "李华",
+        "position": "项目经理",
+        "description": "资深项目管理专家，具备丰富的装修项目管理经验，擅长协调各方资源，确保项目按时高质量完成。",
         "image": "/src/assets/images/about/team/2.jpg"
       },
       {
-        "id": "project-management",
-        "title": "项目管理",
-        "description": "专业的项目经理团队，全程跟踪项目进度，确保按时交付",
+        "id": "member-3",
+        "name": "王强",
+        "position": "技术总监",
+        "description": "技术精湛的施工专家，精通各种装修工艺，对工程质量要求严格，带领团队打造了众多精品工程。",
         "image": "/src/assets/images/about/team/3.jpg"
       },
       {
-        "id": "after-sales",
-        "title": "售后服务",
-        "description": "完善的售后服务体系，提供长期维护和保养服务",
+        "id": "member-4",
+        "name": "陈丽",
+        "position": "客户经理",
+        "description": "专业的客户服务专家，具备优秀的沟通协调能力，致力于为客户提供贴心周到的服务体验。",
         "image": "/src/assets/images/about/team/4.jpg"
       }
     ]

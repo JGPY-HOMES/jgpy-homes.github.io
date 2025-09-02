@@ -9,7 +9,6 @@ interface TeamIntroProps {
 }
 
 export const TeamIntro: React.FC<TeamIntroProps> = ({ teamData }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
 
   // 图标映射
@@ -19,28 +18,6 @@ export const TeamIntro: React.FC<TeamIntroProps> = ({ teamData }) => {
     tools: FaTools,
     handshake: FaHandshake,
   };
-
-  // 监听滚动，当统计区域进入视口时触发动画
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
-      }
-    };
-  }, []);
 
   if (!teamData) {
     return null;
@@ -60,25 +37,21 @@ export const TeamIntro: React.FC<TeamIntroProps> = ({ teamData }) => {
           {teamData.stats.map((stat, index) => {
             const Icon = iconMap[stat.icon] || FaUsers;
             return (
-              <div key={stat.id || index} className={`stat-item ${isVisible ? 'animate' : ''}`}>
+              <div key={stat.id || index} className={`stat-item`}>
                 <div className="stat-icon-wrapper">
                   <div className="stat-icon">
                     <Icon />
                   </div>
                   <div className="icon-glow"></div>
                 </div>
-                <div className={`stat-number ${isVisible ? 'animate' : ''}`}>
-                  {isVisible ? (
-                    <AnimatedNumber 
-                      value={stat.number} 
-                      duration={2000} 
-                      delay={index * 200}
-                    />
-                  ) : (
-                    stat.number
-                  )}
+                <div className={`stat-number`}>
+                  <AnimatedNumber
+                    value={stat.number}
+                    duration={2000}
+                    delay={index * 200}
+                  />
                 </div>
-                <div className={`stat-label ${isVisible ? 'animate' : ''}`}>{stat.label}</div>
+                <div className={`stat-label`}>{stat.label}</div>
                 <div className="stat-description">{stat.description}</div>
                 <div className="stat-decoration"></div>
               </div>
@@ -86,19 +59,21 @@ export const TeamIntro: React.FC<TeamIntroProps> = ({ teamData }) => {
           })}
         </div>
 
-        {/* 团队特色 */}
+        {/* 团队成员 */}
         <div className="team-features">
-          {teamData.features.map((feature, index) => (
-            <div key={feature.id || index} className="feature-card">
+          {teamData.features.map((member, index) => (
+            <div key={member.id || index} className="feature-card">
               <div className="feature-image">
-                <img src={feature.image} alt={feature.title} />
+                <img src={member.image} alt={member.name} />
                 <div className="image-overlay">
-                  <h4 className="overlay-title">{feature.title}</h4>
+                  <h4 className="overlay-title">{member.name}</h4>
+                  <p className="overlay-position">{member.position}</p>
                 </div>
               </div>
               <div className="feature-content">
-                <h4 className="feature-title">{feature.title}</h4>
-                <p className="feature-description">{feature.description}</p>
+                <h4 className="feature-title">{member.name}</h4>
+                <p className="feature-position">{member.position}</p>
+                <p className="feature-description">{member.description}</p>
               </div>
             </div>
           ))}
