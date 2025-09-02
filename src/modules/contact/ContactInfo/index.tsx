@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ContactInfo as ContactInfoType } from '@/entities/contact.entity';
-import { Icon } from '@/components/Icon';
+import { SvgIcon } from '@/components/SvgIcon';
 import './info.scss';
 
 interface ContactInfoProps {
@@ -27,7 +27,7 @@ export const ContactInfo: React.FC<ContactInfoProps> = ({ contactInfo }) => {
             {contactInfo.methods.map((item, index) => (
               <div key={index} className="contact-method">
                 <div className="contact-method__icon" style={{ backgroundColor: item.color }}>
-                  <Icon name={item.icon} size={24} color="white" />
+                  <SvgIcon name={item.icon} color="white" />
                 </div>
                 <div className="contact-method__content">
                   <h4 className="contact-method__title">{item.title}</h4>
@@ -40,7 +40,7 @@ export const ContactInfo: React.FC<ContactInfoProps> = ({ contactInfo }) => {
             {/* 公司地址 */}
             <div className="contact-method contact-method--address">
               <div className="contact-method__icon" style={{ backgroundColor: contactInfo.address.color }}>
-                <Icon name={contactInfo.address.id} size={24} color="white" />
+                <SvgIcon name={contactInfo.address.id} color="white" />
               </div>
               <div className="contact-method__content">
                 <h4 className="contact-method__title">{contactInfo.address.title}</h4>
