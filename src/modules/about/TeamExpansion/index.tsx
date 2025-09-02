@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { FaUserPlus, FaGraduationCap, FaAward, FaHandshake, FaHeart } from 'react-icons/fa';
 import type { TeamExpansion as TeamExpansionType } from '../../../entities/about.entity';
+import { Recruitment } from './Recruitment';
+import { Training } from './Training';
+import { Culture } from './Culture';
+import { Values } from './Values';
+import { Benefits } from './Benefits';
 import './TeamExpansion.scss';
 
 interface TeamExpansionProps {
@@ -8,7 +13,7 @@ interface TeamExpansionProps {
 }
 
 export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState('recruitment');
 
   if (!expansionData) {
     return null;
@@ -43,6 +48,24 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
     }
   ];
 
+  // 渲染标签页内容
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'recruitment':
+        return <Recruitment positions={expansionData.positions} />;
+      case 'training':
+        return <Training trainingPrograms={expansionData.trainingPrograms} />;
+      case 'culture':
+        return <Culture />;
+      case 'values':
+        return <Values values={expansionData.values} />;
+      case 'welfare':
+        return <Benefits benefits={expansionData.benefits} />;
+      default:
+        return <Recruitment positions={expansionData.positions} />;
+    }
+  };
+
   return (
     <section className="team-expansion">
       <div className="container">
@@ -55,13 +78,13 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
         <div className="expansion-content">
           {/* 标签页导航 */}
           <div className="tab-navigation">
-            {tabs.map((tab, index) => {
+            {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
                 <button
                   key={tab.id}
-                  className={`tab-button ${activeTab === index ? 'active' : ''}`}
-                  onClick={() => setActiveTab(index)}
+                  className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
+                  onClick={() => setActiveTab(tab.id)}
                 >
                   <Icon className="tab-icon" />
                   <span className="tab-label">{tab.label}</span>
@@ -73,220 +96,7 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
           {/* 标签页内容 */}
           <div className="tab-content">
             <div className="tab-panel">
-              {/* 人才招聘 */}
-              {activeTab === 0 && (
-                <>
-                  <div className="recruitment-header">
-                    <h3 className="panel-title">我们正在寻找优秀的你</h3>
-                    <p className="panel-description">河南交个朋友装饰诚邀有志之士加入我们的团队，共同为客户创造美好的居住空间。</p>
-                  </div>
-                  
-                  <div className="job-listings">
-                    {expansionData.positions.map((position, index) => (
-                      <div key={position.id || index} className="job-card">
-                        {/* 职位头部信息 */}
-                        <div className="job-header">
-                          <div className="job-title-section">
-                            <h4 className="job-title">{position.title}</h4>
-                            <div className="job-tags">
-                              <span className="tag tag-primary">全职</span>
-                              <span className="tag tag-secondary">经验不限</span>
-                              <span className="tag tag-success">本科</span>
-                            </div>
-                          </div>
-                          <div className="job-salary">
-                            <span className="salary-range">8K-15K</span>
-                            <span className="salary-period">· 13薪</span>
-                          </div>
-                        </div>
-
-                        {/* 职位描述 */}
-                        <div className="job-description">
-                          <p>我们正在寻找有经验的设计师加入我们的团队，负责室内设计项目的方案设计和施工图绘制。</p>
-                        </div>
-
-                        {/* 职位要求 */}
-                        <div className="job-requirements">
-                          <h5 className="section-title">任职要求</h5>
-                          <ul className="requirements-list">
-                            {position.requirements.slice(0, 3).map((req, reqIndex) => (
-                              <li key={reqIndex}>{req}</li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* 福利待遇 */}
-                        <div className="job-benefits">
-                          <h5 className="section-title">福利待遇</h5>
-                          <div className="benefits-tags">
-                            {position.benefits.slice(0, 4).map((benefit, benIndex) => (
-                              <span key={benIndex} className="benefit-tag">{benefit}</span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* 公司信息 */}
-                        {/* <div className="company-info">
-                          <div className="company-logo">
-                            <img src="/src/assets/images/logo.jpg" alt="交个朋友装饰" className="logo-image" />
-                          </div>
-                          <div className="company-details">
-                            <h6 className="company-name">河南交个朋友装饰有限公司</h6>
-                            <div className="company-meta">
-                              <span className="company-size">20-99人</span>
-                              <span className="company-industry">建筑/装修</span>
-                              <span className="company-location">郑州·金水区</span>
-                            </div>
-                          </div>
-                        </div> */}
-
-                        {/* 操作按钮 */}
-                        {/* <div className="job-actions">
-                          <button className="btn btn-primary btn-apply">立即沟通</button>
-                          <button className="btn btn-outline">投递简历</button>
-                        </div> */}
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-
-              {/* 培训发展 */}
-              {activeTab === 1 && (
-                <>
-                  <h3 className="panel-title">持续学习，共同成长</h3>
-                  <p className="panel-description">我们为员工提供全方位的培训和发展机会，帮助每个人在职业生涯中不断进步。</p>
-                  <div className="training-programs">
-                    {expansionData.trainingPrograms.map((program, index) => (
-                      <div key={program.id || index} className="program-card">
-                        <div className="program-header">
-                          <h4 className="program-title">{program.title}</h4>
-                          <span className="program-duration">{program.duration}</span>
-                        </div>
-                        <p className="program-description">{program.description}</p>
-                        <ul className="program-content">
-                          {program.content.map((item, itemIndex) => (
-                            <li key={itemIndex}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-
-              {/* 企业文化 */}
-              {activeTab === 2 && (
-                <>
-                  <h3 className="panel-title">企业文化</h3>
-                  <p className="panel-description">我们秉承专业、诚信、创新、共赢的企业文化，为员工创造良好的工作环境和发展平台。</p>
-                  
-                  {/* 企业文化理念 */}
-                  <div className="culture-principles">
-                    <h4 className="principles-section-title">企业文化理念</h4>
-                    <div className="principles-grid">
-                      <div className="principle-item">
-                        <h5>使命</h5>
-                        <p>为客户创造美好的居住空间，让每个家庭都能享受高品质的装修服务</p>
-                      </div>
-                      <div className="principle-item">
-                        <h5>愿景</h5>
-                        <p>成为河南地区最受信赖的装饰品牌，引领行业标准</p>
-                      </div>
-                      <div className="principle-item">
-                        <h5>理念</h5>
-                        <p>以客户为中心，以质量求生存，以创新求发展</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 企业文化特色 */}
-                  <div className="culture-features">
-                    <h4 className="features-section-title">企业文化特色</h4>
-                    <div className="features-grid">
-                      <div className="feature-item">
-                        <h5>专业精神</h5>
-                        <p>追求卓越，精益求精，不断提升专业技能和服务水平</p>
-                      </div>
-                      <div className="feature-item">
-                        <h5>诚信经营</h5>
-                        <p>诚实守信，透明公开，建立长期稳定的合作关系</p>
-                      </div>
-                      <div className="feature-item">
-                        <h5>创新驱动</h5>
-                        <p>持续创新，拥抱变化，引领行业发展趋势</p>
-                      </div>
-                      <div className="feature-item">
-                        <h5>共赢合作</h5>
-                        <p>互利共赢，共同发展，创造多方价值</p>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {/* 企业价值观 */}
-              {activeTab === 3 && (
-                <>
-                  <h3 className="panel-title">企业价值观</h3>
-                  <p className="panel-description">我们的价值观指导着每一个决策和行动，是我们企业文化的核心体现。</p>
-                  
-                  {/* 核心价值观 */}
-                  <div className="company-values">
-                    <h4 className="values-section-title">核心价值观</h4>
-                    {expansionData.values.map((value, index) => (
-                      <div key={value.id || index} className="value-card">
-                        <div className="value-icon">{value.icon}</div>
-                        <h4 className="value-title">{value.title}</h4>
-                        <p className="value-description">{value.description}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* 价值观实践 */}
-                  <div className="values-practice">
-                    <h4 className="practice-section-title">价值观实践</h4>
-                    <div className="practice-grid">
-                      <div className="practice-item">
-                        <h5>客户至上</h5>
-                        <p>始终以客户需求为导向，提供超越期望的服务体验</p>
-                      </div>
-                      <div className="practice-item">
-                        <h5>团队协作</h5>
-                        <p>倡导团队精神，相互支持，共同成长</p>
-                      </div>
-                      <div className="practice-item">
-                        <h5>持续学习</h5>
-                        <p>保持学习热情，不断提升个人和团队能力</p>
-                      </div>
-                      <div className="practice-item">
-                        <h5>责任担当</h5>
-                        <p>勇于承担责任，积极主动，追求卓越</p>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {/* 员工福利 */}
-              {activeTab === 4 && (
-                <>
-                  <h3 className="panel-title">关爱员工，共创未来</h3>
-                  <p className="panel-description">我们为员工提供完善的福利待遇，让每个人都能安心工作，快乐生活。</p>
-                  <div className="benefits-grid">
-                    {expansionData.benefits.map((benefit, index) => (
-                      <div key={benefit.id || index} className="benefit-category">
-                        <h4 className="benefit-category-title">{benefit.category}</h4>
-                        <ul className="benefit-items">
-                          {benefit.items.map((item, itemIndex) => (
-                            <li key={itemIndex}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
+              {renderTabContent()}
             </div>
           </div>
         </div>

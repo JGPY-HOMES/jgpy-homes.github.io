@@ -1,0 +1,59 @@
+@use '../../../../css/variables' as *;
+
+// 福利网格样式 - 符合项目主题色
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+
+  .benefit-category {
+    background: $background-light; // 白色卡片背景
+    border-radius: 12px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+    box-shadow: $flat-elevation-1;
+    border: 1px solid $border-light;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $flat-elevation-2;
+      border-color: $primary-color;
+    }
+
+    .benefit-category-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: $text-primary; // 主要文字色
+      margin-bottom: 20px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $primary-color; // 使用项目主色调
+    }
+
+    .benefit-items {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 8px 0;
+        color: $text-primary; // 主要文字色
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: '🎁';
+          position: absolute;
+          left: 0;
+          color: $primary-color; // 使用项目主色调
+        }
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
