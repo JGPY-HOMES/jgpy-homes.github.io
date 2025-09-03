@@ -1,34 +1,12 @@
 import React from 'react';
+import type { CompanyValue } from '../../../../entities/about.entity';
 import './Values.scss';
 
-export const Values: React.FC = () => {
-  // 企业价值观数据
-  const companyValues = [
-    {
-      id: 1,
-      title: '专业',
-      description: '追求卓越，精益求精',
-      icon: '⚡'
-    },
-    {
-      id: 2,
-      title: '诚信',
-      description: '诚实守信，透明公开',
-      icon: '🤝'
-    },
-    {
-      id: 3,
-      title: '创新',
-      description: '持续创新，拥抱变化',
-      icon: '🚀'
-    },
-    {
-      id: 4,
-      title: '共赢',
-      description: '互利共赢，共同发展',
-      icon: '🎯'
-    }
-  ];
+interface ValuesProps {
+  values: CompanyValue[];
+}
+
+export const Values: React.FC<ValuesProps> = ({ values }) => {
 
   return (
     <>
@@ -37,7 +15,7 @@ export const Values: React.FC = () => {
       
       {/* 价值观卡片 */}
       <div className="values-grid">
-        {companyValues.map((value) => (
+        {values.map((value) => (
           <div key={value.id} className="value-card">
             <div className="value-icon">{value.icon}</div>
             <h4 className="value-title">{value.title}</h4>

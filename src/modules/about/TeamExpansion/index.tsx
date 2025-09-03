@@ -43,7 +43,7 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
     },
     {
       id: 'welfare',
-      label: '员工福利',
+      label: '公司活动',
       icon: FaHandshake,
     }
   ];
@@ -60,7 +60,7 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
       case 'values':
         return <Values values={expansionData.values} />;
       case 'welfare':
-        return <Benefits benefits={expansionData.benefits} />;
+        return <Benefits activities={expansionData.activities} />;
       default:
         return <Recruitment positions={expansionData.positions} />;
     }

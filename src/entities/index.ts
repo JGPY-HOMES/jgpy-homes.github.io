@@ -30,6 +30,7 @@ export type {
   TrainingProgram,
   CompanyValue,
   BenefitCategory,
+  Activity,
   HistoryItem,
   ValueItem
 } from './about.entity';

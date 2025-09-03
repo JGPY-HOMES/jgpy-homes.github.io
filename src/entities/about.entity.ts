@@ -58,6 +58,16 @@ export interface BenefitCategory {
   items: string[];
 }
 
+export interface Activity {
+  id: string;
+  title: string;
+  type: 'company' | 'expansion';
+  date: string;
+  description: string;
+  image: string;
+  participants?: number;
+}
+
 export interface TeamExpansion {
   title: string;
   subtitle: string;
@@ -65,7 +75,7 @@ export interface TeamExpansion {
   positions: Position[];
   trainingPrograms: TrainingProgram[];
   values: CompanyValue[];
-  benefits: BenefitCategory[];
+  activities: Activity[];
 }
 
 export interface HistoryItem {
