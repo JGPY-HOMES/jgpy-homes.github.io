@@ -1,0 +1,22 @@
+@use "../../css/variables" as *;
+
+.animated-number {
+  display: inline-block;
+  font-weight: 700;
+  background: linear-gradient(135deg, $primary-color, $primary-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: numberGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes numberGlow {
+  0% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  100% {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
+}

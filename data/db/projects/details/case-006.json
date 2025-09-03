@@ -1,0 +1,144 @@
+{
+  "id": "case-006",
+  "title": "软装搭配案例",
+  "subtitle": "色彩与质感的完美结合",
+  "description": "这个软装搭配案例展示了如何通过家具、灯具、布艺等软装元素的精心搭配，营造出温馨舒适的居住环境。",
+  "categoryId": "soft-furniture",
+  "serviceId": "soft-furnishing",
+  "tags": ["软装", "搭配", "色彩", "质感"],
+  "images": [
+    "/src/assets/images/projects/case/1.jpg",
+    "/src/assets/images/projects/case/2.jpg",
+    "/src/assets/images/projects/case/3.jpg"
+  ],
+  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "area": 90,
+  "style": "现代简约",
+  "budget": "15万",
+  "duration": "1个月",
+  "location": "成都市锦江区",
+  "status": "completed",
+  "createdAt": "2024-01-30T00:00:00Z",
+  "updatedAt": "2024-01-30T00:00:00Z",
+  "featured": false,
+  "viewCount": 650,
+  "likeCount": 38,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个软装搭配案例位于成都市锦江区，建筑面积90平方米。业主是一对年轻夫妇，希望通过对软装元素的精心搭配，营造出温馨舒适的居住环境。设计师在充分了解业主需求后，决定采用现代简约风格，通过家具、灯具、布艺等软装元素的精心搭配，营造出温馨舒适的居住环境。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "title": "客厅软装搭配",
+      "description": "客厅采用了现代简约的软装搭配，以灰色和白色为主色调。沙发选择了舒适的布艺沙发，搭配简约的茶几和地毯，营造出温馨舒适的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "客厅的软装搭配注重色彩和质感的平衡。沙发选择了深灰色的布艺材质，既舒适又易于打理。茶几选择了玻璃和金属的组合，既现代又实用。地毯选择了浅灰色的羊毛材质，既美观又舒适。墙面装饰选择了简约的画作，为空间增添了艺术气息。",
+      "title": "客厅软装搭配理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "卧室软装搭配",
+      "description": "卧室采用了温馨的软装搭配，以暖色调为主。床品选择了舒适的棉质材质，搭配柔和的灯光，营造出宁静的睡眠环境。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "title": "餐厅软装搭配",
+      "description": "餐厅采用了简约的软装搭配，以木质和白色为主。餐桌选择了实木的款式，搭配舒适的餐椅，营造出温馨的用餐环境。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "餐厅的软装搭配注重实用性和美观性的结合。餐桌选择了实木的材质，既美观又耐用。餐椅选择了舒适的款式，为长时间的用餐提供良好的体验。吊灯选择了简约的款式，既美观又实用。墙面装饰选择了简约的画作，为空间增添了艺术气息。",
+      "title": "餐厅软装搭配细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "装饰品搭配",
+      "description": "装饰品的选择注重与整体风格的协调。绿植、艺术品、灯具等装饰品都经过精心挑选，为空间增添了生机和艺术气息。",
+      "order": 7
+    }
+  ],
+  "clientInfo": {
+    "name": "成都夫妇",
+    "feedback": "设计师非常专业，能够准确理解我们对软装搭配的需求。整个搭配既美观又实用，让我们的家变得更加温馨舒适。特别是色彩和质感的搭配，让整个空间充满了生活气息。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "郑设计师",
+    "projectManager": "何项目经理"
+  },
+  "materials": [
+    {
+      "name": "沙发",
+      "brand": "顾家家居",
+      "price": 8000
+    },
+    {
+      "name": "茶几",
+      "brand": "曲美",
+      "price": 2000
+    },
+    {
+      "name": "地毯",
+      "brand": "东方地毯",
+      "price": 1500
+    },
+    {
+      "name": "灯具",
+      "brand": "欧普",
+      "price": 3000
+    },
+    {
+      "name": "装饰画",
+      "brand": "艺术画",
+      "price": 2000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-30",
+      "endDate": "2024-02-05",
+      "description": "与客户沟通需求，确定软装搭配方案，制定采购清单"
+    },
+    {
+      "phase": "采购阶段",
+      "startDate": "2024-02-06",
+      "endDate": "2024-02-15",
+      "description": "采购家具、灯具、布艺等软装元素"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-02-16",
+      "endDate": "2024-02-25",
+      "description": "安装家具，布置软装，调整细节"
+    },
+    {
+      "phase": "验收阶段",
+      "startDate": "2024-02-26",
+      "endDate": "2024-02-28",
+      "description": "客户验收，调整细节，完成项目"
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+@use "../../css/variables" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(47, 107, 79, 0.1);
+  transition: all $transition-normal;
+
+  &--scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: $flat-elevation-2;
+  }
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-md $spacing-md;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: $spacing-md $spacing-lg;
+  }
+}
+
+// Logo样式
+.header__logo {
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    text-decoration: none;
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.header__logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: $border-radius-sm;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &__chinese {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: $text-primary;
+    letter-spacing: 0.5px;
+  }
+
+  &__english {
+    font-size: $font-size-xs;
+    color: $text-secondary;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+}
+
+@keyframes leafSpin {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);
+  }
+}
+
+// 桌面端导航
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-sm $spacing-md;
+  color: $text-secondary;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: $border-radius-md;
+  transition: all $transition-normal;
+  position: relative;
+
+  &:hover {
+    color: $primary-color;
+    background-color: rgba(47, 107, 79, 0.05);
+  }
+
+  &--active {
+    color: $primary-color;
+    background-color: rgba(47, 107, 79, 0.1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background-color: $primary-color;
+      border-radius: 1px;
+    }
+  }
+
+  &__icon {
+    font-size: $font-size-sm;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+  }
+}
+
+// 移动端菜单按钮
+.header__menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-radius: $border-radius-md;
+  color: $text-primary;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  transition: all $transition-normal;
+
+  @media (max-width: $breakpoint-lg) {
+    display: flex;
+  }
+
+  &:hover {
+    background-color: rgba(47, 107, 79, 0.1);
+    color: $primary-color;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+// 移动端菜单
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $transition-normal;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.mobile-menu__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.mobile-menu__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+  background-color: $background-light;
+  box-shadow: $flat-elevation-3;
+  transform: translateX(-100%);
+  transition: transform $transition-normal;
+  display: flex;
+  flex-direction: column;
+
+  .mobile-menu--open & {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg;
+  border-bottom: 1px solid $border-light;
+}
+
+.mobile-menu__logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.mobile-menu__logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: $border-radius-sm;
+}
+
+.mobile-menu__title {
+  font-size: $font-size-base;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.mobile-menu__close {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-radius: $border-radius-md;
+  color: $text-secondary;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  transition: all $transition-normal;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: $text-primary;
+  }
+}
+
+.mobile-menu__nav {
+  flex: 1;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  color: $text-secondary;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: $border-radius-md;
+  transition: all $transition-normal;
+
+  &:hover {
+    color: $primary-color;
+    background-color: rgba(47, 107, 79, 0.05);
+  }
+
+  &--active {
+    color: $primary-color;
+    background-color: rgba(47, 107, 79, 0.1);
+  }
+
+  &__icon {
+    font-size: $font-size-lg;
+    width: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+  }
+}
+
+.mobile-menu__footer {
+  padding: $spacing-lg;
+  border-top: 1px solid $border-light;
+}
+
+.mobile-menu__contact {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  color: $text-secondary;
+  font-size: $font-size-sm;
+
+  &__icon {
+    font-size: $font-size-base;
+    color: $primary-color;
+  }
+
+  &__text {
+    font-weight: 500;
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .header__container {
+    padding: $spacing-sm $spacing-md;
+  }
+
+  .logo-text__chinese {
+    font-size: $font-size-base;
+  }
+
+  .logo-text__english {
+    font-size: 10px;
+  }
+
+  .mobile-menu__content {
+    width: 100%;
+  }
+}

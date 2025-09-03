@@ -1,0 +1,187 @@
+@use "../../../css/variables" as *;
+
+.about-us {
+  padding: $spacing-3xl 0;
+  background: $background-light;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-3xl;
+  align-items: center;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+.about-text {
+  .about-title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $primary-color, $primary-light);
+      border-radius: 2px;
+    }
+  }
+
+  .about-subtitle {
+    font-size: $font-size-xl;
+    color: #2c3e50;
+    margin-bottom: $spacing-lg;
+    font-weight: 600;
+  }
+
+  .about-description {
+    font-size: $font-size-lg;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: $border-radius-lg;
+  box-shadow: $flat-elevation-1;
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $flat-elevation-2;
+  }
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  border-radius: $border-radius-md;
+  color: $text-light;
+  font-size: $font-size-lg;
+  flex-shrink: 0;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: $font-size-base;
+  font-weight: 600;
+  color: $primary-color;
+  margin-bottom: $spacing-xs;
+}
+
+.feature-description {
+  font-size: $font-size-sm;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.about-image {
+  position: relative;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: $flat-elevation-2;
+
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform $transition-normal;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: $spacing-2xl;
+  color: $text-light;
+
+  .overlay-content {
+    h3 {
+      font-size: $font-size-xl;
+      font-weight: 600;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      font-size: $font-size-base;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .about-us {
+    padding: $spacing-2xl 0;
+  }
+
+  .about-title {
+    font-size: $font-size-2xl;
+  }
+
+  .about-subtitle {
+    font-size: $font-size-lg;
+  }
+
+  .about-description {
+    font-size: $font-size-base;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+
+  .image-overlay {
+    padding: $spacing-lg;
+
+    .overlay-content h3 {
+      font-size: $font-size-lg;
+    }
+
+    .overlay-content p {
+      font-size: $font-size-sm;
+    }
+  }
+}

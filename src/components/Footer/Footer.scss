@@ -1,0 +1,448 @@
+@use "../../css/variables" as *;
+
+.footer {
+  background-color: $primary-color;
+  color: $text-light;
+  padding: $spacing-3xl 0 $spacing-xl;
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 0 $spacing-md;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 0 $spacing-lg;
+  }
+}
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: $spacing-2xl;
+  margin-bottom: $spacing-3xl;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+// 公司信息区域
+.footer__section {
+  &:first-child {
+    @media (max-width: $breakpoint-lg) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// 移动端隐藏快速链接和服务项目
+@media (max-width: $breakpoint-md) {
+  .footer__quick-links,
+  .footer__services {
+    display: none;
+  }
+
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+
+  .footer__company-section {
+    grid-column: 1 / -1;
+  }
+
+  .footer__qualifications-section {
+    grid-column: 1 / -1;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.footer__logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: $border-radius-md;
+  flex-shrink: 0;
+  box-shadow: $flat-elevation-1;
+}
+
+.footer__company-info {
+  flex: 1;
+}
+
+.footer__company-name {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  margin-bottom: $spacing-sm;
+  color: $text-light;
+}
+
+.footer__company-desc {
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: $spacing-lg;
+}
+
+.footer__social {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.social-link-container {
+  position: relative;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius-md;
+  color: $text-light;
+  font-size: $font-size-lg;
+  text-decoration: none;
+  transition: all $transition-normal;
+  position: relative;
+  overflow: hidden;
+
+  // 添加微妙的背景渐变
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    opacity: 0;
+    transition: opacity $transition-normal;
+  }
+
+  &:hover {
+    background-color: var(--social-color);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  // 添加点击效果
+  &:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: transform 0.1s ease-out;
+  }
+}
+
+.social-qr-code {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: $spacing-md;
+  background-color: $background-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // 添加更精致的箭头，类似图片中的样式
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid $background-white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  // 添加微妙的边框阴影
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: $border-radius-lg;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    pointer-events: none;
+  }
+
+  // 确保在小屏幕上也能正常显示
+  @media (max-width: $breakpoint-sm) {
+    left: 0;
+    transform: none;
+    width: 140px;
+    height: 140px;
+    padding: $spacing-md;
+
+    &::after {
+      left: 24px;
+      transform: none;
+    }
+  }
+
+  // 添加进入动画
+  animation: qrCodeFadeIn 0.3s ease-out;
+
+  // 超小屏幕的额外优化
+  @media (max-width: 480px) {
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    padding: $spacing-sm;
+
+    &::after {
+      left: 30px;
+    }
+  }
+}
+
+// 二维码进入动画
+@keyframes qrCodeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.qr-code-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: $border-radius-md;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+// 导航区域
+.footer__section-title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-lg;
+  color: $text-light;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1px;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.footer__nav-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: $font-size-base;
+  padding: $spacing-xs 0;
+  transition: all $transition-normal;
+  border-radius: $border-radius-sm;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    color: $text-light;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: $spacing-sm;
+  }
+
+  &.active {
+    color: $text-light;
+    font-weight: 500;
+  }
+}
+
+.footer__nav-icon {
+  font-size: $font-size-sm;
+  width: 16px;
+  text-align: center;
+}
+
+// 公司资质
+.footer__qualifications {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.qualification-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-xs 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: $font-size-sm;
+  transition: all $transition-normal;
+  border-radius: $border-radius-sm;
+
+  &:hover {
+    color: $text-light;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: $spacing-sm;
+  }
+
+  &__icon {
+    font-size: $font-size-base;
+    color: rgba(255, 255, 255, 0.6);
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
+
+// 底部版权区域
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $spacing-xl;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: $spacing-md;
+    text-align: center;
+  }
+}
+
+.footer__copyright {
+  p {
+    font-size: $font-size-sm;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.footer__links {
+  display: flex;
+  gap: $spacing-md;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-sm) {
+    gap: $spacing-sm;
+  }
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: $font-size-sm;
+  transition: color $transition-normal;
+  position: relative;
+
+  &:hover {
+    color: $text-light;
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .footer {
+    padding: $spacing-2xl 0 $spacing-lg;
+  }
+
+  .footer__container {
+    padding: 0 $spacing-md;
+  }
+
+  .footer__main {
+    gap: $spacing-lg;
+    margin-bottom: $spacing-2xl;
+  }
+
+  .footer__company-name {
+    font-size: $font-size-lg;
+  }
+
+  .footer__company-desc {
+    font-size: $font-size-sm;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: $font-size-base;
+  }
+
+  .footer__section-title {
+    font-size: $font-size-base;
+  }
+
+  .footer__nav-link {
+    font-size: $font-size-sm;
+  }
+
+  .contact-item__value {
+    font-size: $font-size-xs;
+  }
+}

@@ -1,0 +1,67 @@
+@use "../../../../css/variables" as *;
+
+// 培训项目样式
+.training-programs {
+  display: grid;
+  gap: 30px;
+
+  .program-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #667eea;
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.1);
+    }
+
+    .program-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      .program-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .program-duration {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+
+    .program-description {
+      color: #5a6c7d;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .program-content {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 8px 0;
+        color: #5a6c7d;
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: "✓";
+          color: #28a745;
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

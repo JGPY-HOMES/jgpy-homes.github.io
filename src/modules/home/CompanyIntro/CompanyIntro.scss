@@ -1,0 +1,144 @@
+@use "../../../css/variables" as *;
+
+.company-intro {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(
+    135deg,
+    $background-light 0%,
+    $background-muted 100%
+  );
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-2xl;
+  align-items: center;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.intro-text {
+  .intro-title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $primary-color, $primary-light);
+      border-radius: 2px;
+    }
+  }
+
+  .intro-subtitle {
+    font-size: $font-size-xl;
+    color: #2c3e50;
+    margin-bottom: $spacing-lg;
+    font-weight: 600;
+  }
+
+  .intro-description {
+    font-size: $font-size-lg;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+.intro-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  padding: $spacing-lg;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.stat-icon {
+  display: none; // 隐藏图标，采用简洁设计
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: $spacing-xs;
+}
+
+.stat-label {
+  font-size: $font-size-sm;
+  color: #666;
+  font-weight: 500;
+}
+
+.intro-image {
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+    box-shadow: $flat-elevation-2;
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: $flat-elevation-3;
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .company-intro {
+    padding: $spacing-2xl 0;
+  }
+
+  .intro-title {
+    font-size: $font-size-2xl;
+  }
+
+  .intro-subtitle {
+    font-size: $font-size-lg;
+  }
+
+  .intro-description {
+    font-size: $font-size-base;
+  }
+
+  .intro-image img {
+    height: 300px;
+  }
+}

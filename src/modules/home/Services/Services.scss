@@ -1,0 +1,170 @@
+@use "../../../css/variables" as *;
+
+.services {
+  padding: $spacing-3xl 0;
+  background-color: $background-light;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+
+    .section-title {
+      font-size: $font-size-3xl;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-color, $primary-accent);
+        border-radius: 2px;
+      }
+    }
+
+    .section-description {
+      font-size: $font-size-lg;
+      color: #2c3e50;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-2xl;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.service-card {
+  text-align: center;
+  padding: $spacing-2xl;
+  transition: all $transition-normal;
+  background-color: $background-light;
+  border: 1px solid $border-light;
+  border-radius: $border-radius-lg;
+  box-shadow: $flat-elevation-1;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $flat-elevation-2;
+    border-color: $primary-color;
+  }
+}
+
+.service-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto $spacing-lg;
+  background-color: $primary-color;
+  border-radius: $border-radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-light;
+  font-size: 1.5rem;
+  transition: all $transition-normal;
+
+  .service-card:hover & {
+    background-color: $primary-light;
+    transform: scale(1.05);
+  }
+}
+
+.service-card__title {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  color: $primary-color;
+  margin-bottom: $spacing-md;
+}
+
+.service-card__description {
+  color: #2c3e50;
+  line-height: 1.6;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-base;
+}
+
+.service-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-lg;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  justify-content: center;
+}
+
+.service-card__feature {
+  background-color: $primary-color;
+  color: $text-light;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-sm;
+  font-weight: 500;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: $font-size-xs;
+    padding: $spacing-xs;
+  }
+}
+
+.service-card .btn {
+  margin-top: auto;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    width: auto;
+    min-width: 140px;
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .services {
+    padding: $spacing-2xl 0;
+  }
+
+  .services__header {
+    margin-bottom: $spacing-2xl;
+  }
+
+  .service-card {
+    padding: $spacing-lg;
+  }
+
+  .service-card__icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .service-card__title {
+    font-size: $font-size-lg;
+  }
+
+  .service-card__description {
+    font-size: $font-size-sm;
+  }
+}

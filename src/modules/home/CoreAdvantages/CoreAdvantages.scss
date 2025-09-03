@@ -1,0 +1,155 @@
+@use "../../../css/variables" as *;
+
+.core-advantages {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  color: $text-light;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+
+    .section-title {
+      font-size: $font-size-3xl;
+      font-weight: 700;
+      color: $text-light;
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-light, $primary-accent);
+        border-radius: 2px;
+      }
+    }
+
+    .section-description {
+      font-size: $font-size-lg;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: $spacing-xl;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.advantage-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: $flat-elevation-3;
+  }
+}
+
+.advantage-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: $border-radius-lg;
+  color: $text-light;
+  font-size: $font-size-2xl;
+  margin-bottom: $spacing-lg;
+  box-shadow: $flat-elevation-2;
+}
+
+.advantage-content {
+  .advantage-title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $text-light;
+    margin-bottom: $spacing-md;
+  }
+
+  .advantage-description {
+    font-size: $font-size-base;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+.advantage-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.detail-tag {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: $border-radius-sm;
+  font-size: $font-size-xs;
+  color: $text-light;
+  font-weight: 500;
+  transition: all $transition-normal;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .core-advantages {
+    padding: $spacing-2xl 0;
+  }
+
+  .core-advantages__section-title {
+    font-size: $font-size-2xl;
+  }
+
+  .core-advantages__section-description {
+    font-size: $font-size-base;
+  }
+
+  .advantage-card {
+    padding: $spacing-lg;
+  }
+
+  .advantage-icon {
+    width: 60px;
+    height: 60px;
+    font-size: $font-size-xl;
+  }
+
+  .advantage-title {
+    font-size: $font-size-lg;
+  }
+
+  .advantage-details {
+    gap: $spacing-xs;
+  }
+
+  .detail-tag {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}

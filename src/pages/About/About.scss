@@ -1,0 +1,185 @@
+@use "../../css/variables" as *;
+
+.about-page {
+  // 确保页面整体样式统一
+  background-color: $background-light;
+
+  // 页面级别的间距优化
+  section {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  // 统一的容器样式
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // 统一的标题样式
+  .section-title {
+    font-size: $font-size-4xl;
+    font-weight: 700;
+    color: $text-primary;
+    text-align: center;
+    margin-bottom: $spacing-md;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: $primary-color;
+      border-radius: $border-radius-sm;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  // 统一的副标题样式
+  .section-subtitle {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-base;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-sm;
+    }
+  }
+
+  // 统一的描述文本样式
+  .section-description {
+    font-size: $font-size-base;
+    color: $text-secondary;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto $spacing-xl;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-lg;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-xs;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  // 统一的卡片样式
+  .card {
+    background: $background-light;
+    border-radius: $border-radius-lg;
+    box-shadow: $flat-elevation-1;
+    border: 1px solid $border-light;
+    transition: all $transition-normal;
+
+    &:hover {
+      box-shadow: $flat-elevation-2;
+      transform: translateY(-2px);
+    }
+  }
+
+  // 统一的按钮样式
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-sm $spacing-lg;
+    border: none;
+    border-radius: $border-radius-md;
+    font-size: $font-size-base;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all $transition-normal;
+    box-shadow: $flat-elevation-1;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: $flat-elevation-2;
+    }
+
+    &--primary {
+      background-color: $primary-color;
+      color: $text-light;
+
+      &:hover {
+        background-color: $primary-light;
+      }
+    }
+
+    &--secondary {
+      background-color: $secondary-color;
+      color: $text-primary;
+      border: 1px solid $border-color;
+
+      &:hover {
+        background-color: $secondary-dark;
+      }
+    }
+  }
+
+  // 统一的网格布局
+  .grid {
+    display: grid;
+    gap: $spacing-lg;
+
+    &--2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &--3 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    &--4 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    @media (max-width: $breakpoint-md) {
+      gap: $spacing-md;
+
+      &--2,
+      &--3,
+      &--4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      gap: $spacing-sm;
+    }
+  }
+
+  // 统一的动画效果
+  .fade-in {
+    animation: fadeIn $transition-slow ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp $transition-slow ease-out;
+  }
+
+  .scale-in {
+    animation: scaleIn $transition-normal ease-out;
+  }
+}

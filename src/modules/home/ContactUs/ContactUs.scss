@@ -1,0 +1,218 @@
+@use "../../../css/variables" as *;
+
+.contact-us {
+  padding: $spacing-3xl 0;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+  color: $text-light;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+
+    .section-title {
+      font-size: $font-size-3xl;
+      font-weight: 700;
+      color: $text-light;
+      margin-bottom: $spacing-md;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, $primary-light, $primary-accent);
+        border-radius: 2px;
+      }
+    }
+
+    .section-description {
+      font-size: $font-size-lg;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $spacing-xl;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(10px);
+  transition: all $transition-normal;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: $border-radius-md;
+  color: $text-light;
+  font-size: $font-size-lg;
+  flex-shrink: 0;
+}
+
+.contact-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-label {
+  font-size: $font-size-base;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  color: $text-light;
+}
+
+.contact-value {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+// 地图区域
+.map-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// 地图区域
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  background: linear-gradient(135deg, $primary-light 0%, $primary-accent 100%);
+  border-radius: $border-radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl;
+  color: $text-light;
+  box-shadow: $flat-elevation-2;
+  transition: all $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $flat-elevation-3;
+  }
+}
+
+.map-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.map-icon {
+  font-size: $font-size-3xl;
+  color: $text-light;
+  flex-shrink: 0;
+  margin-bottom: $spacing-lg;
+}
+
+.map-details {
+  flex: 1;
+}
+
+.map-title {
+  font-size: $font-size-lg;
+  font-weight: 600;
+  margin-bottom: $spacing-sm;
+  color: $text-light;
+}
+
+.map-address {
+  font-size: $font-size-base;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+// 响应式设计
+@media (max-width: $breakpoint-sm) {
+  .contact-us {
+    padding: $spacing-2xl 0;
+  }
+
+  .contact-title {
+    font-size: $font-size-2xl;
+  }
+
+  .contact-subtitle {
+    font-size: $font-size-base;
+  }
+
+  .contact-item {
+    padding: $spacing-md;
+  }
+
+  .address-card {
+    padding: $spacing-md;
+  }
+
+  .map-placeholder {
+    max-height: 200px;
+  }
+
+  .map-icon {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-md;
+  }
+
+  .map-title {
+    font-size: $font-size-base;
+  }
+
+  .map-address {
+    font-size: $font-size-sm;
+  }
+}

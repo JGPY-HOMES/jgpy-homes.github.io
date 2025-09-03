@@ -1,0 +1,144 @@
+@use "../../css/variables" as *;
+
+.baidu-map {
+  background: $background-white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: $shadow-xl;
+  margin-bottom: 40px;
+
+  &__header {
+    background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+    color: $text-light;
+    padding: 24px;
+    text-align: center;
+
+    .baidu-map__title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: $text-light;
+    }
+
+    .baidu-map__subtitle {
+      font-size: 1rem;
+      margin: 0;
+      opacity: 0.9;
+      color: $text-light;
+    }
+  }
+
+  &__container {
+    height: 500px;
+    width: 100%;
+    position: relative;
+
+    // 百度地图容器样式
+    .BMap_bubble_title {
+      font-weight: 600;
+      color: $text-primary;
+    }
+
+    .BMap_bubble_content {
+      color: $text-secondary;
+    }
+  }
+
+  // 地图加载失败时的备用样式
+  .map-fallback {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      $background-light 0%,
+      $background-muted 100%
+    );
+    color: $text-primary;
+
+    &__content {
+      text-align: center;
+      padding: 20px;
+      max-width: 300px;
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 0 0 12px 0;
+        color: $primary-color;
+      }
+
+      p {
+        margin: 0 0 16px 0;
+        color: $text-muted;
+        line-height: 1.5;
+      }
+
+      .map-fallback__info {
+        background: $background-white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: $shadow-md;
+
+        h4 {
+          font-size: 1.1rem;
+          margin: 0 0 12px 0;
+          color: $text-primary;
+        }
+
+        p {
+          margin: 0 0 8px 0;
+          font-size: 0.9rem;
+          color: $text-secondary;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+
+    &__header {
+      padding: 20px;
+
+      .baidu-map__title {
+        font-size: 1.2rem;
+      }
+
+      .baidu-map__subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__container {
+      height: 400px;
+    }
+
+    .map-fallback {
+      &__content {
+        padding: 16px;
+        max-width: 280px;
+
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        .map-fallback__info {
+          padding: 14px;
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}

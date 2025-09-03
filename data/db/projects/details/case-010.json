@@ -1,0 +1,169 @@
+{
+  "id": "case-010",
+  "title": "工业风格loft",
+  "subtitle": "粗犷与精致的完美平衡",
+  "description": "这个工业风格loft设计将粗犷的工业元素与精致的现代家具完美结合，营造出独特的空间氛围。",
+  "categoryId": "home-decoration-industrial",
+  "serviceId": "home-decoration",
+  "tags": ["工业风格", "loft", "粗犷", "精致"],
+  "images": [
+    "/src/assets/images/projects/case/1.jpg",
+    "/src/assets/images/projects/case/2.jpg",
+    "/src/assets/images/projects/case/3.jpg"
+  ],
+  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "area": 110,
+  "style": "工业风格",
+  "budget": "28万",
+  "duration": "3个月",
+  "location": "西安市雁塔区",
+  "status": "completed",
+  "createdAt": "2024-02-15T00:00:00Z",
+  "updatedAt": "2024-02-15T00:00:00Z",
+  "featured": false,
+  "viewCount": 680,
+  "likeCount": 42,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个工业风格loft位于西安市雁塔区，建筑面积110平方米。业主是一位年轻的艺术家，希望打造一个既有个性又实用的居住空间。设计师在充分了解业主需求后，决定采用工业风格设计，将粗犷的工业元素与精致的现代家具完美结合，营造出独特的空间氛围。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "title": "Loft整体设计",
+      "description": "Loft采用了工业风格的设计理念，以裸露的砖墙、水泥地面和金属元素为主。空间采用了开放式的设计，增加了空间的通透感和层次感。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "Loft的设计注重粗犷与精致的平衡。墙面采用了裸露的砖墙设计，既有个性又具有历史感。地面采用了水泥地面，既美观又耐用。金属元素的使用增加了工业感，而精致的家具和装饰品则平衡了整体的粗糙感。",
+      "title": "Loft设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "工业元素运用",
+      "description": "工业元素包括裸露的砖墙、水泥地面、金属管道、铁艺装饰等。这些元素的运用营造出了浓厚的工业氛围，同时通过精心的搭配，避免了过于粗糙的感觉。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "title": "生活区设计",
+      "description": "生活区采用了开放式的设计，包括客厅、餐厅和厨房。家具选择了现代简约的款式，与工业元素形成了很好的对比。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "生活区的设计注重功能性和美观性的结合。沙发选择了现代简约的款式，既舒适又美观。餐桌选择了金属和木质的组合，既现代又实用。厨房采用了开放式的设计，与客厅相连，增加了空间的通透感。",
+      "title": "生活区设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "卧室设计",
+      "description": "卧室延续了整体的工业风格，以深色调为主。床品选择了简约的款式，与整体风格保持一致。墙面装饰选择了工业风格的艺术品，增加了空间的个性。",
+      "order": 7
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/kitchen-3.jpg",
+      "title": "照明设计",
+      "description": "照明设计采用了工业风格的灯具，包括吊灯、壁灯和台灯。灯具的选择注重功能性和装饰性的结合，为空间提供了良好的照明效果。",
+      "order": 8
+    }
+  ],
+  "clientInfo": {
+    "name": "西安艺术家",
+    "feedback": "设计师非常专业，能够准确理解我对工业风格loft的需求。整个设计既有个性又实用，让我的居住空间充满了艺术气息。特别是工业元素的运用，让整个空间充满了独特的魅力。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "赵设计师",
+    "projectManager": "孙项目经理"
+  },
+  "materials": [
+    {
+      "name": "地面材料",
+      "brand": "水泥地面",
+      "price": 80
+    },
+    {
+      "name": "墙面材料",
+      "brand": "裸露砖墙",
+      "price": 60
+    },
+    {
+      "name": "金属元素",
+      "brand": "工业金属",
+      "price": 200
+    },
+    {
+      "name": "家具",
+      "brand": "现代家具",
+      "price": 20000
+    },
+    {
+      "name": "灯具",
+      "brand": "工业灯具",
+      "price": 5000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-02-15",
+      "endDate": "2024-02-28",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-03-01",
+      "endDate": "2024-03-10",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-25",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-04-10",
+      "description": "地面处理，墙面处理等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-04-11",
+      "endDate": "2024-04-25",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-04-26",
+      "endDate": "2024-05-05",
+      "description": "墙面处理，刷漆等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-05-06",
+      "endDate": "2024-05-15",
+      "description": "安装灯具，家具等"
+    }
+  ]
+}

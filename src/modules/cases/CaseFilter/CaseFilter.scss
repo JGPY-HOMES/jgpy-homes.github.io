@@ -1,0 +1,216 @@
+@use "../../../css/variables" as *;
+
+.case-filter {
+  background: $background-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $flat-elevation-1;
+  margin-bottom: $spacing-xl;
+  transition: all $transition-normal;
+  z-index: 100;
+  position: relative;
+
+  &__container {
+    padding: $spacing-lg;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  &__header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $text-primary;
+    margin: 0;
+  }
+
+  &__clear {
+    background: none;
+    border: 1px solid $border-color;
+    color: $text-secondary;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: $background-muted;
+      border-color: $border-dark;
+      color: $text-primary;
+    }
+  }
+
+  &__mobile-toggle {
+    display: none;
+    background: $primary-color;
+    border: none;
+    color: $text-light;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    transition: all $transition-fast;
+    min-width: 60px;
+    box-shadow: $flat-elevation-1;
+
+    &:hover {
+      background: $primary-light;
+      transform: translateY(-1px);
+      box-shadow: $flat-elevation-2;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: $flat-elevation-1;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    transition: all $transition-slow;
+
+    @media (max-width: $breakpoint-md) {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  // 移动端展开状态
+  &--mobile-expanded &__content {
+    @media (max-width: $breakpoint-md) {
+      max-height: 1000px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__section {
+    &-title {
+      font-size: $font-size-base;
+      font-weight: 600;
+      color: $text-primary;
+      margin: 0 0 $spacing-md 0;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  &__option {
+    &-button {
+      background: $background-muted;
+      border: 1px solid $border-color;
+      color: $text-secondary;
+      padding: $spacing-sm $spacing-md;
+      border-radius: $border-radius-xl;
+      cursor: pointer;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      transition: all $transition-fast;
+      white-space: nowrap;
+      box-shadow: $shadow-sm;
+
+      &:hover {
+        background: $secondary-dark;
+        border-color: $border-dark;
+        color: $text-primary;
+        transform: translateY(-1px);
+        box-shadow: $shadow-md;
+      }
+
+      &--active {
+        background: $primary-color;
+        border-color: $primary-color;
+        color: $text-light;
+        box-shadow: $flat-elevation-1;
+
+        &:hover {
+          background: $primary-light;
+          border-color: $primary-light;
+          transform: translateY(-1px);
+          box-shadow: $flat-elevation-2;
+        }
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: $spacing-lg;
+    border-radius: $border-radius-md;
+    box-shadow: $flat-elevation-1;
+
+    &__container {
+      padding: $spacing-md;
+    }
+
+    &__header {
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-md;
+      margin-bottom: $spacing-md;
+    }
+
+    &__title {
+      font-size: $font-size-lg;
+      flex: 1;
+    }
+
+    &__header-actions {
+      gap: $spacing-sm;
+    }
+
+    &__content {
+      gap: $spacing-md;
+    }
+
+    &__options {
+      gap: $spacing-xs;
+    }
+
+    &__option-button {
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-xs;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    &__container {
+      padding: $spacing-sm;
+    }
+
+    &__options {
+      flex-direction: column;
+    }
+
+    &__option-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

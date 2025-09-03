@@ -1,0 +1,52 @@
+{
+  "name": "hnjygpzs-website",
+  "version": "1.0.0",
+  "description": "河南交个朋友装饰有限公司官方网站",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 20",
+    "format": "prettier --write src",
+    "deploy": "./scripts/deploy.sh",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "font-awesome": "^4.7.0",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.14.2",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "gh-pages": "^6.3.0",
+    "husky": "^9.1.7",
+    "postcss": "^8.4.24",
+    "prettier": "^3.0.2",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6",
+    "vite": "7.0.6",
+    "vite-plugin-pwa": "1.0.2",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-svgr": "^4.2.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ]
+}
