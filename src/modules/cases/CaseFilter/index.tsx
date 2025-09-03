@@ -15,19 +15,32 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
 }) => {
   const [isSticky, setIsSticky] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
+  const [filterHeight, setFilterHeight] = useState(0);
+  const [isMobileExpanded, setIsMobileExpanded] = useState(false);
+  const filterRef = React.useRef<HTMLDivElement>(null);
 
   // 监听滚动，实现固定效果
   useEffect(() => {
     const handleScroll = () => {
-      const filterElement = document.querySelector('.case-filter');
-      if (filterElement) {
-        const rect = filterElement.getBoundingClientRect();
-        setIsSticky(rect.top <= 0);
+      if (filterRef.current) {
+        const rect = filterRef.current.getBoundingClientRect();
+        const shouldBeSticky = rect.top <= 0 && window.innerWidth > 768;
+        setIsSticky(shouldBeSticky);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // 获取筛选器高度
+    if (filterRef.current) {
+      setFilterHeight(filterRef.current.offsetHeight);
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   // 切换分类展开状态
@@ -94,6 +107,18 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
     });
   };
 
+  // 切换移动端筛选器展开状态
+  const toggleMobileExpanded = () => {
+    setIsMobileExpanded(!isMobileExpanded);
+  };
+
+  // 检查是否有活跃的筛选条件
+  const hasActiveFilters = currentFilters.serviceId || 
+                          currentFilters.categoryId || 
+                          currentFilters.style || 
+                          currentFilters.status || 
+                          currentFilters.featured;
+
   // 获取所有风格选项
   const getAllStyles = () => {
     const styles = new Set<string>();
@@ -112,17 +137,32 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
   const styles = getAllStyles();
 
   return (
-    <div className={`case-filter ${isSticky ? 'case-filter--sticky' : ''}`}>
-      <div className="case-filter__container">
-        <div className="case-filter__header">
-          <h3 className="case-filter__title">筛选条件</h3>
-          <button 
-            className="case-filter__clear"
-            onClick={clearAllFilters}
-          >
-            清空筛选
-          </button>
-        </div>
+    <>
+      {/* 占位符，防止sticky时布局跳动 */}
+      {isSticky && <div style={{ height: filterHeight }} />}
+      
+      <div 
+        ref={filterRef}
+        className={`case-filter ${isSticky ? 'case-filter--sticky' : ''} ${isMobileExpanded ? 'case-filter--mobile-expanded' : ''}`}
+      >
+        <div className="case-filter__container">
+          <div className="case-filter__header">
+            <h3 className="case-filter__title">筛选条件</h3>
+            <div className="case-filter__header-actions">
+              <button 
+                className="case-filter__clear"
+                onClick={clearAllFilters}
+              >
+                清空筛选
+              </button>
+              <button 
+                className="case-filter__mobile-toggle"
+                onClick={toggleMobileExpanded}
+              >
+                {isMobileExpanded ? '收起' : (hasActiveFilters ? '筛选中' : '展开')}
+              </button>
+            </div>
+          </div>
 
         <div className="case-filter__content">
           {/* 服务分类 */}
@@ -242,7 +282,8 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
