@@ -32,7 +32,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/loft-overview.jpg",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
       "title": "Loft整体设计",
       "description": "Loft采用了工业风格的设计理念，以裸露的砖墙、水泥地面和金属元素为主。空间采用了开放式的设计，增加了空间的通透感和层次感。",
       "order": 2
@@ -47,8 +47,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/industrial-elements-1.jpg",
-        "/src/assets/images/projects/case/industrial-elements-2.jpg"
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
       ],
       "title": "工业元素运用",
       "description": "工业元素包括裸露的砖墙、水泥地面、金属管道、铁艺装饰等。这些元素的运用营造出了浓厚的工业氛围，同时通过精心的搭配，避免了过于粗糙的感觉。",
@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/loft-living.jpg",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
       "title": "生活区设计",
       "description": "生活区采用了开放式的设计，包括客厅、餐厅和厨房。家具选择了现代简约的款式，与工业元素形成了很好的对比。",
       "order": 5
@@ -71,8 +71,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/loft-bedroom-1.jpg",
-        "/src/assets/images/projects/case/loft-bedroom-2.jpg"
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
       ],
       "title": "卧室设计",
       "description": "卧室延续了整体的工业风格，以深色调为主。床品选择了简约的款式，与整体风格保持一致。墙面装饰选择了工业风格的艺术品，增加了空间的个性。",
@@ -80,7 +80,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/loft-lighting.jpg",
+      "content": "/src/assets/images/projects/case/kitchen-3.jpg",
       "title": "照明设计",
       "description": "照明设计采用了工业风格的灯具，包括吊灯、壁灯和台灯。灯具的选择注重功能性和装饰性的结合，为空间提供了良好的照明效果。",
       "order": 8

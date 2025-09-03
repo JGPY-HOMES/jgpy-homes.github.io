@@ -33,7 +33,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/cafe-interior.jpg",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
       "title": "咖啡厅内部设计",
       "description": "咖啡厅内部采用了工业风格的设计理念，以暖色调和自然材料为主。墙面采用了裸露的砖墙设计，搭配暖黄色的灯光，营造出温馨舒适的氛围。",
       "order": 2
@@ -48,8 +48,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/coffee-bar-1.jpg",
-        "/src/assets/images/projects/case/coffee-bar-2.jpg"
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
       ],
       "title": "咖啡吧台设计",
       "description": "咖啡吧台采用了现代化的设计，配备了专业的咖啡设备。台面选择了深色的木质材料，既美观又实用。吧台下方设计了储物空间，提高了空间利用率。",
@@ -57,7 +57,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/seating-area.jpg",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
       "title": "座位区设计",
       "description": "座位区采用了多样化的设计，包括舒适的沙发区、高脚椅区和窗边座位。每个区域都经过精心设计，为不同类型的顾客提供合适的选择。",
       "order": 5
@@ -72,8 +72,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/outdoor-area-1.jpg",
-        "/src/assets/images/projects/case/outdoor-area-2.jpg"
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
       ],
       "title": "户外区域设计",
       "description": "户外区域采用了简约的设计，配备了舒适的户外家具。墙面采用了绿植装饰，营造出自然清新的氛围。",

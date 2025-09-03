@@ -32,7 +32,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/before-after.jpg",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
       "title": "改造前后对比",
       "description": "改造前的老房子存在空间布局不合理、采光不足、设施老化等问题。改造后采用了现代简约的设计，重新规划了空间布局，改善了采光条件，更新了所有设施。",
       "order": 2
@@ -47,8 +47,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/structural-work-1.jpg",
-        "/src/assets/images/projects/case/structural-work-2.jpg"
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
       ],
       "title": "结构改造",
       "description": "结构改造包括墙体加固、梁柱修复、地面找平等工作。通过专业的结构分析，确保了房屋的安全性和稳定性。",
@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/space-planning.jpg",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
       "title": "空间规划",
       "description": "空间规划重新设计了各个功能区域，包括客厅、卧室、厨房、卫生间等。通过合理的布局，提高了空间利用率和居住舒适度。",
       "order": 5
@@ -71,8 +71,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/renovation-details-1.jpg",
-        "/src/assets/images/projects/case/renovation-details-2.jpg"
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
       ],
       "title": "改造细节",
       "description": "改造细节包括墙面处理、地面铺装、门窗更换、水电改造等。每个细节都经过精心设计，确保改造质量和效果。",

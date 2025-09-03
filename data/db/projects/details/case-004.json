@@ -32,7 +32,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/open-office.jpg",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
       "title": "开放式办公区",
       "description": "开放式办公区采用了现代简约的设计理念，以白色和灰色为主色调。办公桌选择了可调节高度的款式，搭配舒适的办公椅，为员工提供灵活的工作环境。",
       "order": 2
@@ -47,8 +47,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/meeting-room-1.jpg",
-        "/src/assets/images/projects/case/meeting-room-2.jpg"
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
       ],
       "title": "会议室设计",
       "description": "会议室采用了现代化的设计，配备了先进的视频会议设备。墙面采用了吸音材料，确保会议的音质效果。桌椅选择了舒适的款式，为长时间的会议提供良好的体验。",
@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/reception.jpg",
+      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
       "title": "接待区设计",
       "description": "接待区采用了现代简约的设计，以白色和木色为主色调。前台选择了简约的款式，搭配舒适的沙发，为来访者提供良好的第一印象。",
       "order": 5
@@ -71,8 +71,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/break-room-1.jpg",
-        "/src/assets/images/projects/case/break-room-2.jpg"
+        "/src/assets/images/projects/case/bathroom-1.jpg",
+        "/src/assets/images/projects/case/bathroom-2.jpg"
       ],
       "title": "休息区设计",
       "description": "休息区采用了舒适的设计，配备了咖啡机、冰箱等设备。沙发选择了舒适的款式，为员工提供放松的环境。墙面采用了温馨的色彩，营造出轻松的氛围。",
