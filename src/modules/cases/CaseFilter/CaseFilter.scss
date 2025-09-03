@@ -9,67 +9,13 @@
   z-index: 100;
   position: relative;
 
-  &--sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    border-radius: 0;
-    box-shadow: $flat-elevation-2;
-    margin-bottom: 0;
-    max-height: 80vh;
-    overflow-y: auto;
 
-    .case-filter__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    // 在移动端禁用sticky效果
-    @media (max-width: $breakpoint-md) {
-      position: static;
-      border-radius: $border-radius-lg;
-      box-shadow: $flat-elevation-1;
-      margin-bottom: $spacing-xl;
-      max-height: none;
-      overflow-y: visible;
-
-      .case-filter__container {
-        padding: $spacing-lg;
-      }
-    }
-  }
 
   &__container {
     padding: $spacing-lg;
   }
 
-  // 确保sticky状态下内容不会溢出
-  &--sticky &__content {
-    max-height: calc(80vh - 80px);
-    overflow-y: auto;
-    
-    // 自定义滚动条样式
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-    
-    &::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 3px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      background: #c1c1c1;
-      border-radius: 3px;
-      
-      &:hover {
-        background: #a8a8a8;
-      }
-    }
-  }
+
 
   &__header {
     display: flex;
@@ -256,11 +202,7 @@
       font-size: $font-size-xs;
     }
 
-    &--sticky {
-      .case-filter__container {
-        padding: $spacing-md $spacing-lg;
-      }
-    }
+
   }
 
   @media (max-width: $breakpoint-sm) {

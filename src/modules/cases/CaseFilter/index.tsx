@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { CaseCategory, CaseFilterParams } from '@/entities';
 import './CaseFilter.scss';
 
@@ -13,46 +13,9 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
   onFilterChange,
   currentFilters
 }) => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
-  const [filterHeight, setFilterHeight] = useState(0);
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
-  const filterRef = React.useRef<HTMLDivElement>(null);
 
-  // 监听滚动，实现固定效果
-  useEffect(() => {
-    const handleScroll = () => {
-      if (filterRef.current) {
-        const rect = filterRef.current.getBoundingClientRect();
-        const shouldBeSticky = rect.top <= 0 && window.innerWidth > 768;
-        setIsSticky(shouldBeSticky);
-      }
-    };
 
-    // 获取筛选器高度
-    if (filterRef.current) {
-      setFilterHeight(filterRef.current.offsetHeight);
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
-
-  // 切换分类展开状态
-  const toggleCategory = (categoryId: string) => {
-    const newExpanded = new Set(expandedCategories);
-    if (newExpanded.has(categoryId)) {
-      newExpanded.delete(categoryId);
-    } else {
-      newExpanded.add(categoryId);
-    }
-    setExpandedCategories(newExpanded);
-  };
 
   // 处理分类选择
   const handleCategorySelect = (categoryId: string) => {
@@ -137,14 +100,7 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
   const styles = getAllStyles();
 
   return (
-    <>
-      {/* 占位符，防止sticky时布局跳动 */}
-      {isSticky && <div style={{ height: filterHeight }} />}
-      
-      <div 
-        ref={filterRef}
-        className={`case-filter ${isSticky ? 'case-filter--sticky' : ''} ${isMobileExpanded ? 'case-filter--mobile-expanded' : ''}`}
-      >
+    <div className={`case-filter ${isMobileExpanded ? 'case-filter--mobile-expanded' : ''}`}>
         <div className="case-filter__container">
           <div className="case-filter__header">
             <h3 className="case-filter__title">筛选条件</h3>
@@ -282,8 +238,7 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
             </div>
           </div>
         </div>
-        </div>
       </div>
-    </>
+    </div>
   );
 };
