@@ -34,3 +34,15 @@ export type {
   HistoryItem,
   ValueItem
 } from './about.entity';
+
+// Case types
+export type {
+  CaseCategory,
+  Case,
+  CaseDetail,
+  CaseContent,
+  CaseCarouselItem,
+  CaseListResponse,
+  CaseFilterParams,
+  CasesPageData
+} from './case.entity';

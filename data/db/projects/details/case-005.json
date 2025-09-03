@@ -1,0 +1,163 @@
+{
+  "id": "case-005",
+  "title": "精品咖啡厅",
+  "subtitle": "温馨舒适的咖啡时光",
+  "description": "这个精品咖啡厅设计注重营造温馨舒适的氛围，采用暖色调和自然材料，为顾客提供放松愉悦的咖啡体验。",
+  "categoryId": "commercial-restaurant",
+  "serviceId": "commercial-decoration",
+  "tags": ["咖啡厅", "温馨", "精品", "舒适"],
+  "images": [
+    "/src/assets/images/projects/case/1.jpg",
+    "/src/assets/images/projects/case/2.jpg",
+    "/src/assets/images/projects/case/3.jpg",
+    "/src/assets/images/projects/case/4.jpg"
+  ],
+  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "area": 120,
+  "style": "工业风格",
+  "budget": "35万",
+  "duration": "2个月",
+  "location": "杭州市西湖区",
+  "status": "completed",
+  "createdAt": "2024-01-25T00:00:00Z",
+  "updatedAt": "2024-01-25T00:00:00Z",
+  "featured": true,
+  "viewCount": 890,
+  "likeCount": 72,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个精品咖啡厅位于杭州市西湖区，建筑面积120平方米。业主是一位咖啡爱好者，希望打造一个既温馨又具有个性的咖啡空间。设计师在充分了解业主需求后，决定采用工业风格设计，注重营造温馨舒适的氛围，采用暖色调和自然材料，为顾客提供放松愉悦的咖啡体验。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/cafe-interior.jpg",
+      "title": "咖啡厅内部设计",
+      "description": "咖啡厅内部采用了工业风格的设计理念，以暖色调和自然材料为主。墙面采用了裸露的砖墙设计，搭配暖黄色的灯光，营造出温馨舒适的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "咖啡厅的设计注重营造温馨舒适的氛围。座椅选择了舒适的布艺沙发和木质椅子，为顾客提供良好的体验。墙面采用了暖色调的装饰，搭配绿植和艺术品，营造出自然清新的氛围。照明系统采用了柔和的灯光，为顾客提供舒适的阅读和工作环境。",
+      "title": "咖啡厅设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/coffee-bar-1.jpg",
+        "/src/assets/images/projects/case/coffee-bar-2.jpg"
+      ],
+      "title": "咖啡吧台设计",
+      "description": "咖啡吧台采用了现代化的设计，配备了专业的咖啡设备。台面选择了深色的木质材料，既美观又实用。吧台下方设计了储物空间，提高了空间利用率。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/seating-area.jpg",
+      "title": "座位区设计",
+      "description": "座位区采用了多样化的设计，包括舒适的沙发区、高脚椅区和窗边座位。每个区域都经过精心设计，为不同类型的顾客提供合适的选择。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "座位区的设计注重舒适性和功能性。沙发区适合朋友聚会和休闲阅读，高脚椅区适合快速消费的顾客，窗边座位则为喜欢观景的顾客提供选择。每个座位都配备了电源插座，方便顾客使用电子设备。",
+      "title": "座位区设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/outdoor-area-1.jpg",
+        "/src/assets/images/projects/case/outdoor-area-2.jpg"
+      ],
+      "title": "户外区域设计",
+      "description": "户外区域采用了简约的设计，配备了舒适的户外家具。墙面采用了绿植装饰，营造出自然清新的氛围。",
+      "order": 7
+    }
+  ],
+  "clientInfo": {
+    "name": "杭州咖啡厅",
+    "feedback": "设计师非常专业，能够准确理解我们对咖啡厅环境的需求。整个设计既温馨又有个性，顾客们都非常喜欢新的环境。特别是工业风格的设计，既现代又温暖，营造出了独特的咖啡文化氛围。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "周设计师",
+    "projectManager": "吴项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "大自然",
+      "price": 200
+    },
+    {
+      "name": "墙面材料",
+      "brand": "立邦",
+      "price": 50
+    },
+    {
+      "name": "咖啡设备",
+      "brand": "La Marzocco",
+      "price": 80000
+    },
+    {
+      "name": "家具",
+      "brand": "宜家",
+      "price": 15000
+    },
+    {
+      "name": "照明",
+      "brand": "飞利浦",
+      "price": 8000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-25",
+      "endDate": "2024-02-05",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-02-06",
+      "endDate": "2024-02-15",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-02-16",
+      "endDate": "2024-02-25",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-02-26",
+      "endDate": "2024-03-10",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-20",
+      "description": "制作吧台，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-03-21",
+      "endDate": "2024-03-25",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-03-30",
+      "description": "安装灯具，咖啡设备，家具等"
+    }
+  ]
+}

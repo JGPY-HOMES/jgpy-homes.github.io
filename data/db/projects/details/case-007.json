@@ -1,0 +1,159 @@
+{
+  "id": "case-007",
+  "title": "庭院景观设计",
+  "subtitle": "自然与艺术的完美融合",
+  "description": "这个庭院景观设计将自然元素与艺术设计完美结合，营造出宁静优雅的户外空间，为居住者提供放松身心的环境。",
+  "categoryId": "landscape-garden",
+  "serviceId": "landscape-design",
+  "tags": ["庭院", "景观", "自然", "艺术"],
+  "images": [
+    "/src/assets/images/projects/case/1.jpg",
+    "/src/assets/images/projects/case/2.jpg",
+    "/src/assets/images/projects/case/3.jpg",
+    "/src/assets/images/projects/case/4.jpg"
+  ],
+  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "area": 200,
+  "style": "现代简约",
+  "budget": "45万",
+  "duration": "3个月",
+  "location": "南京市鼓楼区",
+  "status": "completed",
+  "createdAt": "2024-02-01T00:00:00Z",
+  "updatedAt": "2024-02-01T00:00:00Z",
+  "featured": true,
+  "viewCount": 1100,
+  "likeCount": 83,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个庭院景观设计位于南京市鼓楼区，面积200平方米。业主是一位成功的企业家，希望打造一个既美观又实用的庭院空间。设计师在充分了解业主需求后，决定采用现代简约风格，将自然元素与艺术设计完美结合，营造出宁静优雅的户外空间，为居住者提供放松身心的环境。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/garden-overview.jpg",
+      "title": "庭院整体设计",
+      "description": "庭院采用了现代简约的设计理念，以自然元素为主。地面采用了石材和木质的组合，搭配丰富的植物，营造出自然清新的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "庭院的设计注重自然与艺术的结合。植物选择了四季常青的品种，确保庭院全年都有绿色。地面材料选择了天然石材和防腐木材，既美观又耐用。水景设计采用了简约的造型，为庭院增添了动感和声音。",
+      "title": "庭院设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/water-feature-1.jpg",
+        "/src/assets/images/projects/case/water-feature-2.jpg"
+      ],
+      "title": "水景设计",
+      "description": "水景采用了简约的设计，包括一个小型喷泉和浅水池。喷泉采用了现代简约的造型，为庭院增添了动感和声音。浅水池中种植了水生植物，营造出自然生态的氛围。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/seating-area.jpg",
+      "title": "休息区设计",
+      "description": "休息区采用了舒适的户外家具，包括沙发和茶几。地面采用了防腐木材，既美观又实用。周围种植了高大的植物，为休息区提供了良好的私密性。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "休息区的设计注重舒适性和私密性。家具选择了防水的户外款式，既美观又实用。地面采用了防腐木材，既美观又耐用。周围种植了高大的植物，为休息区提供了良好的私密性和遮阳效果。",
+      "title": "休息区设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/planting-1.jpg",
+        "/src/assets/images/projects/case/planting-2.jpg"
+      ],
+      "title": "植物配置",
+      "description": "植物配置注重层次和色彩的变化。高大的乔木提供了良好的遮阳效果，中层的灌木增加了层次感，地被植物覆盖了地面，营造出丰富的植物景观。",
+      "order": 7
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/lighting.jpg",
+      "title": "照明设计",
+      "description": "照明设计采用了柔和的灯光，包括地面灯和树灯。地面灯照亮了主要通道，树灯为植物提供了装饰性的照明，营造出温馨的夜间氛围。",
+      "order": 8
+    }
+  ],
+  "clientInfo": {
+    "name": "南京企业家",
+    "feedback": "设计师非常专业，能够准确理解我们对庭院景观的需求。整个设计既美观又实用，让我们的庭院变成了一个真正的休闲空间。特别是水景和植物的搭配，让整个庭院充满了生机和活力。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "林设计师",
+    "landscapeArchitect": "黄景观师",
+    "projectManager": "马项目经理"
+  },
+  "materials": [
+    {
+      "name": "石材",
+      "brand": "天然石材",
+      "price": 200
+    },
+    {
+      "name": "防腐木",
+      "brand": "芬兰木",
+      "price": 300
+    },
+    {
+      "name": "植物",
+      "brand": "园林植物",
+      "price": 50000
+    },
+    {
+      "name": "水景设备",
+      "brand": "水景设备",
+      "price": 15000
+    },
+    {
+      "name": "照明",
+      "brand": "飞利浦",
+      "price": 8000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-02-01",
+      "endDate": "2024-02-15",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "土方工程",
+      "startDate": "2024-02-16",
+      "endDate": "2024-02-25",
+      "description": "土方开挖，地形整理，基础施工"
+    },
+    {
+      "phase": "硬质景观",
+      "startDate": "2024-02-26",
+      "endDate": "2024-03-15",
+      "description": "石材铺装，水景施工，构筑物建设"
+    },
+    {
+      "phase": "植物种植",
+      "startDate": "2024-03-16",
+      "endDate": "2024-03-25",
+      "description": "植物种植，草坪铺设，植物养护"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-03-30",
+      "description": "照明安装，设备调试，细节调整"
+    }
+  ]
+}

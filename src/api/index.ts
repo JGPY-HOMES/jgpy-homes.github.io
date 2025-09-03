@@ -4,6 +4,9 @@ export { default as ServicesApi } from './services.api';
 export { default as AboutApi } from './about.api';
 export { default as apiClient } from './config';
 
+// Export case API functions
+export * from './cases.api';
+
 // Re-export types from entities for convenience
 export type {
   CompanyInfo,
@@ -13,5 +16,13 @@ export type {
   ContactInfo,
   ContactPageData,
   Service,
-  ServicesPageData
+  ServicesPageData,
+  CaseCategory,
+  Case,
+  CaseDetail,
+  CaseContent,
+  CaseCarouselItem,
+  CaseListResponse,
+  CaseFilterParams,
+  CasesPageData
 } from '@/entities';

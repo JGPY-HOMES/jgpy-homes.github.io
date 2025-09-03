@@ -1,0 +1,146 @@
+{
+  "id": "case-002",
+  "title": "北欧风格两居室",
+  "subtitle": "自然清新的北欧风情",
+  "description": "这套两居室采用北欧风格设计，大量使用原木元素和自然色彩，营造出清新自然的居住氛围。设计师注重功能性和美观性的完美结合。",
+  "categoryId": "home-decoration-nordic",
+  "serviceId": "home-decoration",
+  "tags": ["北欧风格", "两居室", "原木", "清新"],
+  "images": [
+    "/src/assets/images/projects/case/1.jpg",
+    "/src/assets/images/projects/case/2.jpg",
+    "/src/assets/images/projects/case/3.jpg"
+  ],
+  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "area": 85,
+  "style": "北欧风格",
+  "budget": "18万",
+  "duration": "2.5个月",
+  "location": "上海市浦东新区",
+  "status": "completed",
+  "createdAt": "2024-01-10T00:00:00Z",
+  "updatedAt": "2024-01-10T00:00:00Z",
+  "featured": true,
+  "viewCount": 980,
+  "likeCount": 67,
+  "content": [
+    {
+      "type": "text",
+      "content": "这套两居室位于上海市浦东新区，建筑面积85平方米。业主是一位年轻的单身女性，喜欢自然清新的北欧风格。设计师在充分了解业主需求后，决定采用北欧风格设计，大量使用原木元素和自然色彩，营造出清新自然的居住氛围。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "title": "客厅设计",
+      "description": "客厅采用了北欧风格的设计理念，以白色和原木色为主色调。沙发选择了浅灰色的布艺沙发，搭配原木色的茶几，营造出温馨自然的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "客厅的设计注重自然光线的利用，大面积的窗户让阳光充分洒进室内。墙面选择了白色乳胶漆，搭配原木色的装饰画，简约而不失温馨。地毯选择了浅灰色的羊毛地毯，既美观又舒适。",
+      "title": "客厅设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/src/assets/images/projects/case/kitchen-1.jpg",
+        "/src/assets/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "厨房设计",
+      "description": "厨房采用了开放式的设计，与客厅相连，增加了空间的通透感。橱柜选择了白色烤漆面板，搭配原木色的台面，既美观又实用。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/src/assets/images/projects/case/bedroom.jpg",
+      "title": "卧室设计",
+      "description": "卧室延续了整体的北欧风格，床头背景墙采用了原木色的护墙板，与白色墙面形成对比。床品选择了素雅的白色和灰色，营造出宁静的睡眠环境。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "卧室的设计注重舒适性和实用性。衣柜采用了嵌入式设计，既节省空间又美观。床头柜选择了简约的款式，与整体风格保持一致。窗帘选择了透光性好的白色纱帘，让自然光线充分进入室内。",
+      "title": "卧室设计细节",
+      "order": 6
+    }
+  ],
+  "clientInfo": {
+    "name": "李女士",
+    "feedback": "设计师非常理解我的需求，整个设计既美观又实用。北欧风格的设计让我的家变得非常温馨，朋友们来家里都夸赞不已。特别是原木元素的使用，让整个空间充满了自然的气息。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "王设计师",
+    "projectManager": "刘项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "大自然",
+      "price": 320
+    },
+    {
+      "name": "瓷砖",
+      "brand": "诺贝尔",
+      "price": 150
+    },
+    {
+      "name": "橱柜",
+      "brand": "索菲亚",
+      "price": 6000
+    },
+    {
+      "name": "卫浴",
+      "brand": "TOTO",
+      "price": 4000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-10",
+      "endDate": "2024-01-25",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-01-26",
+      "endDate": "2024-02-05",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-02-06",
+      "endDate": "2024-02-20",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-02-21",
+      "endDate": "2024-03-10",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-25",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-04-05",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-04-06",
+      "endDate": "2024-04-15",
+      "description": "安装灯具，卫浴，家具等"
+    }
+  ]
+}

@@ -6,6 +6,8 @@ import { Contact } from './pages/Contact';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { About } from './pages/About';
+import { Cases } from './pages/Cases';
+import { CaseDetail } from './pages/CaseDetail';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/cases" element={<Cases />} />
+            <Route path="/cases/:id" element={<CaseDetail />} />
             {/* 其他路由配置 */}
           </Routes>
         </main>

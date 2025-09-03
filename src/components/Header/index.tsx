@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
   const navItems = [
     { path: '/', label: '首页', icon: FaHome },
     { path: '/services', label: '服务', icon: FaTools },
-    { path: '/projects', label: '案例', icon: FaImages },
+    { path: '/cases', label: '案例', icon: FaImages },
     { path: '/about', label: '关于我们', icon: FaInfoCircle },
     { path: '/contact', label: '联系我们', icon: FaPhone },
   ];
