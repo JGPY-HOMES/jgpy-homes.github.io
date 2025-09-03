@@ -1,4 +1,4 @@
-@use '../../../../css/variables' as *;
+@use "../../../../css/variables" as *;
 
 // 招聘模块样式
 .recruitment-header {
@@ -132,7 +132,7 @@
           padding-left: 12px;
 
           &::before {
-            content: '•';
+            content: "•";
             color: $primary-color;
             position: absolute;
             left: 0;

@@ -1,4 +1,4 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .team-expansion {
   padding: 60px 0;
@@ -21,7 +21,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 50%;
@@ -115,8 +115,6 @@
           text-align: center;
           margin-bottom: 32px;
         }
-
-
       }
     }
   }
@@ -160,8 +158,6 @@
           .panel-title {
             font-size: 1.6rem;
           }
-
-
         }
       }
     }

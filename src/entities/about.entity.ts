@@ -61,7 +61,7 @@ export interface BenefitCategory {
 export interface Activity {
   id: string;
   title: string;
-  type: 'company' | 'expansion';
+  type: "company" | "expansion";
   date: string;
   description: string;
   image: string;

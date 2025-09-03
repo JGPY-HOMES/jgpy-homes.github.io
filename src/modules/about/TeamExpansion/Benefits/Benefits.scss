@@ -1,4 +1,4 @@
-@use '../../../../css/variables' as *;
+@use "../../../../css/variables" as *;
 
 // 简洁列表样式
 .activities-list {
@@ -63,8 +63,6 @@
           margin: 0;
           flex: 1;
         }
-
-
       }
 
       .activity-meta {

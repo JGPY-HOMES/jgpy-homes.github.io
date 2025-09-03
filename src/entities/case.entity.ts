@@ -26,7 +26,7 @@ export interface Case {
   budget?: string; // 预算
   duration?: string; // 工期
   location?: string; // 位置
-  status: 'completed' | 'in-progress' | 'planning';
+  status: "completed" | "in-progress" | "planning";
   createdAt: string;
   updatedAt: string;
   featured: boolean; // 是否推荐
@@ -62,7 +62,7 @@ export interface CaseDetail extends Case {
 
 // 案例内容块
 export interface CaseContent {
-  type: 'text' | 'image' | 'gallery' | 'video' | 'before-after';
+  type: "text" | "image" | "gallery" | "video" | "before-after";
   content: string;
   images?: string[];
   title?: string;
@@ -108,8 +108,8 @@ export interface CaseFilterParams {
   };
   page?: number;
   pageSize?: number;
-  sortBy?: 'createdAt' | 'viewCount' | 'likeCount' | 'area';
-  sortOrder?: 'asc' | 'desc';
+  sortBy?: "createdAt" | "viewCount" | "likeCount" | "area";
+  sortOrder?: "asc" | "desc";
 }
 
 // 案例页面数据

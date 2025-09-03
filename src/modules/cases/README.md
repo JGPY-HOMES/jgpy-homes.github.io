@@ -7,23 +7,27 @@
 ## 功能特性
 
 ### 1. 案例轮播图 (CasesHero)
+
 - 展示精选案例的轮播图
 - 支持自动播放和手动切换
 - 响应式设计，适配各种屏幕尺寸
 
 ### 2. 案例筛选 (CaseFilter)
+
 - 基于服务分类的树形筛选结构
 - 支持按风格、状态、推荐等条件筛选
 - 固定滚动效果，提升用户体验
 - 实时更新URL参数，支持分享和书签
 
 ### 3. 案例列表 (CaseList)
+
 - 网格布局展示案例卡片
 - 支持无限滚动加载
 - 案例卡片包含封面图、标题、描述、标签等信息
 - 显示浏览量、点赞数等统计数据
 
 ### 4. 案例详情 (CaseDetail)
+
 - 完整的案例详情展示
 - 支持多种内容类型：文本、图片、图库等
 - 客户反馈、设计团队、项目时间线等信息
@@ -32,6 +36,7 @@
 ## 数据结构
 
 ### 案例分类 (CaseCategory)
+
 ```typescript
 interface CaseCategory {
   id: string;
@@ -46,6 +51,7 @@ interface CaseCategory {
 ```
 
 ### 案例信息 (Case)
+
 ```typescript
 interface Case {
   id: string;
@@ -62,7 +68,7 @@ interface Case {
   budget?: string;
   duration?: string;
   location?: string;
-  status: 'completed' | 'in-progress' | 'planning';
+  status: "completed" | "in-progress" | "planning";
   createdAt: string;
   updatedAt: string;
   featured: boolean;
@@ -74,39 +80,47 @@ interface Case {
 ## 数据文件
 
 ### 1. 分类数据
+
 - 文件位置: `data/db/projects/categories.json`
 - 包含基于服务分类的树形结构
 
 ### 2. 案例列表
+
 - 文件位置: `data/db/projects/cases.json`
 - 包含所有案例的基本信息
 
 ### 3. 案例详情
+
 - 文件位置: `data/db/projects/details/[case-id].json`
 - 每个案例的详细信息和内容
 
 ### 4. 轮播图数据
+
 - 文件位置: `data/db/projects/carousel.json`
 - 案例页面轮播图的数据
 
 ## API 接口
 
 ### 获取案例列表
+
 ```typescript
 getCases(params: CaseFilterParams): Promise<CaseListResponse>
 ```
 
 ### 获取案例详情
+
 ```typescript
 getCaseDetail(id: string): Promise<CaseDetail | null>
 ```
 
 ### 获取案例分类
+
 ```typescript
 getCaseCategories(): Promise<CaseCategory[]>
 ```
 
 ### 获取轮播图数据
+
 ```typescript
 getCaseCarousel(): Promise<CaseCarouselItem[]>
 ```
@@ -139,6 +153,7 @@ import { CaseDetail } from '@/pages/CaseDetail';
 ## 响应式设计
 
 所有组件都支持响应式设计：
+
 - 桌面端：完整功能展示
 - 平板端：适配中等屏幕
 - 移动端：优化触摸操作

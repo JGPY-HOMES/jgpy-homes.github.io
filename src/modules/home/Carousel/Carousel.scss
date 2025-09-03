@@ -1,4 +1,4 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .carousel {
   position: relative;
@@ -29,7 +29,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -45,11 +45,11 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(
-      135deg,
-      rgba(26, 95, 60, 0.8) 0%,
-      rgba(45, 122, 79, 0.7) 50%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
+    135deg,
+    rgba(26, 95, 60, 0.8) 0%,
+    rgba(45, 122, 79, 0.7) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,8 +63,10 @@
   font-size: $font-size-3xl;
   font-weight: 600;
   margin-bottom: $spacing-md;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
-  
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+
   @media (min-width: $breakpoint-lg) {
     font-size: $font-size-4xl;
   }
@@ -75,8 +77,10 @@
   margin-bottom: $spacing-lg;
   max-width: 600px;
   line-height: 1.6;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
-  
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+
   @media (min-width: $breakpoint-lg) {
     font-size: $font-size-xl;
   }
@@ -98,27 +102,27 @@
   transition: all $transition-normal;
   z-index: 10;
   box-shadow: $flat-elevation-1;
-  
+
   &:hover {
     background-color: $primary-color;
     color: $text-light;
     transform: translateY(-50%) scale(1.05);
     box-shadow: $flat-elevation-2;
   }
-  
+
   &:focus {
     outline: 2px solid $primary-color;
     outline-offset: 2px;
   }
-  
+
   &--prev {
     left: $spacing-lg;
   }
-  
+
   &--next {
     right: $spacing-lg;
   }
-  
+
   svg {
     width: 18px;
     height: 18px;
@@ -143,17 +147,17 @@
   border: none;
   cursor: pointer;
   transition: all $transition-normal;
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.2);
   }
-  
+
   &.active {
     background-color: $primary-color;
     transform: scale(1.2);
   }
-  
+
   &:focus {
     outline: 2px solid $primary-color;
     outline-offset: 2px;
@@ -165,26 +169,26 @@
   .carousel {
     height: 400px;
   }
-  
+
   .carousel-overlay {
     padding: $spacing-lg;
   }
-  
+
   .carousel-title {
     font-size: $font-size-2xl;
   }
-  
+
   .carousel-description {
     font-size: $font-size-base;
   }
-  
+
   .carousel-arrow {
     width: 40px;
     height: 40px;
-    
+
     svg {
       width: 16px;
       height: 16px;
     }
   }
-} 
+}

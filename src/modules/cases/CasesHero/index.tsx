@@ -1,7 +1,7 @@
-import React from 'react';
-import { Carousel } from '@/components/Carousel';
-import type { CaseCarouselItem } from '@/entities';
-import './CasesHero.scss';
+import React from "react";
+import { Carousel } from "@/components/Carousel";
+import type { CaseCarouselItem } from "@/entities";
+import "./CasesHero.scss";
 
 interface CasesHeroProps {
   carouselData: CaseCarouselItem[];

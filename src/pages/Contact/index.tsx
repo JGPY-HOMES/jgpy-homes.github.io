@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { ContactForm, ContactInfo, ContactHero, ContactHeader, ContactMapSection } from '../../modules/contact';
-import { PageLoader } from '../../components/PageLoader';
-import { ContactApi } from '../../api/contact.api';
-import type { ContactPageData } from '../../entities/contact.entity';
-import './Contact.scss';
+import React, { useState, useEffect } from "react";
+import {
+  ContactForm,
+  ContactInfo,
+  ContactHero,
+  ContactHeader,
+  ContactMapSection,
+} from "../../modules/contact";
+import { PageLoader } from "../../components/PageLoader";
+import { ContactApi } from "../../api/contact.api";
+import type { ContactPageData } from "../../entities/contact.entity";
+import "./Contact.scss";
 
 export const Contact: React.FC = () => {
   // 页面加载状态
@@ -17,7 +23,7 @@ export const Contact: React.FC = () => {
       const data = await ContactApi.getContactInfo();
       setContactData(data);
     } catch (error) {
-      console.error('获取联系页面数据失败:', error);
+      console.error("获取联系页面数据失败:", error);
     } finally {
       setIsLoading(false);
     }
@@ -30,14 +36,11 @@ export const Contact: React.FC = () => {
 
   // 加载完成回调
   const handleLoadComplete = () => {
-    console.log('Contact 页面加载完成');
+    console.log("Contact 页面加载完成");
   };
 
   return (
-    <PageLoader 
-      isLoading={isLoading} 
-      onLoadComplete={handleLoadComplete}
-    >
+    <PageLoader isLoading={isLoading} onLoadComplete={handleLoadComplete}>
       <div className="contact-page">
         {/* 轮播图部分 */}
         <ContactHero carousels={contactData?.carousels} />

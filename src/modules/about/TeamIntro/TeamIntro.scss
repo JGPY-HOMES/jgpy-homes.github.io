@@ -1,4 +1,4 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .team-intro {
   padding: 60px 0;
@@ -21,7 +21,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 50%;
@@ -63,13 +63,13 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
       transform: translateY(30px);
-      
+
       // 当统计项进入视口时显示
       &.animate {
         transform: translateY(0);
         opacity: 1;
       }
-      
+
       // 为每个统计项添加不同的延迟
       &:nth-child(1).animate {
         transition-delay: 0.1s;
@@ -100,12 +100,12 @@
         display: block;
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         transform: translateY(20px);
-        
+
         // 当数字动画开始时显示
         &.animate {
           transform: translateY(0);
         }
-        
+
         // 数字跳动效果
         .animated-number {
           display: inline-block;
@@ -120,7 +120,7 @@
         margin-bottom: 0;
         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         transform: translateY(15px);
-        
+
         // 当标签动画开始时显示
         &.animate {
           transform: translateY(0);

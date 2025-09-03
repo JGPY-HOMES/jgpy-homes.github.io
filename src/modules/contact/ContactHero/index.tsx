@@ -1,7 +1,7 @@
-import React from 'react';
-import { Carousel } from '../../../components/Carousel';
-import type { Carousel as CarouselType } from '../../../entities/contact.entity';
-import './ContactHero.scss';
+import React from "react";
+import { Carousel } from "../../../components/Carousel";
+import type { Carousel as CarouselType } from "../../../entities/contact.entity";
+import "./ContactHero.scss";
 
 interface ContactHeroProps {
   carousels?: CarouselType[];
@@ -15,7 +15,7 @@ export const ContactHero: React.FC<ContactHeroProps> = ({ carousels }) => {
 
   return (
     <section className="contact-hero">
-      <Carousel 
+      <Carousel
         items={carousels}
         autoPlay={true}
         interval={4000}

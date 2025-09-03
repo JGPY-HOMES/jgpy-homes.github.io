@@ -28,15 +28,13 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      
+
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
         gap: 16px;
       }
     }
   }
-
-
 
   .contact-method {
     display: flex;
@@ -91,7 +89,7 @@
 
     &--address {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-left: 4px solid #4CAF50;
+      border-left: 4px solid #4caf50;
     }
   }
 

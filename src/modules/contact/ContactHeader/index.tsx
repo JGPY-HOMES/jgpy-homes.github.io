@@ -1,5 +1,5 @@
-import React from 'react';
-import './ContactHeader.scss';
+import React from "react";
+import "./ContactHeader.scss";
 
 export const ContactHeader: React.FC = () => {
   return (

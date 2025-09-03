@@ -1,7 +1,7 @@
-import React from 'react';
-import { Carousel } from '../../../components/Carousel';
-import type { Carousel as CarouselType } from '../../../entities/about.entity';
-import './AboutHero.scss';
+import React from "react";
+import { Carousel } from "../../../components/Carousel";
+import type { Carousel as CarouselType } from "../../../entities/about.entity";
+import "./AboutHero.scss";
 
 interface AboutHeroProps {
   carousels?: CarouselType[];

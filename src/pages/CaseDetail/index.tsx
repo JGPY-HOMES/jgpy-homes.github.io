@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { getCaseDetail, incrementCaseViewCount } from '@/api';
-import type { CaseDetail } from '@/entities';
-import { Loading } from '@/components/Loading';
-import './CaseDetail.scss';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getCaseDetail, incrementCaseViewCount } from "@/api";
+import type { CaseDetail as CaseDetailType } from "@/entities";
+import { Loading } from "@/components/Loading";
+import "./CaseDetail.scss";
 
 export const CaseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [caseDetail, setCaseDetail] = useState<CaseDetail | null>(null);
+  const [caseDetail, setCaseDetail] = useState<CaseDetailType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -28,70 +28,72 @@ export const CaseDetail: React.FC = () => {
         // 增加浏览量
         await incrementCaseViewCount(caseId);
       } else {
-        setError('案例不存在');
+        setError("案例不存在");
       }
     } catch (err) {
-      setError('加载案例详情失败');
-      console.error('Error loading case detail:', err);
+      setError("加载案例详情失败");
+      console.error("Error loading case detail:", err);
     } finally {
       setLoading(false);
     }
   };
 
   const handleBack = () => {
-    navigate('/cases');
+    navigate("/cases");
   };
 
   const formatArea = (area?: number) => {
-    return area ? `${area}㎡` : '面积待定';
+    return area ? `${area}㎡` : "面积待定";
   };
 
   const formatBudget = (budget?: string) => {
-    return budget || '预算待定';
+    return budget || "预算待定";
   };
 
   const formatDuration = (duration?: string) => {
-    return duration || '工期待定';
+    return duration || "工期待定";
   };
 
   const getStatusText = (status: string) => {
     switch (status) {
-      case 'completed':
-        return '已完成';
-      case 'in-progress':
-        return '进行中';
-      case 'planning':
-        return '规划中';
+      case "completed":
+        return "已完成";
+      case "in-progress":
+        return "进行中";
+      case "planning":
+        return "规划中";
       default:
-        return '未知';
+        return "未知";
     }
   };
 
   const getStatusClass = (status: string) => {
     switch (status) {
-      case 'completed':
-        return 'case-detail__status--completed';
-      case 'in-progress':
-        return 'case-detail__status--in-progress';
-      case 'planning':
-        return 'case-detail__status--planning';
+      case "completed":
+        return "case-detail__status--completed";
+      case "in-progress":
+        return "case-detail__status--in-progress";
+      case "planning":
+        return "case-detail__status--planning";
       default:
-        return '';
+        return "";
     }
   };
 
   const renderContent = (content: any) => {
     switch (content.type) {
-      case 'text':
+      case "text":
         return (
           <div key={content.order} className="case-detail__content-text">
             {content.title && (
               <h3 className="case-detail__content-title">{content.title}</h3>
             )}
-            <p className="case-detail__content-description">{content.content}</p>
+            <p className="case-detail__content-description">
+              {content.content}
+            </p>
           </div>
         );
-      case 'image':
+      case "image":
         return (
           <div key={content.order} className="case-detail__content-image">
             {content.title && (
@@ -99,15 +101,17 @@ export const CaseDetail: React.FC = () => {
             )}
             <img
               src={content.content}
-              alt={content.title || '案例图片'}
+              alt={content.title || "案例图片"}
               className="case-detail__content-img"
             />
             {content.description && (
-              <p className="case-detail__content-caption">{content.description}</p>
+              <p className="case-detail__content-caption">
+                {content.description}
+              </p>
             )}
           </div>
         );
-      case 'gallery':
+      case "gallery":
         return (
           <div key={content.order} className="case-detail__content-gallery">
             {content.title && (
@@ -118,13 +122,15 @@ export const CaseDetail: React.FC = () => {
                 <img
                   key={index}
                   src={image}
-                  alt={`${content.title || '案例图片'} ${index + 1}`}
+                  alt={`${content.title || "案例图片"} ${index + 1}`}
                   className="case-detail__gallery-img"
                 />
               ))}
             </div>
             {content.description && (
-              <p className="case-detail__content-caption">{content.description}</p>
+              <p className="case-detail__content-caption">
+                {content.description}
+              </p>
             )}
           </div>
         );
@@ -170,7 +176,9 @@ export const CaseDetail: React.FC = () => {
               {caseDetail.featured && (
                 <span className="case-detail__featured-badge">推荐</span>
               )}
-              <span className={`case-detail__status ${getStatusClass(caseDetail.status)}`}>
+              <span
+                className={`case-detail__status ${getStatusClass(caseDetail.status)}`}
+              >
                 {getStatusText(caseDetail.status)}
               </span>
             </div>
@@ -183,26 +191,36 @@ export const CaseDetail: React.FC = () => {
             <div className="case-detail__meta">
               <div className="case-detail__meta-item">
                 <span className="case-detail__meta-label">面积:</span>
-                <span className="case-detail__meta-value">{formatArea(caseDetail.area)}</span>
+                <span className="case-detail__meta-value">
+                  {formatArea(caseDetail.area)}
+                </span>
               </div>
               <div className="case-detail__meta-item">
                 <span className="case-detail__meta-label">预算:</span>
-                <span className="case-detail__meta-value">{formatBudget(caseDetail.budget)}</span>
+                <span className="case-detail__meta-value">
+                  {formatBudget(caseDetail.budget)}
+                </span>
               </div>
               <div className="case-detail__meta-item">
                 <span className="case-detail__meta-label">工期:</span>
-                <span className="case-detail__meta-value">{formatDuration(caseDetail.duration)}</span>
+                <span className="case-detail__meta-value">
+                  {formatDuration(caseDetail.duration)}
+                </span>
               </div>
               {caseDetail.style && (
                 <div className="case-detail__meta-item">
                   <span className="case-detail__meta-label">风格:</span>
-                  <span className="case-detail__meta-value">{caseDetail.style}</span>
+                  <span className="case-detail__meta-value">
+                    {caseDetail.style}
+                  </span>
                 </div>
               )}
               {caseDetail.location && (
                 <div className="case-detail__meta-item">
                   <span className="case-detail__meta-label">位置:</span>
-                  <span className="case-detail__meta-value">{caseDetail.location}</span>
+                  <span className="case-detail__meta-value">
+                    {caseDetail.location}
+                  </span>
                 </div>
               )}
             </div>
@@ -218,12 +236,16 @@ export const CaseDetail: React.FC = () => {
             <div className="case-detail__stats">
               <div className="case-detail__stat">
                 <span className="case-detail__stat-icon">👁️</span>
-                <span className="case-detail__stat-value">{caseDetail.viewCount}</span>
+                <span className="case-detail__stat-value">
+                  {caseDetail.viewCount}
+                </span>
                 <span className="case-detail__stat-label">浏览</span>
               </div>
               <div className="case-detail__stat">
                 <span className="case-detail__stat-icon">❤️</span>
-                <span className="case-detail__stat-value">{caseDetail.likeCount}</span>
+                <span className="case-detail__stat-value">
+                  {caseDetail.likeCount}
+                </span>
                 <span className="case-detail__stat-label">点赞</span>
               </div>
             </div>
@@ -252,13 +274,17 @@ export const CaseDetail: React.FC = () => {
             <div className="case-detail__feedback-content">
               <div className="case-detail__feedback-header">
                 <div className="case-detail__client-info">
-                  <h4 className="case-detail__client-name">{caseDetail.clientInfo.name}</h4>
+                  <h4 className="case-detail__client-name">
+                    {caseDetail.clientInfo.name}
+                  </h4>
                   <div className="case-detail__rating">
                     {Array.from({ length: 5 }, (_, i) => (
                       <span
                         key={i}
                         className={`case-detail__star ${
-                          i < caseDetail.clientInfo!.rating ? 'case-detail__star--filled' : ''
+                          i < caseDetail.clientInfo!.rating
+                            ? "case-detail__star--filled"
+                            : ""
                         }`}
                       >
                         ⭐
@@ -267,7 +293,9 @@ export const CaseDetail: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <p className="case-detail__feedback-text">{caseDetail.clientInfo.feedback}</p>
+              <p className="case-detail__feedback-text">
+                {caseDetail.clientInfo.feedback}
+              </p>
             </div>
           </div>
         )}
@@ -279,17 +307,23 @@ export const CaseDetail: React.FC = () => {
             <div className="case-detail__team-grid">
               <div className="case-detail__team-member">
                 <span className="case-detail__team-role">设计师</span>
-                <span className="case-detail__team-name">{caseDetail.designTeam.designer}</span>
+                <span className="case-detail__team-name">
+                  {caseDetail.designTeam.designer}
+                </span>
               </div>
               {caseDetail.designTeam.architect && (
                 <div className="case-detail__team-member">
                   <span className="case-detail__team-role">建筑师</span>
-                  <span className="case-detail__team-name">{caseDetail.designTeam.architect}</span>
+                  <span className="case-detail__team-name">
+                    {caseDetail.designTeam.architect}
+                  </span>
                 </div>
               )}
               <div className="case-detail__team-member">
                 <span className="case-detail__team-role">项目经理</span>
-                <span className="case-detail__team-name">{caseDetail.designTeam.projectManager}</span>
+                <span className="case-detail__team-name">
+                  {caseDetail.designTeam.projectManager}
+                </span>
               </div>
             </div>
           </div>
@@ -304,11 +338,15 @@ export const CaseDetail: React.FC = () => {
                 <div key={index} className="case-detail__timeline-item">
                   <div className="case-detail__timeline-marker"></div>
                   <div className="case-detail__timeline-content">
-                    <h4 className="case-detail__timeline-phase">{phase.phase}</h4>
+                    <h4 className="case-detail__timeline-phase">
+                      {phase.phase}
+                    </h4>
                     <div className="case-detail__timeline-dates">
                       {phase.startDate} - {phase.endDate}
                     </div>
-                    <p className="case-detail__timeline-description">{phase.description}</p>
+                    <p className="case-detail__timeline-description">
+                      {phase.description}
+                    </p>
                   </div>
                 </div>
               ))}

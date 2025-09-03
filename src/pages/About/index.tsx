@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { PageLoader } from '../../components/PageLoader';
+import React, { useState, useEffect } from "react";
+import { PageLoader } from "../../components/PageLoader";
 import {
   AboutHero,
   TeamIntro,
   TeamExpansion,
   DevelopmentHistory,
-} from '../../modules/about';
-import { AboutApi } from '../../api/about.api';
-import type { AboutPageData } from '../../entities/about.entity';
-import './About.scss';
+} from "../../modules/about";
+import { AboutApi } from "../../api/about.api";
+import type { AboutPageData } from "../../entities/about.entity";
+import "./About.scss";
 
 export const About: React.FC = () => {
   // 页面加载状态
@@ -22,7 +22,7 @@ export const About: React.FC = () => {
       const data = await AboutApi.getAboutInfo();
       setAboutData(data);
     } catch (error) {
-      console.error('获取关于我们页面数据失败:', error);
+      console.error("获取关于我们页面数据失败:", error);
     } finally {
       setIsLoading(false);
     }
@@ -35,7 +35,7 @@ export const About: React.FC = () => {
 
   // 加载完成回调
   const handleLoadComplete = () => {
-    console.log('About 页面加载完成');
+    console.log("About 页面加载完成");
   };
 
   return (

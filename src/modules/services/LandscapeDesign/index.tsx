@@ -1,5 +1,5 @@
-import React from 'react';
-import { SERVICES } from '../../../constants';
+import React from "react";
+import { SERVICES } from "../../../constants";
 
 export const LandscapeDesign: React.FC = () => {
   const service = SERVICES[4]; // 获取园林景观服务信息
@@ -16,9 +16,9 @@ export const LandscapeDesign: React.FC = () => {
               </h2>
               <h3 className="service-subtitle">{service.subtitle}</h3>
             </div>
-            
+
             <p className="service-description">{service.description}</p>
-            
+
             <div className="service-features">
               {service.features.map((feature, index) => (
                 <div key={index} className="feature-item">
@@ -32,12 +32,9 @@ export const LandscapeDesign: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="service-image">
-            <img 
-              src={service.image} 
-              alt={service.name}
-            />
+            <img src={service.image} alt={service.name} />
             <div className="image-overlay">
               <div className="overlay-content">
                 <h3>{service.name}</h3>

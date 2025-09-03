@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaHome, FaTools, FaImages, FaInfoCircle, FaPhone, FaEnvelope } from 'react-icons/fa';
-import logo from '../../assets/images/logo.jpg';
-import './Header.scss';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaTools,
+  FaImages,
+  FaInfoCircle,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
+import logo from "../../assets/images/logo.jpg";
+import "./Header.scss";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   // 监听滚动事件
   useEffect(() => {
@@ -15,8 +23,8 @@ export const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // 关闭菜单
@@ -26,20 +34,24 @@ export const Header: React.FC = () => {
 
   // 导航项配置
   const navItems = [
-    { path: '/', label: '首页', icon: FaHome },
-    { path: '/services', label: '服务', icon: FaTools },
-    { path: '/cases', label: '案例', icon: FaImages },
-    { path: '/about', label: '关于我们', icon: FaInfoCircle },
-    { path: '/contact', label: '联系我们', icon: FaPhone },
+    { path: "/", label: "首页", icon: FaHome },
+    { path: "/services", label: "服务", icon: FaTools },
+    { path: "/cases", label: "案例", icon: FaImages },
+    { path: "/about", label: "关于我们", icon: FaInfoCircle },
+    { path: "/contact", label: "联系我们", icon: FaPhone },
   ];
 
   return (
-    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
+    <header className={`header ${isScrolled ? "header--scrolled" : ""}`}>
       <div className="header__container">
         {/* Logo */}
         <div className="header__logo">
           <NavLink to="/" className="logo-link" onClick={closeMenu}>
-            <img src={logo} alt="河南交个朋友装饰有限公司logo" className="header__logo-img" />
+            <img
+              src={logo}
+              alt="河南交个朋友装饰有限公司logo"
+              className="header__logo-img"
+            />
             <div className="logo-text">
               <span className="logo-text__chinese">河南交个朋友装饰</span>
               <span className="logo-text__english">Make a good home</span>
@@ -55,8 +67,8 @@ export const Header: React.FC = () => {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className={({ isActive }) => 
-                  `nav-link ${isActive ? 'nav-link--active' : ''}`
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "nav-link--active" : ""}`
                 }
                 onClick={closeMenu}
               >
@@ -68,7 +80,7 @@ export const Header: React.FC = () => {
         </nav>
 
         {/* 移动端菜单按钮 */}
-        <button 
+        <button
           className="header__menu-btn"
           onClick={() => setMenuOpen(!isMenuOpen)}
           aria-label="切换菜单"
@@ -78,19 +90,23 @@ export const Header: React.FC = () => {
       </div>
 
       {/* 移动端导航菜单 */}
-      <div className={`mobile-menu ${isMenuOpen ? 'mobile-menu--open' : ''}`}>
+      <div className={`mobile-menu ${isMenuOpen ? "mobile-menu--open" : ""}`}>
         <div className="mobile-menu__overlay" onClick={closeMenu}></div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__header">
-                         <div className="mobile-menu__logo">
-               <img src={logo} alt="河南交个朋友装饰有限公司logo" className="mobile-menu__logo-img" />
-               <span className="mobile-menu__title">河南交个朋友装饰</span>
-             </div>
+            <div className="mobile-menu__logo">
+              <img
+                src={logo}
+                alt="河南交个朋友装饰有限公司logo"
+                className="mobile-menu__logo-img"
+              />
+              <span className="mobile-menu__title">河南交个朋友装饰</span>
+            </div>
             <button className="mobile-menu__close" onClick={closeMenu}>
               <FaTimes />
             </button>
           </div>
-          
+
           <nav className="mobile-menu__nav">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -98,8 +114,8 @@ export const Header: React.FC = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className={({ isActive }) => 
-                    `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`
+                  className={({ isActive }) =>
+                    `mobile-nav-link ${isActive ? "mobile-nav-link--active" : ""}`
                   }
                   onClick={closeMenu}
                 >
@@ -127,4 +143,3 @@ export const Header: React.FC = () => {
     </header>
   );
 };
-    

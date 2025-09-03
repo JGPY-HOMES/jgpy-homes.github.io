@@ -1,5 +1,5 @@
-import React from 'react';
-import './SvgIcon.scss';
+import React from "react";
+import "./SvgIcon.scss";
 
 interface SvgIconProps {
   name: string;
@@ -9,17 +9,17 @@ interface SvgIconProps {
   onClick?: () => void;
 }
 
-export const SvgIcon: React.FC<SvgIconProps> = ({ 
+export const SvgIcon: React.FC<SvgIconProps> = ({
   name,
-  className = '', 
+  className = "",
   color,
-  size = '1em',
-  onClick
+  size = "1em",
+  onClick,
 }) => {
   const svgStyle: React.CSSProperties = {
     width: size,
     height: size,
-    ...(color && { color })
+    ...(color && { color }),
   };
 
   return (

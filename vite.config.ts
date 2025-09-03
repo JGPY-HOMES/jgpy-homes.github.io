@@ -67,7 +67,7 @@ export default defineConfig({
     },
   },
   assetsInclude: ['**/*.svg'],
-  base: '/',
+  base: '/jgpy-homes.github.io/',
   server: {
     port: 3000,
     open: true,

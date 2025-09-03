@@ -1,5 +1,5 @@
-import React from 'react';
-import './Culture.scss';
+import React from "react";
+import "./Culture.scss";
 
 export const Culture: React.FC = () => {
   return (

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { 
-  FaPhone, 
-  FaWeixin, 
-  FaWeibo, 
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  FaPhone,
+  FaWeixin,
+  FaWeibo,
   FaQq,
   FaHome,
   FaTools,
@@ -12,58 +12,58 @@ import {
   FaBuilding,
   FaCouch,
   FaTree,
-  FaHammer
-} from 'react-icons/fa';
-import logo from '../../assets/images/logo.jpg';
-import weixinQR from '../../assets/images/contact/weixin.jpg';
-import sinaQR from '../../assets/images/contact/sina.jpg';
-import qqQR from '../../assets/images/contact/qq.jpg';
-import './Footer.scss';
+  FaHammer,
+} from "react-icons/fa";
+import logo from "../../assets/images/logo.jpg";
+import weixinQR from "../../assets/images/contact/weixin.jpg";
+import sinaQR from "../../assets/images/contact/sina.jpg";
+import qqQR from "../../assets/images/contact/qq.jpg";
+import "./Footer.scss";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const [hoveredSocial, setHoveredSocial] = useState<string | null>(null);
 
   const quickLinks = [
-    { path: '/', label: '首页', icon: FaHome },
-    { path: '/services', label: '服务', icon: FaTools },
-    { path: '/projects', label: '案例', icon: FaImages },
-    { path: '/about', label: '关于我们', icon: FaInfoCircle },
-    { path: '/contact', label: '联系我们', icon: FaPhone },
+    { path: "/", label: "首页", icon: FaHome },
+    { path: "/services", label: "服务", icon: FaTools },
+    { path: "/projects", label: "案例", icon: FaImages },
+    { path: "/about", label: "关于我们", icon: FaInfoCircle },
+    { path: "/contact", label: "联系我们", icon: FaPhone },
   ];
 
   const services = [
-    { label: '家装设计', icon: FaHome, anchor: 'home-decoration' },
-    { label: '工装设计', icon: FaBuilding, anchor: 'commercial-decoration' },
-    { label: '软装搭配', icon: FaCouch, anchor: 'soft-furnishing' },
-    { label: '园林景观', icon: FaTree, anchor: 'landscape-design' },
-    { label: '装修施工', icon: FaHammer, anchor: 'construction-services' },
+    { label: "家装设计", icon: FaHome, anchor: "home-decoration" },
+    { label: "工装设计", icon: FaBuilding, anchor: "commercial-decoration" },
+    { label: "软装搭配", icon: FaCouch, anchor: "soft-furnishing" },
+    { label: "园林景观", icon: FaTree, anchor: "landscape-design" },
+    { label: "装修施工", icon: FaHammer, anchor: "construction-services" },
   ];
 
   const socialLinks = [
-    { 
-      icon: FaWeixin, 
-      label: '微信', 
-      href: '#', 
-      color: '#07C160',
+    {
+      icon: FaWeixin,
+      label: "微信",
+      href: "#",
+      color: "#07C160",
       qrCode: weixinQR,
-      key: 'weixin'
+      key: "weixin",
     },
-    { 
-      icon: FaWeibo, 
-      label: 'sina', 
-      href: '#', 
-      color: '#E6162D',
+    {
+      icon: FaWeibo,
+      label: "sina",
+      href: "#",
+      color: "#E6162D",
       qrCode: sinaQR,
-      key: 'sina'
+      key: "sina",
     },
-    { 
-      icon: FaQq, 
-      label: 'QQ', 
-      href: '#', 
-      color: '#12B7F5',
+    {
+      icon: FaQq,
+      label: "QQ",
+      href: "#",
+      color: "#12B7F5",
       qrCode: qqQR,
-      key: 'qq'
+      key: "qq",
     },
   ];
 
@@ -71,27 +71,27 @@ export const Footer: React.FC = () => {
     const element = document.getElementById(anchor);
     if (element) {
       // 动态计算头部高度
-      const header = document.querySelector('.header');
+      const header = document.querySelector(".header");
       const headerHeight = header ? header.getBoundingClientRect().height : 80;
-      
-      // 考虑服务模块的padding和视觉空间
-      const servicePadding = 64; // $spacing-3xl = 64px
-      const additionalOffset = 30; // 额外的视觉空间，确保标题完全可见
-      
+
+      // 额外的视觉空间，确保标题完全可见
+      const additionalOffset = 30;
+
       // 计算目标滚动位置，让锚点位置在视窗中更合适
-      const elementPosition = element.offsetTop - headerHeight - additionalOffset;
-      
+      const elementPosition =
+        element.offsetTop - headerHeight - additionalOffset;
+
       // 平滑滚动到目标位置
       window.scrollTo({
         top: Math.max(0, elementPosition),
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   const handleServiceClick = (anchor: string) => {
     // 如果当前在服务页面，直接滚动到锚点
-    if (window.location.pathname === '/services') {
+    if (window.location.pathname === "/services") {
       scrollToAnchor(anchor);
     } else {
       // 如果不在服务页面，先跳转到服务页面，然后滚动到锚点
@@ -107,13 +107,19 @@ export const Footer: React.FC = () => {
           {/* 公司信息 */}
           <div className="footer__section footer__company-section">
             <div className="footer__logo">
-              <img src={logo} alt="交个朋友装饰logo" className="footer__logo-img" />
+              <img
+                src={logo}
+                alt="交个朋友装饰logo"
+                className="footer__logo-img"
+              />
               <div className="footer__company-info">
                 <h3 className="footer__company-name">交个朋友装饰</h3>
-                <p className="footer__company-desc">专业室内外装修设计服务提供商，为您打造理想空间。</p>
+                <p className="footer__company-desc">
+                  专业室内外装修设计服务提供商，为您打造理想空间。
+                </p>
               </div>
             </div>
-            
+
             <div className="footer__social">
               {socialLinks.map((social, index) => (
                 <div
@@ -125,16 +131,18 @@ export const Footer: React.FC = () => {
                   <a
                     href={social.href}
                     className="social-link"
-                    style={{ '--social-color': social.color } as React.CSSProperties}
+                    style={
+                      { "--social-color": social.color } as React.CSSProperties
+                    }
                     aria-label={social.label}
                   >
                     <social.icon />
                   </a>
                   {hoveredSocial === social.key && (
                     <div className="social-qr-code">
-                      <img 
-                        src={social.qrCode} 
-                        alt={`${social.label}二维码`} 
+                      <img
+                        src={social.qrCode}
+                        alt={`${social.label}二维码`}
                         className="qr-code-image"
                       />
                     </div>
@@ -185,15 +193,21 @@ export const Footer: React.FC = () => {
             <div className="footer__qualifications">
               <div className="qualification-item">
                 <FaBuilding className="qualification-item__icon" />
-                <span className="qualification-item__text">建筑装饰工程专业承包</span>
+                <span className="qualification-item__text">
+                  建筑装饰工程专业承包
+                </span>
               </div>
               <div className="qualification-item">
                 <FaTools className="qualification-item__icon" />
-                <span className="qualification-item__text">室内装饰设计资质</span>
+                <span className="qualification-item__text">
+                  室内装饰设计资质
+                </span>
               </div>
               <div className="qualification-item">
                 <FaCouch className="qualification-item__icon" />
-                <span className="qualification-item__text">软装设计服务认证</span>
+                <span className="qualification-item__text">
+                  软装设计服务认证
+                </span>
               </div>
             </div>
           </div>
@@ -205,13 +219,18 @@ export const Footer: React.FC = () => {
             <p>© {currentYear} 河南交个朋友装饰有限公司. 保留所有权利.</p>
           </div>
           <div className="footer__links">
-            <a href="#" className="footer__link">隐私政策</a>
-            <a href="#" className="footer__link">服务条款</a>
-            <a href="#" className="footer__link">网站地图</a>
+            <a href="#" className="footer__link">
+              隐私政策
+            </a>
+            <a href="#" className="footer__link">
+              服务条款
+            </a>
+            <a href="#" className="footer__link">
+              网站地图
+            </a>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-    

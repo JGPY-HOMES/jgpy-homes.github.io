@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import type { CaseCategory, CaseFilterParams } from '@/entities';
-import './CaseFilter.scss';
+import React, { useState } from "react";
+import type { CaseCategory, CaseFilterParams } from "@/entities";
+import "./CaseFilter.scss";
 
 interface CaseFilterProps {
   categories: CaseCategory[];
@@ -11,18 +11,17 @@ interface CaseFilterProps {
 export const CaseFilter: React.FC<CaseFilterProps> = ({
   categories,
   onFilterChange,
-  currentFilters
+  currentFilters,
 }) => {
   const [isMobileExpanded, setIsMobileExpanded] = useState(false);
-
-
 
   // 处理分类选择
   const handleCategorySelect = (categoryId: string) => {
     onFilterChange({
       ...currentFilters,
-      categoryId: currentFilters.categoryId === categoryId ? undefined : categoryId,
-      page: 1 // 重置页码
+      categoryId:
+        currentFilters.categoryId === categoryId ? undefined : categoryId,
+      page: 1, // 重置页码
     });
   };
 
@@ -32,7 +31,7 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
       ...currentFilters,
       serviceId: currentFilters.serviceId === serviceId ? undefined : serviceId,
       categoryId: undefined, // 清空分类选择
-      page: 1 // 重置页码
+      page: 1, // 重置页码
     });
   };
 
@@ -41,7 +40,7 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
     onFilterChange({
       ...currentFilters,
       style: currentFilters.style === style ? undefined : style,
-      page: 1 // 重置页码
+      page: 1, // 重置页码
     });
   };
 
@@ -50,7 +49,7 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
     onFilterChange({
       ...currentFilters,
       status: currentFilters.status === status ? undefined : status,
-      page: 1 // 重置页码
+      page: 1, // 重置页码
     });
   };
 
@@ -59,14 +58,14 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
     onFilterChange({
       ...currentFilters,
       featured: currentFilters.featured === true ? undefined : true,
-      page: 1 // 重置页码
+      page: 1, // 重置页码
     });
   };
 
   // 清空所有筛选
   const clearAllFilters = () => {
     onFilterChange({
-      page: 1
+      page: 1,
     });
   };
 
@@ -76,19 +75,20 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
   };
 
   // 检查是否有活跃的筛选条件
-  const hasActiveFilters = currentFilters.serviceId || 
-                          currentFilters.categoryId || 
-                          currentFilters.style || 
-                          currentFilters.status || 
-                          currentFilters.featured;
+  const hasActiveFilters =
+    currentFilters.serviceId ||
+    currentFilters.categoryId ||
+    currentFilters.style ||
+    currentFilters.status ||
+    currentFilters.featured;
 
   // 获取所有风格选项
   const getAllStyles = () => {
     const styles = new Set<string>();
-    categories.forEach(category => {
+    categories.forEach((category) => {
       if (category.children) {
-        category.children.forEach(child => {
-          if (child.name.includes('风格')) {
+        category.children.forEach((child) => {
+          if (child.name.includes("风格")) {
             styles.add(child.name);
           }
         });
@@ -100,36 +100,37 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
   const styles = getAllStyles();
 
   return (
-    <div className={`case-filter ${isMobileExpanded ? 'case-filter--mobile-expanded' : ''}`}>
-        <div className="case-filter__container">
-          <div className="case-filter__header">
-            <h3 className="case-filter__title">筛选条件</h3>
-            <div className="case-filter__header-actions">
-              <button 
-                className="case-filter__clear"
-                onClick={clearAllFilters}
-              >
-                清空筛选
-              </button>
-              <button 
-                className="case-filter__mobile-toggle"
-                onClick={toggleMobileExpanded}
-              >
-                {isMobileExpanded ? '收起' : (hasActiveFilters ? '筛选中' : '展开')}
-              </button>
-            </div>
+    <div
+      className={`case-filter ${isMobileExpanded ? "case-filter--mobile-expanded" : ""}`}
+    >
+      <div className="case-filter__container">
+        <div className="case-filter__header">
+          <h3 className="case-filter__title">筛选条件</h3>
+          <div className="case-filter__header-actions">
+            <button className="case-filter__clear" onClick={clearAllFilters}>
+              清空筛选
+            </button>
+            <button
+              className="case-filter__mobile-toggle"
+              onClick={toggleMobileExpanded}
+            >
+              {isMobileExpanded ? "收起" : hasActiveFilters ? "筛选中" : "展开"}
+            </button>
           </div>
+        </div>
 
         <div className="case-filter__content">
           {/* 服务分类 */}
           <div className="case-filter__section">
             <h4 className="case-filter__section-title">服务分类</h4>
             <div className="case-filter__options">
-              {categories.map(category => (
+              {categories.map((category) => (
                 <div key={category.id} className="case-filter__option">
                   <button
                     className={`case-filter__option-button ${
-                      currentFilters.serviceId === category.id ? 'case-filter__option-button--active' : ''
+                      currentFilters.serviceId === category.id
+                        ? "case-filter__option-button--active"
+                        : ""
                     }`}
                     onClick={() => handleServiceSelect(category.id)}
                   >
@@ -146,12 +147,14 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
               <h4 className="case-filter__section-title">具体分类</h4>
               <div className="case-filter__options">
                 {categories
-                  .find(cat => cat.id === currentFilters.serviceId)
-                  ?.children?.map(category => (
+                  .find((cat) => cat.id === currentFilters.serviceId)
+                  ?.children?.map((category) => (
                     <div key={category.id} className="case-filter__option">
                       <button
                         className={`case-filter__option-button ${
-                          currentFilters.categoryId === category.id ? 'case-filter__option-button--active' : ''
+                          currentFilters.categoryId === category.id
+                            ? "case-filter__option-button--active"
+                            : ""
                         }`}
                         onClick={() => handleCategorySelect(category.id)}
                       >
@@ -168,11 +171,13 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
             <div className="case-filter__section">
               <h4 className="case-filter__section-title">风格</h4>
               <div className="case-filter__options">
-                {styles.map(style => (
+                {styles.map((style) => (
                   <div key={style} className="case-filter__option">
                     <button
                       className={`case-filter__option-button ${
-                        currentFilters.style === style ? 'case-filter__option-button--active' : ''
+                        currentFilters.style === style
+                          ? "case-filter__option-button--active"
+                          : ""
                       }`}
                       onClick={() => handleStyleSelect(style)}
                     >
@@ -191,9 +196,11 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
               <div className="case-filter__option">
                 <button
                   className={`case-filter__option-button ${
-                    currentFilters.status === 'completed' ? 'case-filter__option-button--active' : ''
+                    currentFilters.status === "completed"
+                      ? "case-filter__option-button--active"
+                      : ""
                   }`}
-                  onClick={() => handleStatusSelect('completed')}
+                  onClick={() => handleStatusSelect("completed")}
                 >
                   已完成
                 </button>
@@ -201,9 +208,11 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
               <div className="case-filter__option">
                 <button
                   className={`case-filter__option-button ${
-                    currentFilters.status === 'in-progress' ? 'case-filter__option-button--active' : ''
+                    currentFilters.status === "in-progress"
+                      ? "case-filter__option-button--active"
+                      : ""
                   }`}
-                  onClick={() => handleStatusSelect('in-progress')}
+                  onClick={() => handleStatusSelect("in-progress")}
                 >
                   进行中
                 </button>
@@ -211,9 +220,11 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
               <div className="case-filter__option">
                 <button
                   className={`case-filter__option-button ${
-                    currentFilters.status === 'planning' ? 'case-filter__option-button--active' : ''
+                    currentFilters.status === "planning"
+                      ? "case-filter__option-button--active"
+                      : ""
                   }`}
-                  onClick={() => handleStatusSelect('planning')}
+                  onClick={() => handleStatusSelect("planning")}
                 >
                   规划中
                 </button>
@@ -228,7 +239,9 @@ export const CaseFilter: React.FC<CaseFilterProps> = ({
               <div className="case-filter__option">
                 <button
                   className={`case-filter__option-button ${
-                    currentFilters.featured === true ? 'case-filter__option-button--active' : ''
+                    currentFilters.featured === true
+                      ? "case-filter__option-button--active"
+                      : ""
                   }`}
                   onClick={handleFeaturedToggle}
                 >

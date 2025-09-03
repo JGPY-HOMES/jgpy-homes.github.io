@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { FaUsers, FaLightbulb, FaTools, FaHandshake } from 'react-icons/fa';
-import type { TeamIntro as TeamIntroType } from '../../../entities/about.entity';
-import { AnimatedNumber } from '../../../components/AnimatedNumber';
-import './TeamIntro.scss';
+import React, { useRef } from "react";
+import { FaUsers, FaLightbulb, FaTools, FaHandshake } from "react-icons/fa";
+import type { TeamIntro as TeamIntroType } from "../../../entities/about.entity";
+import { AnimatedNumber } from "../../../components/AnimatedNumber";
+import "./TeamIntro.scss";
 
 interface TeamIntroProps {
   teamData?: TeamIntroType;

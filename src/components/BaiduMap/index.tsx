@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import './BaiduMap.scss';
+import React, { useEffect, useRef } from "react";
+import "./BaiduMap.scss";
 
 interface BaiduMapProps {
   className?: string;
 }
 
-export const BaiduMap: React.FC<BaiduMapProps> = ({ className = '' }) => {
+export const BaiduMap: React.FC<BaiduMapProps> = ({ className = "" }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
 
@@ -17,7 +17,7 @@ export const BaiduMap: React.FC<BaiduMapProps> = ({ className = '' }) => {
         return;
       }
 
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.src = `https://api.map.baidu.com/api?v=3.0&ak=RSF4c00s9xwliCcXXPixEl1pJZ1NqiTw&callback=initBaiduMap`;
       script.async = true;
 
@@ -73,12 +73,12 @@ export const BaiduMap: React.FC<BaiduMapProps> = ({ className = '' }) => {
           {
             width: 280,
             height: 120,
-            title: '公司位置',
-          }
+            title: "公司位置",
+          },
         );
 
         // 点击标记显示信息窗口
-        marker.addEventListener('click', () => {
+        marker.addEventListener("click", () => {
           map.openInfoWindow(infoWindow, point);
         });
 
@@ -88,13 +88,13 @@ export const BaiduMap: React.FC<BaiduMapProps> = ({ className = '' }) => {
         // 添加地图样式
         try {
           map.setMapStyle({
-            style: 'midnight',
+            style: "midnight",
           });
         } catch (error) {
-          console.log('地图样式设置失败，使用默认样式');
+          console.log("地图样式设置失败，使用默认样式");
         }
       } catch (error) {
-        console.error('百度地图初始化失败:', error);
+        console.error("百度地图初始化失败:", error);
         // 如果地图加载失败，显示备用内容
         if (mapRef.current) {
           mapRef.current.innerHTML = `

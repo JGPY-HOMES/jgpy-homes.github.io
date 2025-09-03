@@ -1,12 +1,14 @@
-import React from 'react';
-import type { DevelopmentHistory as DevelopmentHistoryType } from '../../../entities/about.entity';
-import './DevelopmentHistory.scss';
+import React from "react";
+import type { DevelopmentHistory as DevelopmentHistoryType } from "../../../entities/about.entity";
+import "./DevelopmentHistory.scss";
 
 interface DevelopmentHistoryProps {
   historyData?: DevelopmentHistoryType;
 }
 
-export const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({ historyData }) => {
+export const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({
+  historyData,
+}) => {
   if (!historyData) {
     return null;
   }
@@ -22,7 +24,10 @@ export const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({ historyD
 
         <div className="timeline">
           {historyData.timeline.map((item, index) => (
-            <div key={item.id || index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+            <div
+              key={item.id || index}
+              className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+            >
               <div className="timeline-content">
                 <div className="timeline-year">{item.year}</div>
                 <div className="timeline-card">
@@ -31,7 +36,9 @@ export const DevelopmentHistory: React.FC<DevelopmentHistoryProps> = ({ historyD
                   </div>
                   <div className="timeline-text">
                     <h4 className="timeline-item-title">{item.title}</h4>
-                    <p className="timeline-item-description">{item.description}</p>
+                    <p className="timeline-item-description">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </div>

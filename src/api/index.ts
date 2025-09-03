@@ -1,11 +1,11 @@
-export { default as CompanyApi } from './company.api';
-export { default as ContactApi } from './contact.api';
-export { default as ServicesApi } from './services.api';
-export { default as AboutApi } from './about.api';
-export { default as apiClient } from './config';
+export { default as CompanyApi } from "./company.api";
+export { default as ContactApi } from "./contact.api";
+export { default as ServicesApi } from "./services.api";
+export { default as AboutApi } from "./about.api";
+export { default as apiClient } from "./config";
 
 // Export case API functions
-export * from './cases.api';
+export * from "./cases.api";
 
 // Re-export types from entities for convenience
 export type {
@@ -24,5 +24,5 @@ export type {
   CaseCarouselItem,
   CaseListResponse,
   CaseFilterParams,
-  CasesPageData
-} from '@/entities';
+  CasesPageData,
+} from "@/entities";

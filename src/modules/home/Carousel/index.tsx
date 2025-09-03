@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import './Carousel.scss';
+import React, { useState, useEffect, useCallback } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./Carousel.scss";
 
 interface CarouselItem {
   id: string | number;
@@ -25,7 +25,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   interval = 5000,
   showArrows = true,
   showIndicators = true,
-  className = ''
+  className = "",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -46,13 +46,16 @@ export const Carousel: React.FC<CarouselProps> = ({
     }
   }, [items.length, isTransitioning]);
 
-  const goToSlide = useCallback((index: number) => {
-    if (!isTransitioning && index !== currentIndex) {
-      setIsTransitioning(true);
-      setCurrentIndex(index);
-      setTimeout(() => setIsTransitioning(false), 300);
-    }
-  }, [currentIndex, isTransitioning]);
+  const goToSlide = useCallback(
+    (index: number) => {
+      if (!isTransitioning && index !== currentIndex) {
+        setIsTransitioning(true);
+        setCurrentIndex(index);
+        setTimeout(() => setIsTransitioning(false), 300);
+      }
+    },
+    [currentIndex, isTransitioning],
+  );
 
   // 自动播放
   useEffect(() => {
@@ -68,15 +71,15 @@ export const Carousel: React.FC<CarouselProps> = ({
   // 键盘导航
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
+      if (e.key === "ArrowLeft") {
         prevSlide();
-      } else if (e.key === 'ArrowRight') {
+      } else if (e.key === "ArrowRight") {
         nextSlide();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [prevSlide, nextSlide]);
 
   if (!items.length) {
@@ -86,17 +89,20 @@ export const Carousel: React.FC<CarouselProps> = ({
   return (
     <div className={`carousel ${className}`}>
       <div className="carousel-container">
-        <div 
+        <div
           className="carousel-track"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
-            transition: isTransitioning ? 'transform 0.3s ease-in-out' : 'none'
+            transition: isTransitioning ? "transform 0.3s ease-in-out" : "none",
           }}
         >
           {items.map((item, index) => (
             <div key={item.id} className="carousel-slide">
               <div className="carousel-image">
-                <img src={item.image} alt={item.title || `Slide ${index + 1}`} />
+                <img
+                  src={item.image}
+                  alt={item.title || `Slide ${index + 1}`}
+                />
                 <div className="carousel-overlay">
                   {item.title && (
                     <h2 className="carousel-title">{item.title}</h2>
@@ -117,14 +123,14 @@ export const Carousel: React.FC<CarouselProps> = ({
 
         {showArrows && items.length > 1 && (
           <>
-            <button 
+            <button
               className="carousel-arrow carousel-arrow--prev"
               onClick={prevSlide}
               aria-label="上一张"
             >
               <FaChevronLeft />
             </button>
-            <button 
+            <button
               className="carousel-arrow carousel-arrow--next"
               onClick={nextSlide}
               aria-label="下一张"
@@ -139,7 +145,7 @@ export const Carousel: React.FC<CarouselProps> = ({
             {items.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
+                className={`carousel-indicator ${index === currentIndex ? "active" : ""}`}
                 onClick={() => goToSlide(index)}
                 aria-label={`跳转到第 ${index + 1} 张图片`}
               />
@@ -149,4 +155,4 @@ export const Carousel: React.FC<CarouselProps> = ({
       </div>
     </div>
   );
-}; 
+};

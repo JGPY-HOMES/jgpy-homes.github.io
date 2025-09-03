@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { PageLoader } from '../../components/PageLoader';
+import React, { useState, useEffect } from "react";
+import { PageLoader } from "../../components/PageLoader";
 import {
   HomeHero,
   CompanyIntro,
@@ -8,7 +8,7 @@ import {
   AboutUs,
   FeaturedProjects,
   ContactUs,
-} from '../../modules/home';
+} from "../../modules/home";
 
 export const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
   }, []);
 
   const handleLoadComplete = () => {
-    console.log('页面加载完成');
+    console.log("页面加载完成");
   };
 
   return (

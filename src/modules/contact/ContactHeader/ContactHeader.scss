@@ -1,4 +1,4 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .page-header {
   text-align: center;
@@ -10,7 +10,7 @@
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 20px;
-    
+
     @media (max-width: 768px) {
       font-size: 2rem;
     }

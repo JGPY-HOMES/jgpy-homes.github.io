@@ -1,4 +1,4 @@
-@use '../../css/variables' as *;
+@use "../../css/variables" as *;
 
 .loading-container {
   display: flex;
@@ -12,19 +12,19 @@
   flex-direction: column;
   align-items: center;
   gap: $spacing-md;
-  
+
   &--sm {
     .loading-spinner,
     .loading-dots,
     .loading-pulse {
       transform: scale(0.6);
     }
-    
+
     .loading-text {
       font-size: $font-size-sm;
     }
   }
-  
+
   &--md {
     .loading-spinner,
     .loading-dots,
@@ -32,14 +32,14 @@
       transform: scale(0.8);
     }
   }
-  
+
   &--lg {
     .loading-spinner,
     .loading-dots,
     .loading-pulse {
       transform: scale(1.25);
     }
-    
+
     .loading-text {
       font-size: $font-size-lg;
     }
@@ -60,7 +60,7 @@
   position: relative;
   width: 40px;
   height: 40px;
-  
+
   .spinner-ring {
     position: absolute;
     width: 100%;
@@ -69,16 +69,16 @@
     border-top-color: $text-light;
     border-radius: 50%;
     animation: spin 1.2s linear infinite;
-    
+
     &:nth-child(1) {
       animation-delay: 0s;
     }
-    
+
     &:nth-child(2) {
       animation-delay: 0.4s;
       border-top-color: rgba(255, 255, 255, 0.8);
     }
-    
+
     &:nth-child(3) {
       animation-delay: 0.8s;
       border-top-color: rgba(255, 255, 255, 0.6);
@@ -99,22 +99,22 @@
 .loading-dots {
   display: flex;
   gap: 6px;
-  
+
   .dot {
     width: 6px;
     height: 6px;
     background-color: $text-light;
     border-radius: 50%;
     animation: dotPulse 1.4s ease-in-out infinite both;
-    
+
     &:nth-child(1) {
       animation-delay: 0s;
     }
-    
+
     &:nth-child(2) {
       animation-delay: 0.2s;
     }
-    
+
     &:nth-child(3) {
       animation-delay: 0.4s;
     }
@@ -122,7 +122,9 @@
 }
 
 @keyframes dotPulse {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: scale(0.8);
     opacity: 0.5;
   }
@@ -156,4 +158,4 @@
     transform: scale(0.9);
     opacity: 1;
   }
-} 
+}

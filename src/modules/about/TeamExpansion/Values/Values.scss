@@ -1,4 +1,4 @@
-@use '../../../../css/variables' as *;
+@use "../../../../css/variables" as *;
 
 // 价值观网格布局
 .values-grid {
@@ -19,7 +19,7 @@
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;

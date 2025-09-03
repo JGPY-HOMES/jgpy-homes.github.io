@@ -1,3 +1,5 @@
+export type UserRole = "admin" | "user" | "guest";
+
 export interface User {
   id: number;
   name: string;
@@ -20,4 +22,3 @@ export interface RegisterParams {
   password: string;
   phone?: string;
 }
-    

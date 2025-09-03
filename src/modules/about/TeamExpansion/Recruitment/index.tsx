@@ -1,9 +1,9 @@
-import React from 'react';
-import type { TeamExpansion as TeamExpansionType } from '../../../../entities/about.entity';
-import './Recruitment.scss';
+import React from "react";
+import type { TeamExpansion as TeamExpansionType } from "../../../../entities/about.entity";
+import "./Recruitment.scss";
 
 interface RecruitmentProps {
-  positions: TeamExpansionType['positions'];
+  positions: TeamExpansionType["positions"];
 }
 
 export const Recruitment: React.FC<RecruitmentProps> = ({ positions }) => {
@@ -11,9 +11,11 @@ export const Recruitment: React.FC<RecruitmentProps> = ({ positions }) => {
     <>
       <div className="recruitment-header">
         <h3 className="panel-title">我们正在寻找优秀的你</h3>
-        <p className="panel-description">河南交个朋友装饰诚邀有志之士加入我们的团队，共同为客户创造美好的居住空间。</p>
+        <p className="panel-description">
+          河南交个朋友装饰诚邀有志之士加入我们的团队，共同为客户创造美好的居住空间。
+        </p>
       </div>
-      
+
       <div className="job-listings">
         {positions.map((position, index) => (
           <div key={position.id || index} className="job-card">
@@ -35,7 +37,9 @@ export const Recruitment: React.FC<RecruitmentProps> = ({ positions }) => {
 
             {/* 职位描述 */}
             <div className="job-description">
-              <p>我们正在寻找有经验的设计师加入我们的团队，负责室内设计项目的方案设计和施工图绘制。</p>
+              <p>
+                我们正在寻找有经验的设计师加入我们的团队，负责室内设计项目的方案设计和施工图绘制。
+              </p>
             </div>
 
             {/* 职位要求 */}
@@ -53,7 +57,9 @@ export const Recruitment: React.FC<RecruitmentProps> = ({ positions }) => {
               <h5 className="section-title">福利待遇</h5>
               <div className="benefits-tags">
                 {position.benefits.slice(0, 4).map((benefit, benIndex) => (
-                  <span key={benIndex} className="benefit-tag">{benefit}</span>
+                  <span key={benIndex} className="benefit-tag">
+                    {benefit}
+                  </span>
                 ))}
               </div>
             </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { useCountUp } from '../../hooks/useCountUp';
-import './AnimatedNumber.scss';
+import React from "react";
+import { useCountUp } from "../../hooks/useCountUp";
+import "./AnimatedNumber.scss";
 
 interface AnimatedNumberProps {
   value: string;
@@ -13,13 +13,16 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   value,
   duration = 2000,
   delay = 0,
-  className = ''
+  className = "",
 }) => {
   // 提取数字部分
-  const numericValue = parseInt(value.replace(/\D/g, ''));
-  const suffix = value.replace(/\d/g, ''); // 获取非数字部分（如 +, % 等）
-  
-  const { count, startAnimation, reset } = useCountUp(numericValue, { duration, delay });
+  const numericValue = parseInt(value.replace(/\D/g, ""));
+  const suffix = value.replace(/\d/g, ""); // 获取非数字部分（如 +, % 等）
+
+  const { count, startAnimation, reset } = useCountUp(numericValue, {
+    duration,
+    delay,
+  });
 
   const handleMouseEnter = () => {
     reset();
@@ -27,11 +30,12 @@ export const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   };
 
   return (
-    <span 
+    <span
       className={`animated-number ${className}`}
       onMouseEnter={handleMouseEnter}
     >
-      {count}{suffix}
+      {count}
+      {suffix}
     </span>
   );
 };

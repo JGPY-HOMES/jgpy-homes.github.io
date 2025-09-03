@@ -1,22 +1,22 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .business-scope {
   padding: $spacing-3xl 0;
   background: $background-light;
-  
+
   .section-header {
     text-align: center;
     margin-bottom: $spacing-3xl;
-    
+
     .section-title {
       font-size: $font-size-3xl;
       font-weight: 700;
       color: $primary-color;
       margin-bottom: $spacing-md;
       position: relative;
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 50%;
@@ -27,10 +27,10 @@
         border-radius: 2px;
       }
     }
-    
+
     .section-description {
       font-size: $font-size-lg;
-      color: #2C3E50;
+      color: #2c3e50;
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.6;
@@ -42,7 +42,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: $spacing-xl;
-  
+
   @media (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
     gap: $spacing-lg;
@@ -56,7 +56,7 @@
   box-shadow: $flat-elevation-1;
   border: 1px solid $border-light;
   transition: all $transition-normal;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: $flat-elevation-3;
@@ -92,7 +92,7 @@
 
 .card-description {
   font-size: $font-size-base;
-  color: #2C3E50;
+  color: #2c3e50;
   line-height: 1.6;
   margin-bottom: $spacing-lg;
 }
@@ -104,7 +104,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $spacing-sm;
-  
+
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
   }
@@ -115,8 +115,8 @@
   align-items: center;
   gap: $spacing-xs;
   font-size: $font-size-sm;
-  color: #2C3E50;
-  
+  color: #2c3e50;
+
   .feature-dot {
     width: 6px;
     height: 6px;
@@ -131,26 +131,26 @@
   .business-scope {
     padding: $spacing-2xl 0;
   }
-  
+
   .section-title {
     font-size: $font-size-2xl;
   }
-  
+
   .section-description {
     font-size: $font-size-base;
   }
-  
+
   .business-card {
     padding: $spacing-lg;
   }
-  
+
   .card-icon {
     width: 50px;
     height: 50px;
     font-size: $font-size-lg;
   }
-  
+
   .card-title {
     font-size: $font-size-lg;
   }
-} 
+}

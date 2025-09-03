@@ -1,4 +1,4 @@
-@use '../../css/variables' as *;
+@use "../../css/variables" as *;
 
 .carousel {
   position: relative;
@@ -60,7 +60,7 @@
 
   .carousel-icon {
     margin-bottom: 20px;
-    
+
     .icon-text {
       font-size: 4rem;
       display: block;
@@ -74,7 +74,7 @@
     font-weight: 700;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    
+
     @media (max-width: 768px) {
       font-size: 2.5rem;
     }
@@ -85,7 +85,7 @@
     font-weight: 300;
     margin-bottom: 20px;
     opacity: 0.9;
-    
+
     @media (max-width: 768px) {
       font-size: 1.2rem;
     }
@@ -97,7 +97,7 @@
     opacity: 0.8;
     max-width: 600px;
     margin: 0 auto 20px auto;
-    
+
     @media (max-width: 768px) {
       font-size: 1rem;
     }
@@ -120,27 +120,27 @@
     transition: all $transition-normal;
     z-index: 10;
     box-shadow: $flat-elevation-1;
-    
+
     &:hover {
       background-color: $primary-color;
       color: $text-light;
       transform: translateY(-50%) scale(1.05);
       box-shadow: $flat-elevation-2;
     }
-    
+
     &:focus {
       outline: 2px solid $primary-color;
       outline-offset: 2px;
     }
-    
+
     &--prev {
       left: $spacing-lg;
     }
-    
+
     &--next {
       right: $spacing-lg;
     }
-    
+
     svg {
       width: 18px;
       height: 18px;
@@ -166,17 +166,17 @@
     border: none;
     cursor: pointer;
     transition: all $transition-normal;
-    
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.8);
       transform: scale(1.2);
     }
-    
+
     &.active {
       background-color: $primary-color;
       transform: scale(1.2);
     }
-    
+
     &:focus {
       outline: 2px solid $primary-color;
       outline-offset: 2px;
@@ -210,7 +210,8 @@
 
 // 图标浮动动画
 @keyframes iconFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -224,23 +225,23 @@
     .carousel-overlay {
       padding: $spacing-lg;
     }
-    
+
     .carousel-title {
       font-size: 2.5rem;
     }
-    
+
     .carousel-subtitle {
       font-size: 1.2rem;
     }
-    
+
     .carousel-description {
       font-size: 1rem;
     }
-    
+
     .carousel-arrow {
       width: 40px;
       height: 40px;
-      
+
       svg {
         width: 16px;
         height: 16px;

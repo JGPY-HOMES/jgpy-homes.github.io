@@ -1,5 +1,5 @@
-import apiClient from './config';
-import { CompanyInfo } from '@/entities/company.entity';
+import apiClient from "./config";
+import { CompanyInfo } from "@/entities/company.entity";
 
 export class CompanyApi {
   /**
@@ -7,11 +7,11 @@ export class CompanyApi {
    */
   static async getCompanyInfo(): Promise<CompanyInfo> {
     try {
-      const response = await apiClient.get<CompanyInfo>('/company.json');
+      const response = await apiClient.get<CompanyInfo>("/company.json");
       return response.data;
     } catch (error) {
-      console.error('获取公司信息失败:', error);
-      throw new Error('获取公司信息失败');
+      console.error("获取公司信息失败:", error);
+      throw new Error("获取公司信息失败");
     }
   }
 }

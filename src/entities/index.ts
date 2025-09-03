@@ -1,5 +1,5 @@
 // Company types
-export type { CompanyInfo } from './company.entity';
+export type { CompanyInfo } from "./company.entity";
 
 // Contact types
 export type {
@@ -7,14 +7,11 @@ export type {
   ContactMethod,
   CompanyAddress,
   ContactInfo,
-  ContactPageData
-} from './contact.entity';
+  ContactPageData,
+} from "./contact.entity";
 
 // Services types
-export type {
-  Service,
-  ServicesPageData
-} from './services.entity';
+export type { Service, ServicesPageData } from "./services.entity";
 
 // About types
 export type {
@@ -32,8 +29,8 @@ export type {
   BenefitCategory,
   Activity,
   HistoryItem,
-  ValueItem
-} from './about.entity';
+  ValueItem,
+} from "./about.entity";
 
 // Case types
 export type {
@@ -44,5 +41,5 @@ export type {
   CaseCarouselItem,
   CaseListResponse,
   CaseFilterParams,
-  CasesPageData
-} from './case.entity';
+  CasesPageData,
+} from "./case.entity";

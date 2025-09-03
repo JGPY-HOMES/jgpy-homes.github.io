@@ -1,4 +1,4 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .case-filter {
   background: $background-white;
@@ -9,13 +9,9 @@
   z-index: 100;
   position: relative;
 
-
-
   &__container {
     padding: $spacing-lg;
   }
-
-
 
   &__header {
     display: flex;
@@ -201,8 +197,6 @@
       padding: $spacing-xs $spacing-sm;
       font-size: $font-size-xs;
     }
-
-
   }
 
   @media (max-width: $breakpoint-sm) {

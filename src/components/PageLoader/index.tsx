@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Loading } from '../Loading';
-import './PageLoader.scss';
+import React, { useEffect, useState } from "react";
+import "./PageLoader.scss";
 
 interface PageLoaderProps {
   isLoading: boolean;
@@ -8,10 +7,10 @@ interface PageLoaderProps {
   children: React.ReactNode;
 }
 
-export const PageLoader: React.FC<PageLoaderProps> = ({ 
-  isLoading, 
-  onLoadComplete, 
-  children 
+export const PageLoader: React.FC<PageLoaderProps> = ({
+  isLoading,
+  onLoadComplete,
+  children,
 }) => {
   const [showContent, setShowContent] = useState(false);
 
@@ -40,7 +39,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
                   <div className="house-window house-window--right"></div>
                 </div>
               </div>
-              
+
               {/* 装修工具 */}
               <div className="construction-tools">
                 <div className="tool tool--hammer">
@@ -56,7 +55,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
                   <div className="saw-blade"></div>
                 </div>
               </div>
-              
+
               {/* 装饰元素 */}
               <div className="decorations">
                 <div className="flower flower--1"></div>
@@ -64,12 +63,12 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
                 <div className="flower flower--3"></div>
                 <div className="tree"></div>
               </div>
-              
+
               {/* 进度条 */}
               <div className="progress-bar">
                 <div className="progress-fill"></div>
               </div>
-              
+
               <div className="loading-text">
                 <span className="loading-text__main">正在装修您的小屋</span>
                 <span className="loading-text__sub">请稍候...</span>
@@ -78,10 +77,12 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           </div>
         </div>
       )}
-      
-      <div className={`page-content ${showContent ? 'page-content--visible' : ''}`}>
+
+      <div
+        className={`page-content ${showContent ? "page-content--visible" : ""}`}
+      >
         {children}
       </div>
     </>
   );
-}; 
+};

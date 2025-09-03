@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
-import { FaUserPlus, FaGraduationCap, FaAward, FaHandshake, FaHeart } from 'react-icons/fa';
-import type { TeamExpansion as TeamExpansionType } from '../../../entities/about.entity';
-import { Recruitment } from './Recruitment';
-import { Training } from './Training';
-import { Culture } from './Culture';
-import { Values } from './Values';
-import { Benefits } from './Benefits';
-import './TeamExpansion.scss';
+import React, { useState } from "react";
+import {
+  FaUserPlus,
+  FaGraduationCap,
+  FaAward,
+  FaHandshake,
+  FaHeart,
+} from "react-icons/fa";
+import type { TeamExpansion as TeamExpansionType } from "../../../entities/about.entity";
+import { Recruitment } from "./Recruitment";
+import { Training } from "./Training";
+import { Culture } from "./Culture";
+import { Values } from "./Values";
+import { Benefits } from "./Benefits";
+import "./TeamExpansion.scss";
 
 interface TeamExpansionProps {
   expansionData?: TeamExpansionType;
 }
 
-export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) => {
-  const [activeTab, setActiveTab] = useState('recruitment');
+export const TeamExpansion: React.FC<TeamExpansionProps> = ({
+  expansionData,
+}) => {
+  const [activeTab, setActiveTab] = useState("recruitment");
 
   if (!expansionData) {
     return null;
@@ -22,44 +30,44 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
   // 标签页配置
   const tabs = [
     {
-      id: 'recruitment',
-      label: '人才招聘',
+      id: "recruitment",
+      label: "人才招聘",
       icon: FaUserPlus,
     },
     {
-      id: 'training',
-      label: '培训发展',
+      id: "training",
+      label: "培训发展",
       icon: FaGraduationCap,
     },
     {
-      id: 'culture',
-      label: '企业文化',
+      id: "culture",
+      label: "企业文化",
       icon: FaAward,
     },
     {
-      id: 'values',
-      label: '企业价值观',
+      id: "values",
+      label: "企业价值观",
       icon: FaHeart,
     },
     {
-      id: 'welfare',
-      label: '公司活动',
+      id: "welfare",
+      label: "公司活动",
       icon: FaHandshake,
-    }
+    },
   ];
 
   // 渲染标签页内容
   const renderTabContent = () => {
     switch (activeTab) {
-      case 'recruitment':
+      case "recruitment":
         return <Recruitment positions={expansionData.positions} />;
-      case 'training':
+      case "training":
         return <Training trainingPrograms={expansionData.trainingPrograms} />;
-      case 'culture':
+      case "culture":
         return <Culture />;
-      case 'values':
+      case "values":
         return <Values values={expansionData.values} />;
-      case 'welfare':
+      case "welfare":
         return <Benefits activities={expansionData.activities} />;
       default:
         return <Recruitment positions={expansionData.positions} />;
@@ -83,7 +91,7 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
               return (
                 <button
                   key={tab.id}
-                  className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
+                  className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
                   onClick={() => setActiveTab(tab.id)}
                 >
                   <Icon className="tab-icon" />
@@ -95,9 +103,7 @@ export const TeamExpansion: React.FC<TeamExpansionProps> = ({ expansionData }) =
 
           {/* 标签页内容 */}
           <div className="tab-content">
-            <div className="tab-panel">
-              {renderTabContent()}
-            </div>
+            <div className="tab-panel">{renderTabContent()}</div>
           </div>
         </div>
       </div>

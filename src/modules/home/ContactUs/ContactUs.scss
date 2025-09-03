@@ -1,23 +1,23 @@
-@use '../../../css/variables' as *;
+@use "../../../css/variables" as *;
 
 .contact-us {
   padding: $spacing-3xl 0;
   background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
   color: $text-light;
-  
+
   .section-header {
     text-align: center;
     margin-bottom: $spacing-3xl;
-    
+
     .section-title {
       font-size: $font-size-3xl;
       font-weight: 700;
       color: $text-light;
       margin-bottom: $spacing-md;
       position: relative;
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 50%;
@@ -28,7 +28,7 @@
         border-radius: 2px;
       }
     }
-    
+
     .section-description {
       font-size: $font-size-lg;
       color: rgba(255, 255, 255, 0.9);
@@ -37,7 +37,7 @@
       line-height: 1.6;
     }
   }
-  
+
   .contact-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,7 +48,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: $spacing-xl;
-  
+
   @media (max-width: $breakpoint-lg) {
     grid-template-columns: 1fr;
     gap: $spacing-lg;
@@ -71,13 +71,11 @@
   border-radius: $border-radius-lg;
   backdrop-filter: blur(10px);
   transition: all $transition-normal;
-  
+
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
   }
-  
-
 }
 
 .contact-icon {
@@ -112,8 +110,6 @@
   line-height: 1.5;
 }
 
-
-
 // 地图区域
 .map-section {
   display: flex;
@@ -121,13 +117,11 @@
   height: 100%;
   cursor: pointer;
   transition: all $transition-normal;
-  
+
   &:hover {
     transform: translateY(-2px);
   }
 }
-
-
 
 // 地图区域
 .map-placeholder {
@@ -143,7 +137,7 @@
   color: $text-light;
   box-shadow: $flat-elevation-2;
   transition: all $transition-normal;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: $flat-elevation-3;
@@ -183,44 +177,42 @@
   line-height: 1.4;
 }
 
-
-
 // 响应式设计
 @media (max-width: $breakpoint-sm) {
   .contact-us {
     padding: $spacing-2xl 0;
   }
-  
+
   .contact-title {
     font-size: $font-size-2xl;
   }
-  
+
   .contact-subtitle {
     font-size: $font-size-base;
   }
-  
+
   .contact-item {
     padding: $spacing-md;
   }
-  
+
   .address-card {
     padding: $spacing-md;
   }
-  
+
   .map-placeholder {
     max-height: 200px;
   }
-  
+
   .map-icon {
     font-size: $font-size-2xl;
     margin-bottom: $spacing-md;
   }
-  
+
   .map-title {
     font-size: $font-size-base;
   }
-  
+
   .map-address {
     font-size: $font-size-sm;
   }
-} 
+}
