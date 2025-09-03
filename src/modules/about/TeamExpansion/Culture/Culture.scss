@@ -1,133 +1,202 @@
 @use '../../../../css/variables' as *;
 
-// 企业文化理念样式
-.culture-principles {
-  margin-bottom: 40px;
+// 企业文化内容样式
+.culture-content {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-3xl;
+  margin-top: $spacing-2xl;
+  padding: $spacing-xl 0;
 
-  .principles-section-title {
-    font-size: $font-size-xl;
-    font-weight: 600;
-    color: $text-primary;
-    text-align: center;
-    margin-bottom: $spacing-lg;
-    padding-bottom: $spacing-sm;
-    border-bottom: 2px solid $border-light;
-  }
+  .culture-text {
+    flex: 1;
+    max-width: 650px;
+    padding-right: $spacing-lg;
 
-  .principles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $spacing-lg;
+    .culture-title {
+      font-size: $font-size-4xl;
+      font-weight: 700;
+      color: $text-primary;
+      margin: 0 0 $spacing-sm 0;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
 
-    .principle-item {
-      background: $background-light;
-      border-radius: $border-radius-lg;
-      padding: $spacing-xl $spacing-lg;
-      text-align: center;
-      border: 1px solid $border-light;
-      box-shadow: $flat-elevation-1;
-      transition: all $transition-normal;
+    .culture-subtitle {
+      font-size: $font-size-3xl;
+      font-weight: 600;
+      color: $text-primary;
+      margin: 0 0 $spacing-xl 0;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
 
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: $flat-elevation-2;
-        border-color: $primary-color;
-      }
-
-      h5 {
-        font-size: $font-size-lg;
-        font-weight: 600;
-        color: $primary-color;
-        margin-bottom: $spacing-md;
-        position: relative;
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 40px;
-          height: 2px;
-          background: $primary-color;
-          border-radius: $border-radius-sm;
-        }
-      }
-
+    .culture-description {
       p {
+        font-size: $font-size-lg;
+        line-height: 1.7;
         color: $text-secondary;
-        line-height: 1.6;
-        margin: 0;
+        margin: 0 0 $spacing-lg 0;
+        text-align: justify;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
-}
 
-// 企业文化特色样式
-.culture-features {
-  .features-section-title {
-    font-size: $font-size-xl;
-    font-weight: 600;
-    color: $text-primary;
-    text-align: center;
-    margin-bottom: $spacing-lg;
-    padding-bottom: $spacing-sm;
-    border-bottom: 2px solid $border-light;
-  }
+  .culture-image {
+    flex: 0 0 450px;
+    height: 550px;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+    box-shadow: $flat-elevation-3;
+    position: relative;
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: $spacing-lg;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($primary-color, 0.1), transparent);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity $transition-normal;
+    }
 
-    .feature-item {
-      background: $background-light;
-      border-radius: $border-radius-lg;
-      padding: $spacing-xl $spacing-lg;
-      text-align: center;
-      border: 1px solid $border-light;
-      box-shadow: $flat-elevation-1;
-      transition: all $transition-normal;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $transition-normal;
+    }
 
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: $flat-elevation-2;
-        border-color: $primary-color;
+    &:hover {
+      img {
+        transform: scale(1.03);
       }
 
-      h5 {
-        font-size: $font-size-lg;
-        font-weight: 600;
-        color: $primary-color;
-        margin-bottom: $spacing-md;
-        position: relative;
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -8px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 40px;
-          height: 2px;
-          background: $primary-color;
-          border-radius: $border-radius-sm;
-        }
-      }
-
-      p {
-        color: $text-secondary;
-        line-height: 1.6;
-        margin: 0;
+      &::before {
+        opacity: 1;
       }
     }
   }
 }
 
 // 响应式设计
+@media (max-width: 1200px) {
+  .culture-content {
+    gap: $spacing-2xl;
+
+    .culture-text {
+      max-width: 550px;
+      padding-right: $spacing-md;
+    }
+
+    .culture-image {
+      flex: 0 0 380px;
+      height: 480px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .culture-content {
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    .culture-text {
+      max-width: 500px;
+      padding-right: $spacing-sm;
+
+      .culture-title {
+        font-size: $font-size-3xl;
+      }
+
+      .culture-subtitle {
+        font-size: $font-size-2xl;
+      }
+
+      .culture-description {
+        p {
+          font-size: $font-size-base;
+        }
+      }
+    }
+
+    .culture-image {
+      flex: 0 0 320px;
+      height: 400px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
-  .principles-grid,
-  .features-grid {
-    grid-template-columns: 1fr;
+  .culture-content {
+    flex-direction: column;
+    gap: $spacing-lg;
+    margin-top: $spacing-lg;
+    padding: $spacing-lg 0;
+
+    .culture-text {
+      max-width: none;
+      padding-right: 0;
+      text-align: center;
+
+      .culture-title {
+        font-size: $font-size-2xl;
+      }
+
+      .culture-subtitle {
+        font-size: $font-size-xl;
+      }
+
+      .culture-description {
+        p {
+          font-size: $font-size-sm;
+          text-align: left;
+        }
+      }
+    }
+
+    .culture-image {
+      flex: none;
+      width: 100%;
+      max-width: 450px;
+      height: 350px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .culture-content {
+    gap: $spacing-md;
+    padding: $spacing-md 0;
+
+    .culture-text {
+      .culture-title {
+        font-size: $font-size-xl;
+      }
+
+      .culture-subtitle {
+        font-size: $font-size-lg;
+      }
+
+      .culture-description {
+        p {
+          font-size: $font-size-xs;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .culture-image {
+      height: 280px;
+      max-width: 100%;
+    }
   }
 }
