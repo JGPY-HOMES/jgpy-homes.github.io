@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "vite",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && vite build && npm run copy-data",
+    "build": "npm run clean && tsc && vite build && npm run copy-data && npm run compress-dist-images",
     "copy-data": "./scripts/copy-data.sh",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 20",
     "format": "prettier --write src",
     "deploy": "./scripts/deploy.sh",
-    "prepare": "husky"
+    "prepare": "husky",
+    "compress-dist-images": "node scripts/compress-dist-images.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -40,6 +41,7 @@
     "husky": "^9.1.7",
     "postcss": "^8.4.24",
     "prettier": "^3.0.2",
+    "sharp": "^0.34.3",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
     "vite": "7.0.6",
