@@ -1,0 +1,14 @@
+echo "🚀 检测到 push 操作，准备部署..."
+
+# 检查是否在 main 或 master 分支
+current_branch=$(git branch --show-current)
+if [ "$current_branch" = "main" ] || [ "$current_branch" = "master" ]; then
+    echo "🌿 当前在 $current_branch 分支，开始自动部署..."
+    
+    # 自动部署到 GitHub Pages
+    echo "🚀 开始自动部署..."
+    npm run deploy
+else
+    echo "🌿 当前在 $current_branch 分支，跳过自动部署"
+    echo "💡 提示：只有在 main 或 master 分支才会自动部署"
+fi
