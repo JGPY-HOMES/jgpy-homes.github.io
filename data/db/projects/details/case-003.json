@@ -1,0 +1,173 @@
+{
+  "id": "case-003",
+  "title": "中式风格别墅",
+  "subtitle": "传统与现代的完美融合",
+  "description": "这套中式风格别墅将传统中式元素与现代生活需求完美结合，营造出典雅大气的居住环境。设计师运用传统工艺和现代材料，打造出独特的空间体验。",
+  "categoryId": "home-decoration-chinese",
+  "serviceId": "home-decoration",
+  "tags": ["中式风格", "别墅", "传统", "典雅"],
+  "images": [
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg",
+    "/data/images/projects/case/5.jpg"
+  ],
+  "coverImage": "/data/images/projects/case/cover.jpg",
+  "area": 280,
+  "style": "中式风格",
+  "budget": "80万",
+  "duration": "6个月",
+  "location": "深圳市南山区",
+  "status": "completed",
+  "createdAt": "2024-01-05T00:00:00Z",
+  "updatedAt": "2024-01-05T00:00:00Z",
+  "featured": true,
+  "viewCount": 2100,
+  "likeCount": 156,
+  "content": [
+    {
+      "type": "text",
+      "content": "这套中式风格别墅位于深圳市南山区，建筑面积280平方米。业主是一位成功的企业家，对中国传统文化有着深厚的感情，希望在现代别墅中融入传统中式元素。设计师在充分了解业主需求后，决定采用中式风格设计，将传统中式元素与现代生活需求完美结合，营造出典雅大气的居住环境。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/living-room.jpg",
+      "title": "客厅设计",
+      "description": "客厅采用了中式风格的设计理念，以深色木质家具为主，搭配传统的中国红和金色元素。沙发选择了实木框架的布艺沙发，茶几选择了传统的红木茶几，营造出典雅大气的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "客厅的设计注重传统元素的运用，墙面采用了传统的中国画作为装饰，搭配实木的装饰线条。吊灯选择了传统的宫灯造型，既美观又具有文化内涵。地毯选择了深红色的传统图案地毯，与整体风格保持一致。",
+      "title": "客厅设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg",
+        "/data/images/projects/case/kitchen-3.jpg"
+      ],
+      "title": "厨房设计",
+      "description": "厨房采用了现代与传统的结合设计，橱柜选择了深色的实木面板，搭配现代化的电器设备。操作台面选择了深色的花岗岩，既美观又实用。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
+      "title": "主卧设计",
+      "description": "主卧延续了整体的中式风格，床头背景墙采用了传统的中国画作为装饰，搭配实木的床架。床品选择了深色的丝绸材质，营造出奢华典雅的睡眠环境。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "主卧的设计注重舒适性和文化内涵。衣柜采用了实木的推拉门设计，既节省空间又美观。床头柜选择了传统的红木款式，与整体风格保持一致。窗帘选择了深色的丝绸材质，既美观又具有良好的遮光性。",
+      "title": "主卧设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "卫生间设计",
+      "description": "卫生间采用了现代与传统的结合设计，瓷砖选择了深色的仿古砖，搭配现代化的卫浴设备。洗手台选择了实木的台面，既美观又实用。",
+      "order": 7
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/kitchen-3.jpg",
+      "title": "书房设计",
+      "description": "书房采用了传统的中式设计，书桌选择了实木的款式，搭配传统的文房四宝。书架选择了实木的开放式设计，既美观又实用。",
+      "order": 8
+    }
+  ],
+  "clientInfo": {
+    "name": "王先生",
+    "feedback": "设计师非常专业，能够准确理解我对中式文化的需求。整个设计既保持了传统的中式风格，又融入了现代的生活元素。特别是客厅的设计，既典雅又大气，朋友们来家里都夸赞不已。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "陈设计师",
+    "architect": "李建筑师",
+    "projectManager": "张项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "安信",
+      "price": 450
+    },
+    {
+      "name": "瓷砖",
+      "brand": "东鹏",
+      "price": 200
+    },
+    {
+      "name": "橱柜",
+      "brand": "欧派",
+      "price": 15000
+    },
+    {
+      "name": "卫浴",
+      "brand": "科勒",
+      "price": 8000
+    },
+    {
+      "name": "家具",
+      "brand": "红木家具",
+      "price": 50000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-05",
+      "endDate": "2024-01-25",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-01-26",
+      "endDate": "2024-02-15",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-02-16",
+      "endDate": "2024-03-05",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-03-06",
+      "endDate": "2024-03-25",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-04-20",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-04-21",
+      "endDate": "2024-05-10",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-05-11",
+      "endDate": "2024-05-25",
+      "description": "安装灯具，卫浴，家具等"
+    }
+  ]
+}

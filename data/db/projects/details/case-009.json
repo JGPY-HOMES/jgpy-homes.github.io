@@ -1,0 +1,189 @@
+{
+  "id": "case-009",
+  "title": "欧式风格豪宅",
+  "subtitle": "奢华典雅的欧式风情",
+  "description": "这套欧式风格豪宅采用经典的欧式设计元素，营造出奢华典雅的居住环境，体现了主人的品味和地位。",
+  "categoryId": "home-decoration-european",
+  "serviceId": "home-decoration",
+  "tags": ["欧式风格", "豪宅", "奢华", "典雅"],
+  "images": [
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg",
+    "/data/images/projects/case/5.jpg",
+    "/data/images/projects/case/6.jpg"
+  ],
+  "coverImage": "/data/images/projects/case/cover.jpg",
+  "area": 350,
+  "style": "欧式风格",
+  "budget": "150万",
+  "duration": "8个月",
+  "location": "重庆市渝中区",
+  "status": "completed",
+  "createdAt": "2024-02-10T00:00:00Z",
+  "updatedAt": "2024-02-10T00:00:00Z",
+  "featured": true,
+  "viewCount": 1800,
+  "likeCount": 124,
+  "content": [
+    {
+      "type": "text",
+      "content": "这套欧式风格豪宅位于重庆市渝中区，建筑面积350平方米。业主是一位成功的企业家，希望打造一个既奢华又典雅的居住环境。设计师在充分了解业主需求后，决定采用欧式风格设计，运用经典的欧式设计元素，营造出奢华典雅的居住环境，体现了主人的品味和地位。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/living-room.jpg",
+      "title": "大厅设计",
+      "description": "大厅采用了欧式风格的设计理念，以金色和白色为主色调。墙面采用了欧式的装饰线条，搭配华丽的吊灯，营造出奢华典雅的氛围。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "大厅的设计注重奢华感和仪式感。地面采用了进口的大理石，既美观又耐用。墙面采用了欧式的装饰线条和壁纸，搭配金色的装饰元素，营造出富丽堂皇的氛围。吊灯选择了欧式的水晶吊灯，既美观又具有装饰性。",
+      "title": "大厅设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "客厅设计",
+      "description": "客厅采用了欧式风格的设计，以深色木质家具为主，搭配华丽的装饰。沙发选择了欧式的款式，搭配精美的茶几和装饰品，营造出奢华舒适的氛围。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
+      "title": "餐厅设计",
+      "description": "餐厅采用了欧式风格的设计，以深色木质家具为主。餐桌选择了欧式的款式，搭配舒适的餐椅，营造出优雅的用餐环境。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "餐厅的设计注重优雅和舒适性。餐桌选择了实木的款式，既美观又耐用。餐椅选择了舒适的款式，为长时间的用餐提供良好的体验。吊灯选择了欧式的款式，既美观又实用。墙面装饰选择了欧式的画作，为空间增添了艺术气息。",
+      "title": "餐厅设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "主卧设计",
+      "description": "主卧延续了整体的欧式风格，以深色木质家具为主。床头背景墙采用了欧式的装饰，搭配华丽的床品，营造出奢华舒适的睡眠环境。",
+      "order": 7
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/kitchen-3.jpg",
+      "title": "书房设计",
+      "description": "书房采用了欧式风格的设计，以深色木质家具为主。书桌选择了欧式的款式，搭配舒适的书椅，营造出优雅的学习环境。",
+      "order": 8
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bedroom.jpg",
+        "/data/images/projects/case/1.jpg"
+      ],
+      "title": "卫生间设计",
+      "description": "卫生间采用了欧式风格的设计，以白色和金色为主色调。卫浴设备选择了欧式的款式，搭配精美的装饰，营造出奢华舒适的环境。",
+      "order": 9
+    }
+  ],
+  "clientInfo": {
+    "name": "重庆企业家",
+    "feedback": "设计师非常专业，能够准确理解我们对欧式风格豪宅的需求。整个设计既奢华又典雅，让我们的家变成了一个真正的豪宅。特别是欧式元素的运用，让整个空间充满了贵族气息。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "黄设计师",
+    "architect": "周建筑师",
+    "projectManager": "吴项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "进口实木",
+      "price": 800
+    },
+    {
+      "name": "大理石",
+      "brand": "进口大理石",
+      "price": 500
+    },
+    {
+      "name": "家具",
+      "brand": "欧式家具",
+      "price": 80000
+    },
+    {
+      "name": "卫浴",
+      "brand": "科勒",
+      "price": 15000
+    },
+    {
+      "name": "灯具",
+      "brand": "水晶吊灯",
+      "price": 20000
+    },
+    {
+      "name": "装饰品",
+      "brand": "欧式装饰",
+      "price": 10000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-02-10",
+      "endDate": "2024-03-10",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-25",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-04-15",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-04-16",
+      "endDate": "2024-05-15",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-05-16",
+      "endDate": "2024-06-30",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-07-01",
+      "endDate": "2024-07-20",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-07-21",
+      "endDate": "2024-08-10",
+      "description": "安装灯具，卫浴，家具等"
+    }
+  ]
+}

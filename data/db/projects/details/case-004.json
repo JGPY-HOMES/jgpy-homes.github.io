@@ -1,0 +1,163 @@
+{
+  "id": "case-004",
+  "title": "现代办公空间",
+  "subtitle": "高效协作的办公环境",
+  "description": "这个现代办公空间设计注重功能性和协作性，采用开放式布局和灵活的办公区域，为员工提供舒适高效的工作环境。",
+  "categoryId": "commercial-office",
+  "serviceId": "commercial-decoration",
+  "tags": ["办公空间", "现代", "开放式", "协作"],
+  "images": [
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg"
+  ],
+  "coverImage": "/data/images/projects/case/cover.jpg",
+  "area": 500,
+  "style": "现代简约",
+  "budget": "120万",
+  "duration": "4个月",
+  "location": "广州市天河区",
+  "status": "completed",
+  "createdAt": "2024-01-20T00:00:00Z",
+  "updatedAt": "2024-01-20T00:00:00Z",
+  "featured": false,
+  "viewCount": 750,
+  "likeCount": 45,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个现代办公空间位于广州市天河区，建筑面积500平方米。业主是一家快速发展的科技公司，希望打造一个既现代又高效的办公环境。设计师在充分了解业主需求后，决定采用现代简约风格，注重功能性和协作性，采用开放式布局和灵活的办公区域，为员工提供舒适高效的工作环境。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/living-room.jpg",
+      "title": "开放式办公区",
+      "description": "开放式办公区采用了现代简约的设计理念，以白色和灰色为主色调。办公桌选择了可调节高度的款式，搭配舒适的办公椅，为员工提供灵活的工作环境。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "开放式办公区的设计注重协作性和灵活性。办公桌采用了模块化的设计，可以根据团队需求进行调整。墙面采用了玻璃隔断，既保证了私密性又增加了空间的通透感。照明系统采用了智能化的设计，可以根据自然光线自动调节亮度。",
+      "title": "开放式办公区设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "会议室设计",
+      "description": "会议室采用了现代化的设计，配备了先进的视频会议设备。墙面采用了吸音材料，确保会议的音质效果。桌椅选择了舒适的款式，为长时间的会议提供良好的体验。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
+      "title": "接待区设计",
+      "description": "接待区采用了现代简约的设计，以白色和木色为主色调。前台选择了简约的款式，搭配舒适的沙发，为来访者提供良好的第一印象。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "接待区的设计注重品牌形象的展示。墙面采用了公司的品牌色彩，搭配简约的装饰画。地面选择了耐磨的地板材料，既美观又实用。照明系统采用了柔和的灯光，营造出温馨的氛围。",
+      "title": "接待区设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "休息区设计",
+      "description": "休息区采用了舒适的设计，配备了咖啡机、冰箱等设备。沙发选择了舒适的款式，为员工提供放松的环境。墙面采用了温馨的色彩，营造出轻松的氛围。",
+      "order": 7
+    }
+  ],
+  "clientInfo": {
+    "name": "广州科技公司",
+    "feedback": "设计师非常专业，能够准确理解我们对办公环境的需求。整个设计既现代又实用，员工们都非常喜欢新的办公环境。特别是开放式办公区的设计，大大提高了团队协作的效率。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "刘设计师",
+    "architect": "赵建筑师",
+    "projectManager": "孙项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "圣象",
+      "price": 180
+    },
+    {
+      "name": "吊顶",
+      "brand": "龙牌",
+      "price": 80
+    },
+    {
+      "name": "办公家具",
+      "brand": "震旦",
+      "price": 25000
+    },
+    {
+      "name": "照明",
+      "brand": "飞利浦",
+      "price": 15000
+    },
+    {
+      "name": "空调",
+      "brand": "格力",
+      "price": 30000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-20",
+      "endDate": "2024-02-05",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-02-06",
+      "endDate": "2024-02-20",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-02-21",
+      "endDate": "2024-03-10",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-25",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-03-26",
+      "endDate": "2024-04-15",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-04-16",
+      "endDate": "2024-04-30",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-05-01",
+      "endDate": "2024-05-15",
+      "description": "安装灯具，办公家具，设备等"
+    }
+  ]
+}

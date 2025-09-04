@@ -1,0 +1,262 @@
+{
+  "categories": [
+    {
+      "id": "home-decoration",
+      "name": "家装设计",
+      "serviceId": "home-decoration",
+      "description": "个性化家居设计案例",
+      "image": "/data/images/services/2.jpg",
+      "sort": 1,
+      "children": [
+        {
+          "id": "home-decoration-modern",
+          "name": "现代简约",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "现代简约风格家装案例",
+          "sort": 1
+        },
+        {
+          "id": "home-decoration-nordic",
+          "name": "北欧风格",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "北欧风格家装案例",
+          "sort": 2
+        },
+        {
+          "id": "home-decoration-chinese",
+          "name": "中式风格",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "中式风格家装案例",
+          "sort": 3
+        },
+        {
+          "id": "home-decoration-european",
+          "name": "欧式风格",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "欧式风格家装案例",
+          "sort": 4
+        },
+        {
+          "id": "home-decoration-industrial",
+          "name": "工业风格",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "工业风格家装案例",
+          "sort": 5
+        },
+        {
+          "id": "home-decoration-mix",
+          "name": "混搭风格",
+          "parentId": "home-decoration",
+          "serviceId": "home-decoration",
+          "description": "混搭风格家装案例",
+          "sort": 6
+        }
+      ]
+    },
+    {
+      "id": "commercial-decoration",
+      "name": "工装设计",
+      "serviceId": "commercial-decoration",
+      "description": "商业空间设计案例",
+      "image": "/data/images/services/3.jpg",
+      "sort": 2,
+      "children": [
+        {
+          "id": "commercial-office",
+          "name": "办公空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "办公空间设计案例",
+          "sort": 1
+        },
+        {
+          "id": "commercial-retail",
+          "name": "零售空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "零售空间设计案例",
+          "sort": 2
+        },
+        {
+          "id": "commercial-restaurant",
+          "name": "餐饮空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "餐饮空间设计案例",
+          "sort": 3
+        },
+        {
+          "id": "commercial-hotel",
+          "name": "酒店空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "酒店空间设计案例",
+          "sort": 4
+        },
+        {
+          "id": "commercial-medical",
+          "name": "医疗空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "医疗空间设计案例",
+          "sort": 5
+        },
+        {
+          "id": "commercial-education",
+          "name": "教育空间",
+          "parentId": "commercial-decoration",
+          "serviceId": "commercial-decoration",
+          "description": "教育空间设计案例",
+          "sort": 6
+        }
+      ]
+    },
+    {
+      "id": "soft-furnishing",
+      "name": "软装搭配",
+      "serviceId": "soft-furnishing",
+      "description": "软装设计与搭配案例",
+      "image": "/data/images/services/4.jpg",
+      "sort": 3,
+      "children": [
+        {
+          "id": "soft-furniture",
+          "name": "家具搭配",
+          "parentId": "soft-furnishing",
+          "serviceId": "soft-furnishing",
+          "description": "家具搭配设计案例",
+          "sort": 1
+        },
+        {
+          "id": "soft-lighting",
+          "name": "灯光设计",
+          "parentId": "soft-furnishing",
+          "serviceId": "soft-furnishing",
+          "description": "灯光设计案例",
+          "sort": 2
+        },
+        {
+          "id": "soft-textile",
+          "name": "布艺搭配",
+          "parentId": "soft-furnishing",
+          "serviceId": "soft-furnishing",
+          "description": "布艺搭配案例",
+          "sort": 3
+        },
+        {
+          "id": "soft-decoration",
+          "name": "装饰品搭配",
+          "parentId": "soft-furnishing",
+          "serviceId": "soft-furnishing",
+          "description": "装饰品搭配案例",
+          "sort": 4
+        },
+        {
+          "id": "soft-color",
+          "name": "色彩搭配",
+          "parentId": "soft-furnishing",
+          "serviceId": "soft-furnishing",
+          "description": "色彩搭配案例",
+          "sort": 5
+        }
+      ]
+    },
+    {
+      "id": "landscape-design",
+      "name": "园林景观",
+      "serviceId": "landscape-design",
+      "description": "景观设计与施工案例",
+      "image": "/data/images/services/5.jpg",
+      "sort": 4,
+      "children": [
+        {
+          "id": "landscape-garden",
+          "name": "庭院景观",
+          "parentId": "landscape-design",
+          "serviceId": "landscape-design",
+          "description": "庭院景观设计案例",
+          "sort": 1
+        },
+        {
+          "id": "landscape-water",
+          "name": "水景设计",
+          "parentId": "landscape-design",
+          "serviceId": "landscape-design",
+          "description": "水景设计案例",
+          "sort": 2
+        },
+        {
+          "id": "landscape-plant",
+          "name": "植物配置",
+          "parentId": "landscape-design",
+          "serviceId": "landscape-design",
+          "description": "植物配置案例",
+          "sort": 3
+        },
+        {
+          "id": "landscape-pavement",
+          "name": "铺装设计",
+          "parentId": "landscape-design",
+          "serviceId": "landscape-design",
+          "description": "铺装设计案例",
+          "sort": 4
+        },
+        {
+          "id": "landscape-sculpture",
+          "name": "园林小品",
+          "parentId": "landscape-design",
+          "serviceId": "landscape-design",
+          "description": "园林小品设计案例",
+          "sort": 5
+        }
+      ]
+    },
+    {
+      "id": "construction-services",
+      "name": "装修施工",
+      "serviceId": "construction-services",
+      "description": "专业施工服务案例",
+      "image": "/data/images/services/3.jpg",
+      "sort": 5,
+      "children": [
+        {
+          "id": "construction-renovation",
+          "name": "旧房改造",
+          "parentId": "construction-services",
+          "serviceId": "construction-services",
+          "description": "旧房改造施工案例",
+          "sort": 1
+        },
+        {
+          "id": "construction-new",
+          "name": "新房装修",
+          "parentId": "construction-services",
+          "serviceId": "construction-services",
+          "description": "新房装修施工案例",
+          "sort": 2
+        },
+        {
+          "id": "construction-partial",
+          "name": "局部改造",
+          "parentId": "construction-services",
+          "serviceId": "construction-services",
+          "description": "局部改造施工案例",
+          "sort": 3
+        },
+        {
+          "id": "construction-luxury",
+          "name": "豪华装修",
+          "parentId": "construction-services",
+          "serviceId": "construction-services",
+          "description": "豪华装修施工案例",
+          "sort": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "carousel": [
+    {
+      "id": "carousel-001",
+      "title": "精选案例展示",
+      "subtitle": "专业设计，品质施工",
+      "description": "我们拥有丰富的设计经验和专业的施工团队，为您打造理想的生活空间。每一个案例都是我们用心雕琢的作品。",
+      "image": "/data/images/projects/carousel/1.jpg",
+      "link": "/cases",
+      "featured": true
+    },
+    {
+      "id": "carousel-002",
+      "title": "现代简约风格",
+      "subtitle": "简约而不简单",
+      "description": "现代简约风格注重功能性和美观性的完美结合，以简洁的线条和纯净的色彩营造出舒适的生活环境。",
+      "image": "/data/images/projects/carousel/2.jpg",
+      "link": "/cases?category=home-decoration-modern",
+      "featured": true
+    },
+    {
+      "id": "carousel-003",
+      "title": "北欧风格设计",
+      "subtitle": "自然清新的北欧风情",
+      "description": "北欧风格设计注重自然光线的利用和原木元素的使用，营造出清新自然的居住氛围。",
+      "image": "/data/images/projects/carousel/3.jpg",
+      "link": "/cases?category=home-decoration-nordic",
+      "featured": true
+    },
+    {
+      "id": "carousel-004",
+      "title": "商业空间设计",
+      "subtitle": "专业商业空间解决方案",
+      "description": "我们为各类商业空间提供专业的设计和施工服务，包括办公空间、零售空间、餐饮空间等。",
+      "image": "/data/images/projects/carousel/4.jpg",
+      "link": "/cases?service=commercial-decoration",
+      "featured": true
+    },
+    {
+      "id": "carousel-005",
+      "title": "软装搭配服务",
+      "subtitle": "让空间更有温度",
+      "description": "专业的软装搭配服务，通过家具、灯具、布艺等软装元素的精心搭配，为您的空间增添温馨与美感。",
+      "image": "/data/images/projects/carousel/5.jpg",
+      "link": "/cases?service=soft-furnishing",
+      "featured": true
+    }
+  ]
+}

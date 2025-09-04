@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🚀 检测到新的提交，准备部署..."
+
+# 检查是否在 main 或 master 分支
+current_branch=$(git branch --show-current)
+if [ "$current_branch" = "main" ] || [ "$current_branch" = "master" ]; then
+    echo "🌿 当前在 $current_branch 分支，开始自动部署..."
+    
+    # 询问是否要部署（可选，也可以自动部署）
+    read -p "是否要部署到 GitHub Pages? (Y/n): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Nn]$ ]]; then
+        echo "⏭️  跳过部署"
+        exit 0
+    fi
+    
+    # 运行部署脚本
+    npm run deploy
+else
+    echo "🌿 当前在 $current_branch 分支，跳过自动部署"
+    echo "💡 提示：只有在 main 或 master 分支才会自动部署"
+fi

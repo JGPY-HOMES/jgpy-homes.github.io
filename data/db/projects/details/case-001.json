@@ -1,0 +1,160 @@
+{
+  "id": "case-001",
+  "title": "现代简约三居室",
+  "subtitle": "简约而不简单的现代生活",
+  "description": "这套三居室采用现代简约风格，以白色和木色为主色调，营造出温馨舒适的居住环境。设计师巧妙运用空间布局，让每个区域都发挥最大功能。",
+  "categoryId": "home-decoration-modern",
+  "serviceId": "home-decoration",
+  "tags": ["现代简约", "三居室", "温馨", "实用"],
+  "images": [
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg"
+  ],
+  "coverImage": "/data/images/projects/case/cover.jpg",
+  "area": 120,
+  "style": "现代简约",
+  "budget": "25万",
+  "duration": "3个月",
+  "location": "北京市朝阳区",
+  "status": "completed",
+  "createdAt": "2024-01-15T00:00:00Z",
+  "updatedAt": "2024-01-15T00:00:00Z",
+  "featured": true,
+  "viewCount": 1250,
+  "likeCount": 89,
+  "content": [
+    {
+      "type": "text",
+      "content": "这套三居室位于北京市朝阳区，建筑面积120平方米。业主是一对年轻夫妇，希望打造一个简约而不简单的现代居住空间。设计师在充分了解业主需求后，决定采用现代简约风格，以白色和木色为主色调，营造出温馨舒适的居住环境。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/living-room.jpg",
+      "title": "客厅设计",
+      "description": "客厅采用开放式设计，与餐厅和厨房相连，增加了空间的通透感。电视背景墙采用白色大理石，搭配木色电视柜，简约而不失质感。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "客厅是整个家的核心区域，设计师在这里花费了很多心思。沙发选择了浅灰色的布艺沙发，既舒适又易于打理。茶几选择了简约的圆形设计，与整体风格保持一致。地毯的加入让空间更加温馨，同时也起到了区域划分的作用。",
+      "title": "客厅设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg",
+        "/data/images/projects/case/kitchen-3.jpg"
+      ],
+      "title": "厨房设计",
+      "description": "厨房采用L型布局，充分利用空间。橱柜选择了白色烤漆面板，搭配黑色拉手，简约时尚。操作台面选择了石英石，既美观又实用。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
+      "title": "主卧设计",
+      "description": "主卧延续了整体的简约风格，床头背景墙采用了木色护墙板，与白色墙面形成对比。床品选择了素雅的灰色，营造出宁静的睡眠环境。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "主卧的设计注重舒适性和实用性。衣柜采用了嵌入式设计，既节省空间又美观。床头柜选择了简约的款式，与整体风格保持一致。窗帘选择了遮光性好的材质，确保良好的睡眠质量。",
+      "title": "主卧设计细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "卫生间设计",
+      "description": "卫生间采用了干湿分离的设计，提高了使用效率。瓷砖选择了白色和灰色的搭配，既美观又易于清洁。",
+      "order": 7
+    }
+  ],
+  "clientInfo": {
+    "name": "张先生夫妇",
+    "feedback": "设计师非常专业，能够准确理解我们的需求。整个装修过程很顺利，最终效果超出了我们的预期。特别是客厅的设计，既实用又美观，朋友们来家里都夸赞不已。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "李设计师",
+    "architect": "王建筑师",
+    "projectManager": "陈项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "圣象",
+      "price": 280
+    },
+    {
+      "name": "瓷砖",
+      "brand": "马可波罗",
+      "price": 120
+    },
+    {
+      "name": "橱柜",
+      "brand": "欧派",
+      "price": 8000
+    },
+    {
+      "name": "卫浴",
+      "brand": "科勒",
+      "price": 5000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-01-15",
+      "endDate": "2024-01-30",
+      "description": "与客户沟通需求，确定设计方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-02-01",
+      "endDate": "2024-02-10",
+      "description": "拆除原有装修，进行结构改造"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-02-11",
+      "endDate": "2024-02-25",
+      "description": "水电改造，安装水电管线"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-02-26",
+      "endDate": "2024-03-15",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-03-16",
+      "endDate": "2024-04-05",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-04-06",
+      "endDate": "2024-04-20",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-04-21",
+      "endDate": "2024-04-30",
+      "description": "安装灯具，卫浴，家具等"
+    }
+  ]
+}

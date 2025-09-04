@@ -1,0 +1,163 @@
+{
+  "id": "case-008",
+  "title": "旧房改造案例",
+  "subtitle": "老房子的华丽转身",
+  "description": "这个旧房改造案例展示了如何通过专业的设计和施工，让老房子焕发新的生机，满足现代生活的需求。",
+  "categoryId": "construction-renovation",
+  "serviceId": "construction-services",
+  "tags": ["旧房改造", "翻新", "现代", "实用"],
+  "images": [
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg"
+  ],
+  "coverImage": "/data/images/projects/case/cover.jpg",
+  "area": 95,
+  "style": "现代简约",
+  "budget": "22万",
+  "duration": "3.5个月",
+  "location": "武汉市江汉区",
+  "status": "completed",
+  "createdAt": "2024-02-05T00:00:00Z",
+  "updatedAt": "2024-02-05T00:00:00Z",
+  "featured": false,
+  "viewCount": 720,
+  "likeCount": 51,
+  "content": [
+    {
+      "type": "text",
+      "content": "这个旧房改造案例位于武汉市江汉区，建筑面积95平方米。业主是一对中年夫妇，希望通过对老房子的改造，让居住环境更加舒适现代。设计师在充分了解业主需求和房屋现状后，决定采用现代简约风格，通过专业的设计和施工，让老房子焕发新的生机，满足现代生活的需求。",
+      "title": "项目背景",
+      "order": 1
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/living-room.jpg",
+      "title": "改造前后对比",
+      "description": "改造前的老房子存在空间布局不合理、采光不足、设施老化等问题。改造后采用了现代简约的设计，重新规划了空间布局，改善了采光条件，更新了所有设施。",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "content": "改造的重点包括空间重新规划、结构加固、水电改造、墙面处理等。设计师充分利用了原有的空间结构，通过合理的布局设计，让每个区域都发挥最大功能。同时，采用了现代的材料和工艺，提升了居住的舒适度。",
+      "title": "改造设计理念",
+      "order": 3
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
+      ],
+      "title": "结构改造",
+      "description": "结构改造包括墙体加固、梁柱修复、地面找平等工作。通过专业的结构分析，确保了房屋的安全性和稳定性。",
+      "order": 4
+    },
+    {
+      "type": "image",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
+      "title": "空间规划",
+      "description": "空间规划重新设计了各个功能区域，包括客厅、卧室、厨房、卫生间等。通过合理的布局，提高了空间利用率和居住舒适度。",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "content": "空间规划注重功能性和实用性的结合。客厅采用了开放式的设计，增加了空间的通透感。卧室注重私密性和舒适性，厨房和卫生间采用了现代化的设计，提高了使用效率。",
+      "title": "空间规划细节",
+      "order": 6
+    },
+    {
+      "type": "gallery",
+      "content": "",
+      "images": [
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
+      ],
+      "title": "改造细节",
+      "description": "改造细节包括墙面处理、地面铺装、门窗更换、水电改造等。每个细节都经过精心设计，确保改造质量和效果。",
+      "order": 7
+    }
+  ],
+  "clientInfo": {
+    "name": "武汉夫妇",
+    "feedback": "设计师非常专业，能够准确理解我们对旧房改造的需求。整个改造过程很顺利，最终效果超出了我们的预期。特别是空间规划的设计，让我们的老房子焕发了新的生机，居住环境得到了极大的改善。",
+    "rating": 5
+  },
+  "designTeam": {
+    "designer": "徐设计师",
+    "architect": "刘建筑师",
+    "projectManager": "陈项目经理"
+  },
+  "materials": [
+    {
+      "name": "地板",
+      "brand": "圣象",
+      "price": 200
+    },
+    {
+      "name": "瓷砖",
+      "brand": "马可波罗",
+      "price": 100
+    },
+    {
+      "name": "墙面材料",
+      "brand": "立邦",
+      "price": 40
+    },
+    {
+      "name": "门窗",
+      "brand": "断桥铝",
+      "price": 800
+    },
+    {
+      "name": "卫浴",
+      "brand": "科勒",
+      "price": 4000
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "设计阶段",
+      "startDate": "2024-02-05",
+      "endDate": "2024-02-20",
+      "description": "与客户沟通需求，现场勘测，确定改造方案，绘制施工图纸"
+    },
+    {
+      "phase": "拆改阶段",
+      "startDate": "2024-02-21",
+      "endDate": "2024-03-05",
+      "description": "拆除原有装修，进行结构改造，清理建筑垃圾"
+    },
+    {
+      "phase": "水电阶段",
+      "startDate": "2024-03-06",
+      "endDate": "2024-03-20",
+      "description": "水电改造，安装水电管线，测试水电系统"
+    },
+    {
+      "phase": "泥瓦阶段",
+      "startDate": "2024-03-21",
+      "endDate": "2024-04-10",
+      "description": "贴瓷砖，做防水，砌墙等泥瓦工程"
+    },
+    {
+      "phase": "木工阶段",
+      "startDate": "2024-04-11",
+      "endDate": "2024-04-25",
+      "description": "制作橱柜，安装门窗，吊顶等木工工程"
+    },
+    {
+      "phase": "油漆阶段",
+      "startDate": "2024-04-26",
+      "endDate": "2024-05-10",
+      "description": "墙面处理，刷漆，贴壁纸等油漆工程"
+    },
+    {
+      "phase": "安装阶段",
+      "startDate": "2024-05-11",
+      "endDate": "2024-05-20",
+      "description": "安装灯具，卫浴，家具等"
+    }
+  ]
+}
