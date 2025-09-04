@@ -9,12 +9,12 @@
       "serviceId": "home-decoration",
       "tags": ["现代简约", "三居室", "温馨", "实用"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg",
-        "/src/assets/images/projects/case/4.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg",
+        "/data/images/projects/case/4.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 120,
       "style": "现代简约",
       "budget": "25万",
@@ -36,11 +36,11 @@
       "serviceId": "home-decoration",
       "tags": ["北欧风格", "两居室", "原木", "清新"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 85,
       "style": "北欧风格",
       "budget": "18万",
@@ -62,13 +62,13 @@
       "serviceId": "home-decoration",
       "tags": ["中式风格", "别墅", "传统", "典雅"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg",
-        "/src/assets/images/projects/case/4.jpg",
-        "/src/assets/images/projects/case/5.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg",
+        "/data/images/projects/case/4.jpg",
+        "/data/images/projects/case/5.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 280,
       "style": "中式风格",
       "budget": "80万",
@@ -90,11 +90,11 @@
       "serviceId": "commercial-decoration",
       "tags": ["办公空间", "现代", "开放式", "协作"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 500,
       "style": "现代简约",
       "budget": "120万",
@@ -116,12 +116,12 @@
       "serviceId": "commercial-decoration",
       "tags": ["咖啡厅", "温馨", "精品", "舒适"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg",
-        "/src/assets/images/projects/case/4.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg",
+        "/data/images/projects/case/4.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 120,
       "style": "工业风格",
       "budget": "35万",
@@ -143,11 +143,11 @@
       "serviceId": "soft-furnishing",
       "tags": ["软装", "搭配", "色彩", "质感"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 90,
       "style": "现代简约",
       "budget": "15万",
@@ -169,12 +169,12 @@
       "serviceId": "landscape-design",
       "tags": ["庭院", "景观", "自然", "艺术"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg",
-        "/src/assets/images/projects/case/4.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg",
+        "/data/images/projects/case/4.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 200,
       "style": "现代简约",
       "budget": "45万",
@@ -196,11 +196,11 @@
       "serviceId": "construction-services",
       "tags": ["旧房改造", "翻新", "现代", "实用"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 95,
       "style": "现代简约",
       "budget": "22万",
@@ -222,14 +222,14 @@
       "serviceId": "home-decoration",
       "tags": ["欧式风格", "豪宅", "奢华", "典雅"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg",
-        "/src/assets/images/projects/case/4.jpg",
-        "/src/assets/images/projects/case/5.jpg",
-        "/src/assets/images/projects/case/6.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg",
+        "/data/images/projects/case/4.jpg",
+        "/data/images/projects/case/5.jpg",
+        "/data/images/projects/case/6.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 350,
       "style": "欧式风格",
       "budget": "150万",
@@ -251,11 +251,11 @@
       "serviceId": "home-decoration",
       "tags": ["工业风格", "loft", "粗犷", "精致"],
       "images": [
-        "/src/assets/images/projects/case/1.jpg",
-        "/src/assets/images/projects/case/2.jpg",
-        "/src/assets/images/projects/case/3.jpg"
+        "/data/images/projects/case/1.jpg",
+        "/data/images/projects/case/2.jpg",
+        "/data/images/projects/case/3.jpg"
       ],
-      "coverImage": "/src/assets/images/projects/case/cover.jpg",
+      "coverImage": "/data/images/projects/case/cover.jpg",
       "area": 110,
       "style": "工业风格",
       "budget": "28万",

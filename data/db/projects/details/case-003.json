@@ -7,13 +7,13 @@
   "serviceId": "home-decoration",
   "tags": ["中式风格", "别墅", "传统", "典雅"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg",
-    "/src/assets/images/projects/case/4.jpg",
-    "/src/assets/images/projects/case/5.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg",
+    "/data/images/projects/case/5.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 280,
   "style": "中式风格",
   "budget": "80万",
@@ -34,7 +34,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "客厅设计",
       "description": "客厅采用了中式风格的设计理念，以深色木质家具为主，搭配传统的中国红和金色元素。沙发选择了实木框架的布艺沙发，茶几选择了传统的红木茶几，营造出典雅大气的氛围。",
       "order": 2
@@ -49,9 +49,9 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg",
-        "/src/assets/images/projects/case/kitchen-3.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg",
+        "/data/images/projects/case/kitchen-3.jpg"
       ],
       "title": "厨房设计",
       "description": "厨房采用了现代与传统的结合设计，橱柜选择了深色的实木面板，搭配现代化的电器设备。操作台面选择了深色的花岗岩，既美观又实用。",
@@ -59,7 +59,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
       "title": "主卧设计",
       "description": "主卧延续了整体的中式风格，床头背景墙采用了传统的中国画作为装饰，搭配实木的床架。床品选择了深色的丝绸材质，营造出奢华典雅的睡眠环境。",
       "order": 5
@@ -74,8 +74,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bathroom-1.jpg",
-        "/src/assets/images/projects/case/bathroom-2.jpg"
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
       ],
       "title": "卫生间设计",
       "description": "卫生间采用了现代与传统的结合设计，瓷砖选择了深色的仿古砖，搭配现代化的卫浴设备。洗手台选择了实木的台面，既美观又实用。",
@@ -83,7 +83,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/kitchen-3.jpg",
+      "content": "/data/images/projects/case/kitchen-3.jpg",
       "title": "书房设计",
       "description": "书房采用了传统的中式设计，书桌选择了实木的款式，搭配传统的文房四宝。书架选择了实木的开放式设计，既美观又实用。",
       "order": 8

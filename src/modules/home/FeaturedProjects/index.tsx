@@ -2,12 +2,20 @@ import React from "react";
 import { FaHome, FaBuilding, FaCouch, FaStar } from "react-icons/fa";
 import "./FeaturedProjects.scss";
 
+// 导入项目图片
+import project1 from "../../../assets/images/hero/3.jpg";
+import project2 from "../../../assets/images/hero/4.jpg";
+import project3 from "../../../assets/images/hero/6.jpg";
+import project4 from "../../../assets/images/hero/7.jpg";
+import project5 from "../../../assets/images/hero/11.jpg";
+import project6 from "../../../assets/images/hero/12.jpg";
+
 export const FeaturedProjects: React.FC = () => {
   const projectsData = [
     {
       title: "现代简约客厅",
       category: "家装设计",
-      image: "/src/assets/images/hero/3.jpg",
+      image: project1,
       icon: FaHome,
       rating: 5,
       description: "采用现代简约风格，打造温馨舒适的客厅空间",
@@ -15,7 +23,7 @@ export const FeaturedProjects: React.FC = () => {
     {
       title: "开放式厨房",
       category: "家装设计",
-      image: "/src/assets/images/hero/4.jpg",
+      image: project2,
       icon: FaHome,
       rating: 5,
       description: "开放式厨房设计，增加空间通透感",
@@ -23,7 +31,7 @@ export const FeaturedProjects: React.FC = () => {
     {
       title: "温馨卧室",
       category: "家装设计",
-      image: "/src/assets/images/hero/6.jpg",
+      image: project3,
       icon: FaHome,
       rating: 5,
       description: "温馨舒适的卧室设计，营造良好的睡眠环境",
@@ -31,7 +39,7 @@ export const FeaturedProjects: React.FC = () => {
     {
       title: "现代办公室",
       category: "工装设计",
-      image: "/src/assets/images/hero/7.jpg",
+      image: project4,
       icon: FaBuilding,
       rating: 5,
       description: "现代办公空间设计，提升工作效率",
@@ -39,7 +47,7 @@ export const FeaturedProjects: React.FC = () => {
     {
       title: "精品餐厅",
       category: "工装设计",
-      image: "/src/assets/images/hero/11.jpg",
+      image: project5,
       icon: FaBuilding,
       rating: 5,
       description: "精品餐厅装修，营造优雅的用餐环境",
@@ -47,7 +55,7 @@ export const FeaturedProjects: React.FC = () => {
     {
       title: "豪华别墅",
       category: "高端定制",
-      image: "/src/assets/images/hero/12.jpg",
+      image: project6,
       icon: FaCouch,
       rating: 5,
       description: "豪华别墅整体装修，体现品质生活",

@@ -7,14 +7,14 @@
   "serviceId": "home-decoration",
   "tags": ["欧式风格", "豪宅", "奢华", "典雅"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg",
-    "/src/assets/images/projects/case/4.jpg",
-    "/src/assets/images/projects/case/5.jpg",
-    "/src/assets/images/projects/case/6.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg",
+    "/data/images/projects/case/5.jpg",
+    "/data/images/projects/case/6.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 350,
   "style": "欧式风格",
   "budget": "150万",
@@ -35,7 +35,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "大厅设计",
       "description": "大厅采用了欧式风格的设计理念，以金色和白色为主色调。墙面采用了欧式的装饰线条，搭配华丽的吊灯，营造出奢华典雅的氛围。",
       "order": 2
@@ -50,8 +50,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
       ],
       "title": "客厅设计",
       "description": "客厅采用了欧式风格的设计，以深色木质家具为主，搭配华丽的装饰。沙发选择了欧式的款式，搭配精美的茶几和装饰品，营造出奢华舒适的氛围。",
@@ -59,7 +59,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
       "title": "餐厅设计",
       "description": "餐厅采用了欧式风格的设计，以深色木质家具为主。餐桌选择了欧式的款式，搭配舒适的餐椅，营造出优雅的用餐环境。",
       "order": 5
@@ -74,8 +74,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bathroom-1.jpg",
-        "/src/assets/images/projects/case/bathroom-2.jpg"
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
       ],
       "title": "主卧设计",
       "description": "主卧延续了整体的欧式风格，以深色木质家具为主。床头背景墙采用了欧式的装饰，搭配华丽的床品，营造出奢华舒适的睡眠环境。",
@@ -83,7 +83,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/kitchen-3.jpg",
+      "content": "/data/images/projects/case/kitchen-3.jpg",
       "title": "书房设计",
       "description": "书房采用了欧式风格的设计，以深色木质家具为主。书桌选择了欧式的款式，搭配舒适的书椅，营造出优雅的学习环境。",
       "order": 8
@@ -92,8 +92,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bedroom.jpg",
-        "/src/assets/images/projects/case/1.jpg"
+        "/data/images/projects/case/bedroom.jpg",
+        "/data/images/projects/case/1.jpg"
       ],
       "title": "卫生间设计",
       "description": "卫生间采用了欧式风格的设计，以白色和金色为主色调。卫浴设备选择了欧式的款式，搭配精美的装饰，营造出奢华舒适的环境。",

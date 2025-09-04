@@ -7,11 +7,11 @@
   "serviceId": "soft-furnishing",
   "tags": ["软装", "搭配", "色彩", "质感"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 90,
   "style": "现代简约",
   "budget": "15万",
@@ -32,7 +32,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "客厅软装搭配",
       "description": "客厅采用了现代简约的软装搭配，以灰色和白色为主色调。沙发选择了舒适的布艺沙发，搭配简约的茶几和地毯，营造出温馨舒适的氛围。",
       "order": 2
@@ -47,8 +47,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
       ],
       "title": "卧室软装搭配",
       "description": "卧室采用了温馨的软装搭配，以暖色调为主。床品选择了舒适的棉质材质，搭配柔和的灯光，营造出宁静的睡眠环境。",
@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
       "title": "餐厅软装搭配",
       "description": "餐厅采用了简约的软装搭配，以木质和白色为主。餐桌选择了实木的款式，搭配舒适的餐椅，营造出温馨的用餐环境。",
       "order": 5
@@ -71,8 +71,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bathroom-1.jpg",
-        "/src/assets/images/projects/case/bathroom-2.jpg"
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
       ],
       "title": "装饰品搭配",
       "description": "装饰品的选择注重与整体风格的协调。绿植、艺术品、灯具等装饰品都经过精心挑选，为空间增添了生机和艺术气息。",

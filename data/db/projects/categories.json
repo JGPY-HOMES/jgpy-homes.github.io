@@ -5,7 +5,7 @@
       "name": "家装设计",
       "serviceId": "home-decoration",
       "description": "个性化家居设计案例",
-      "image": "/src/assets/images/services/2.jpg",
+      "image": "/data/images/services/2.jpg",
       "sort": 1,
       "children": [
         {
@@ -63,7 +63,7 @@
       "name": "工装设计",
       "serviceId": "commercial-decoration",
       "description": "商业空间设计案例",
-      "image": "/src/assets/images/services/3.jpg",
+      "image": "/data/images/services/3.jpg",
       "sort": 2,
       "children": [
         {
@@ -121,7 +121,7 @@
       "name": "软装搭配",
       "serviceId": "soft-furnishing",
       "description": "软装设计与搭配案例",
-      "image": "/src/assets/images/services/4.jpg",
+      "image": "/data/images/services/4.jpg",
       "sort": 3,
       "children": [
         {
@@ -171,7 +171,7 @@
       "name": "园林景观",
       "serviceId": "landscape-design",
       "description": "景观设计与施工案例",
-      "image": "/src/assets/images/services/5.jpg",
+      "image": "/data/images/services/5.jpg",
       "sort": 4,
       "children": [
         {
@@ -221,7 +221,7 @@
       "name": "装修施工",
       "serviceId": "construction-services",
       "description": "专业施工服务案例",
-      "image": "/src/assets/images/services/3.jpg",
+      "image": "/data/images/services/3.jpg",
       "sort": 5,
       "children": [
         {

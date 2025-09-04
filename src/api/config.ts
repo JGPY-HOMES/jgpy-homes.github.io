@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 // API 基础配置
 export const API_CONFIG = {
-  baseURL: "/data/db", // 指向 data/db 目录
+  baseURL: "/data/db", // 直接使用固定路径
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",

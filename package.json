@@ -4,7 +4,9 @@
   "description": "河南交个朋友装饰有限公司官方网站",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && vite build && npm run copy-data",
+    "copy-data": "./scripts/copy-data.sh",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 20",
     "format": "prettier --write src",

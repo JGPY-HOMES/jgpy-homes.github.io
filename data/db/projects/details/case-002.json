@@ -7,11 +7,11 @@
   "serviceId": "home-decoration",
   "tags": ["北欧风格", "两居室", "原木", "清新"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 85,
   "style": "北欧风格",
   "budget": "18万",
@@ -32,7 +32,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "客厅设计",
       "description": "客厅采用了北欧风格的设计理念，以白色和原木色为主色调。沙发选择了浅灰色的布艺沙发，搭配原木色的茶几，营造出温馨自然的氛围。",
       "order": 2
@@ -47,8 +47,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
       ],
       "title": "厨房设计",
       "description": "厨房采用了开放式的设计，与客厅相连，增加了空间的通透感。橱柜选择了白色烤漆面板，搭配原木色的台面，既美观又实用。",
@@ -56,7 +56,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/bedroom.jpg",
+      "content": "/data/images/projects/case/bedroom.jpg",
       "title": "卧室设计",
       "description": "卧室延续了整体的北欧风格，床头背景墙采用了原木色的护墙板，与白色墙面形成对比。床品选择了素雅的白色和灰色，营造出宁静的睡眠环境。",
       "order": 5

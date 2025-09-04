@@ -214,6 +214,9 @@
     pointer-events: none;
   }
 
+  // 添加进入动画
+  animation: qrCodeFadeIn 0.3s ease-out;
+
   // 确保在小屏幕上也能正常显示
   @media (max-width: $breakpoint-sm) {
     left: 0;
@@ -227,9 +230,6 @@
       transform: none;
     }
   }
-
-  // 添加进入动画
-  animation: qrCodeFadeIn 0.3s ease-out;
 
   // 超小屏幕的额外优化
   @media (max-width: 480px) {

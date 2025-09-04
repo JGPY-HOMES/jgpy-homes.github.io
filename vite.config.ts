@@ -4,7 +4,6 @@ import { VitePWA } from 'vite-plugin-pwa';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { fileURLToPath, URL } from 'url';
 import path from 'path';
-
 export default defineConfig({
   plugins: [
     react(),
@@ -67,9 +66,24 @@ export default defineConfig({
     },
   },
   assetsInclude: ['**/*.svg'],
-  base: '/jgpy-homes.github.io/',
+  base: '/',
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    copyPublicDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
+  },
   server: {
     port: 3000,
     open: true,
+    // 配置静态文件服务，确保 data 文件夹在开发环境中可访问
+    fs: {
+      allow: ['..', '.', './data']
+    }
   },
 });

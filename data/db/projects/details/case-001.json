@@ -7,12 +7,12 @@
   "serviceId": "home-decoration",
   "tags": ["现代简约", "三居室", "温馨", "实用"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg",
-    "/src/assets/images/projects/case/4.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 120,
   "style": "现代简约",
   "budget": "25万",
@@ -33,7 +33,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "客厅设计",
       "description": "客厅采用开放式设计，与餐厅和厨房相连，增加了空间的通透感。电视背景墙采用白色大理石，搭配木色电视柜，简约而不失质感。",
       "order": 2
@@ -48,9 +48,9 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg",
-        "/src/assets/images/projects/case/kitchen-3.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg",
+        "/data/images/projects/case/kitchen-3.jpg"
       ],
       "title": "厨房设计",
       "description": "厨房采用L型布局，充分利用空间。橱柜选择了白色烤漆面板，搭配黑色拉手，简约时尚。操作台面选择了石英石，既美观又实用。",
@@ -58,7 +58,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
       "title": "主卧设计",
       "description": "主卧延续了整体的简约风格，床头背景墙采用了木色护墙板，与白色墙面形成对比。床品选择了素雅的灰色，营造出宁静的睡眠环境。",
       "order": 5
@@ -73,8 +73,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bathroom-1.jpg",
-        "/src/assets/images/projects/case/bathroom-2.jpg"
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
       ],
       "title": "卫生间设计",
       "description": "卫生间采用了干湿分离的设计，提高了使用效率。瓷砖选择了白色和灰色的搭配，既美观又易于清洁。",

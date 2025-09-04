@@ -2,6 +2,9 @@ import React from "react";
 import { FaHistory, FaBullseye, FaUsers, FaAward } from "react-icons/fa";
 import "./AboutUs.scss";
 
+// 导入关于我们图片
+import aboutImage from "../../../assets/images/hero/2.jpg";
+
 export const AboutUs: React.FC = () => {
   const aboutData = {
     title: "关于我们",
@@ -62,7 +65,7 @@ export const AboutUs: React.FC = () => {
           </div>
 
           <div className="about-image">
-            <img src="/src/assets/images/hero/2.jpg" alt="关于我们" />
+            <img src={aboutImage} alt="关于我们" />
             <div className="image-overlay">
               <div className="overlay-content">
                 <h3>专业团队</h3>

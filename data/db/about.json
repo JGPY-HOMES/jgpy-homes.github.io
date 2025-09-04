@@ -2,28 +2,28 @@
   "carousels": [
     {
       "id": "1",
-      "image": "/src/assets/images/about/avatar/1.jpg",
+      "image": "/data/images/about/avatar/1.jpg",
       "title": "专业团队",
       "description": "拥有资深设计师和专业技术团队，为您提供最优质的服务",
       "link": "#team"
     },
     {
       "id": "2",
-      "image": "/src/assets/images/about/avatar/2.jpg",
+      "image": "/data/images/about/avatar/2.jpg",
       "title": "十年发展",
       "description": "十余年行业深耕，积累了丰富的项目经验和客户口碑",
       "link": "#history"
     },
     {
       "id": "3",
-      "image": "/src/assets/images/about/avatar/3.jpg",
+      "image": "/data/images/about/avatar/3.jpg",
       "title": "品质保证",
       "description": "严格的质量管理体系，确保每个项目的高品质交付",
       "link": "#values"
     },
     {
       "id": "4",
-      "image": "/src/assets/images/about/avatar/4.jpg",
+      "image": "/data/images/about/avatar/4.jpg",
       "title": "客户至上",
       "description": "以客户需求为中心，提供个性化定制服务",
       "link": "#contact"
@@ -69,28 +69,28 @@
         "name": "张明",
         "position": "首席设计师",
         "description": "拥有10年室内设计经验，擅长现代简约和北欧风格设计，曾获得多项设计大奖，致力于为客户创造舒适美观的居住空间。",
-        "image": "/src/assets/images/about/team/1.jpg"
+        "image": "/data/images/about/team/1.jpg"
       },
       {
         "id": "member-2",
         "name": "李华",
         "position": "项目经理",
         "description": "资深项目管理专家，具备丰富的装修项目管理经验，擅长协调各方资源，确保项目按时高质量完成。",
-        "image": "/src/assets/images/about/team/2.jpg"
+        "image": "/data/images/about/team/2.jpg"
       },
       {
         "id": "member-3",
         "name": "王强",
         "position": "技术总监",
         "description": "技术精湛的施工专家，精通各种装修工艺，对工程质量要求严格，带领团队打造了众多精品工程。",
-        "image": "/src/assets/images/about/team/3.jpg"
+        "image": "/data/images/about/team/3.jpg"
       },
       {
         "id": "member-4",
         "name": "陈丽",
         "position": "客户经理",
         "description": "专业的客户服务专家，具备优秀的沟通协调能力，致力于为客户提供贴心周到的服务体验。",
-        "image": "/src/assets/images/about/team/4.jpg"
+        "image": "/data/images/about/team/4.jpg"
       }
     ]
   },
@@ -235,7 +235,7 @@
         "type": "company",
         "date": "2024-03-15",
         "description": "组织全体员工参加10公里公路赛，倡导健康生活理念，增强团队凝聚力。比赛路线经过公司周边风景优美的区域，让员工在运动中感受团队的力量。",
-        "image": "/src/assets/images/hero/1.jpg",
+        "image": "/data/images/hero/1.jpg",
         "participants": 35
       },
       {
@@ -244,7 +244,7 @@
         "type": "company",
         "date": "2024-03-22",
         "description": "举办部门间乒乓球友谊赛，促进同事间的交流与合作。比赛分为男子组、女子组和混合双打，营造轻松愉快的竞技氛围。",
-        "image": "/src/assets/images/hero/2.jpg",
+        "image": "/data/images/hero/2.jpg",
         "participants": 28
       },
       {
@@ -253,7 +253,7 @@
         "type": "expansion",
         "date": "2024-04-05",
         "description": "组织员工徒步嵩山，感受大自然的魅力，挑战自我极限。活动包括登山、野餐、团队游戏等环节，让员工在自然环境中放松身心。",
-        "image": "/src/assets/images/hero/3.jpg",
+        "image": "/data/images/hero/3.jpg",
         "participants": 22
       },
       {
@@ -262,7 +262,7 @@
         "type": "expansion",
         "date": "2024-04-12",
         "description": "邀请行业专家进行建筑装饰技术分享，探讨最新的设计理念和施工工艺，为团队提供专业的学习交流平台。",
-        "image": "/src/assets/images/hero/4.jpg",
+        "image": "/data/images/hero/4.jpg",
         "participants": 20
       },
       {
@@ -271,7 +271,7 @@
         "type": "company",
         "date": "2024-04-20",
         "description": "组织春季户外团建活动，包括团队协作游戏、烧烤聚餐、篝火晚会等环节，增进同事间的友谊，提升团队合作精神。",
-        "image": "/src/assets/images/hero/6.jpg",
+        "image": "/data/images/hero/6.jpg",
         "participants": 40
       },
       {
@@ -280,7 +280,7 @@
         "type": "expansion",
         "date": "2024-05-08",
         "description": "举办内部设计创意大赛，鼓励员工发挥创意才能，展示设计作品。比赛涵盖室内设计、景观设计等多个领域，激发团队创新活力。",
-        "image": "/src/assets/images/hero/7.jpg",
+        "image": "/data/images/hero/7.jpg",
         "participants": 15
       }
     ]
@@ -295,42 +295,42 @@
         "year": "2010",
         "title": "公司成立",
         "description": "河南交个朋友装饰有限公司正式成立，开始专注于室内外装修设计服务",
-        "image": "/src/assets/images/about/avatar/1.jpg"
+        "image": "/data/images/about/avatar/1.jpg"
       },
       {
         "id": "2012",
         "year": "2012",
         "title": "业务扩展",
         "description": "业务范围扩展至商业空间设计，团队规模扩大至20人",
-        "image": "/src/assets/images/about/avatar/2.jpg"
+        "image": "/data/images/about/avatar/2.jpg"
       },
       {
         "id": "2015",
         "year": "2015",
         "title": "技术升级",
         "description": "引入3D设计技术，建立标准化施工流程，获得多项行业认证",
-        "image": "/src/assets/images/about/avatar/3.jpg"
+        "image": "/data/images/about/avatar/3.jpg"
       },
       {
         "id": "2018",
         "year": "2018",
         "title": "品牌建设",
         "description": "建立完善的品牌体系，客户满意度达到95%以上",
-        "image": "/src/assets/images/about/avatar/4.jpg"
+        "image": "/data/images/about/avatar/4.jpg"
       },
       {
         "id": "2020",
         "year": "2020",
         "title": "数字化转型",
         "description": "启动数字化转型，建立线上服务平台，提升服务效率",
-        "image": "/src/assets/images/about/avatar/1.jpg"
+        "image": "/data/images/about/avatar/1.jpg"
       },
       {
         "id": "2023",
         "year": "2023",
         "title": "持续发展",
         "description": "团队规模达到50+人，累计服务客户超过500家，成为区域知名品牌",
-        "image": "/src/assets/images/about/avatar/2.jpg"
+        "image": "/data/images/about/avatar/2.jpg"
       }
     ]
   },

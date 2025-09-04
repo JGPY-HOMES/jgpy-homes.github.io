@@ -7,12 +7,12 @@
   "serviceId": "landscape-design",
   "tags": ["庭院", "景观", "自然", "艺术"],
   "images": [
-    "/src/assets/images/projects/case/1.jpg",
-    "/src/assets/images/projects/case/2.jpg",
-    "/src/assets/images/projects/case/3.jpg",
-    "/src/assets/images/projects/case/4.jpg"
+    "/data/images/projects/case/1.jpg",
+    "/data/images/projects/case/2.jpg",
+    "/data/images/projects/case/3.jpg",
+    "/data/images/projects/case/4.jpg"
   ],
-  "coverImage": "/src/assets/images/projects/case/cover.jpg",
+  "coverImage": "/data/images/projects/case/cover.jpg",
   "area": 200,
   "style": "现代简约",
   "budget": "45万",
@@ -33,7 +33,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/living-room.jpg",
+      "content": "/data/images/projects/case/living-room.jpg",
       "title": "庭院整体设计",
       "description": "庭院采用了现代简约的设计理念，以自然元素为主。地面采用了石材和木质的组合，搭配丰富的植物，营造出自然清新的氛围。",
       "order": 2
@@ -48,8 +48,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/kitchen-1.jpg",
-        "/src/assets/images/projects/case/kitchen-2.jpg"
+        "/data/images/projects/case/kitchen-1.jpg",
+        "/data/images/projects/case/kitchen-2.jpg"
       ],
       "title": "水景设计",
       "description": "水景采用了简约的设计，包括一个小型喷泉和浅水池。喷泉采用了现代简约的造型，为庭院增添了动感和声音。浅水池中种植了水生植物，营造出自然生态的氛围。",
@@ -57,7 +57,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/master-bedroom.jpg",
+      "content": "/data/images/projects/case/master-bedroom.jpg",
       "title": "休息区设计",
       "description": "休息区采用了舒适的户外家具，包括沙发和茶几。地面采用了防腐木材，既美观又实用。周围种植了高大的植物，为休息区提供了良好的私密性。",
       "order": 5
@@ -72,8 +72,8 @@
       "type": "gallery",
       "content": "",
       "images": [
-        "/src/assets/images/projects/case/bathroom-1.jpg",
-        "/src/assets/images/projects/case/bathroom-2.jpg"
+        "/data/images/projects/case/bathroom-1.jpg",
+        "/data/images/projects/case/bathroom-2.jpg"
       ],
       "title": "植物配置",
       "description": "植物配置注重层次和色彩的变化。高大的乔木提供了良好的遮阳效果，中层的灌木增加了层次感，地被植物覆盖了地面，营造出丰富的植物景观。",
@@ -81,7 +81,7 @@
     },
     {
       "type": "image",
-      "content": "/src/assets/images/projects/case/bedroom.jpg",
+      "content": "/data/images/projects/case/bedroom.jpg",
       "title": "照明设计",
       "description": "照明设计采用了柔和的灯光，包括地面灯和树灯。地面灯照亮了主要通道，树灯为植物提供了装饰性的照明，营造出温馨的夜间氛围。",
       "order": 8

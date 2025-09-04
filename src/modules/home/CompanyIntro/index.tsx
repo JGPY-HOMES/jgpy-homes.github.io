@@ -2,6 +2,9 @@ import React from "react";
 import { FaBuilding, FaUsers, FaAward, FaCheckCircle } from "react-icons/fa";
 import "./CompanyIntro.scss";
 
+// 导入公司介绍图片
+import companyImage from "../../../assets/images/hero/1.jpg";
+
 export const CompanyIntro: React.FC = () => {
   const introData = {
     title: "河南交个朋友装饰有限公司",
@@ -40,7 +43,7 @@ export const CompanyIntro: React.FC = () => {
           </div>
 
           <div className="intro-image">
-            <img src="/src/assets/images/hero/1.jpg" alt="公司简介" />
+            <img src={companyImage} alt="公司简介" />
           </div>
         </div>
       </div>

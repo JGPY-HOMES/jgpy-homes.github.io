@@ -1,6 +1,9 @@
 import React from "react";
 import "./Culture.scss";
 
+// 导入企业文化图片
+import cultureImage from "../../../../assets/images/about/team/1.jpg";
+
 export const Culture: React.FC = () => {
   return (
     <>
@@ -19,7 +22,7 @@ export const Culture: React.FC = () => {
           </div>
         </div>
         <div className="culture-image">
-          <img src="/src/assets/images/about/team/1.jpg" alt="企业文化" />
+          <img src={cultureImage} alt="企业文化" />
         </div>
       </div>
     </>
