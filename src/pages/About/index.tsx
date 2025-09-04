@@ -16,7 +16,7 @@ export const About: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   // 关于我们页面数据
   const [aboutData, setAboutData] = useState<AboutPageData | null>(null);
-  
+
   // 设置页面标题
   usePageTitle("关于我们 - 河南交个朋友装饰有限公司");
 

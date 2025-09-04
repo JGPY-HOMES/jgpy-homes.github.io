@@ -12,12 +12,12 @@ export const CaseDetail: React.FC = () => {
   const [caseDetail, setCaseDetail] = useState<CaseDetailType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  
+
   // 设置动态页面标题
   usePageTitle(
-    caseDetail?.title 
+    caseDetail?.title
       ? `${caseDetail.title} - 河南交个朋友装饰有限公司`
-      : `案例详情 ${id || ''} - 河南交个朋友装饰有限公司`
+      : `案例详情 ${id || ""} - 河南交个朋友装饰有限公司`,
   );
 
   useEffect(() => {

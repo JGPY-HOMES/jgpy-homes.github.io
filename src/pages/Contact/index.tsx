@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   // 联系页面数据
   const [contactData, setContactData] = useState<ContactPageData | null>(null);
-  
+
   // 设置页面标题
   usePageTitle("联系我们 - 河南交个朋友装饰有限公司");
 

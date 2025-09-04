@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 // 设置页面标题的工具函数
 export const setPageTitle = (title: string) => {

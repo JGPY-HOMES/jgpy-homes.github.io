@@ -16,7 +16,7 @@ export const Cases: React.FC = () => {
     page: 1,
     pageSize: 12,
   });
-  
+
   // 设置页面标题
   usePageTitle("装修案例 - 河南交个朋友装饰有限公司");
 
