@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { PageLoader } from "../../components/PageLoader";
+import { usePageTitle } from "../../hooks";
 import {
   ServiceHero,
   HomeDecoration,
@@ -11,6 +12,9 @@ import {
 
 export const Services: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  
+  // 设置页面标题
+  usePageTitle("装修服务 - 河南交个朋友装饰有限公司");
 
   useEffect(() => {
     // 模拟页面加载

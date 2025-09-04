@@ -4,6 +4,7 @@ import { CasesHero, CaseFilter, CaseList } from "@/modules/cases";
 import { getCasesPageData } from "@/api";
 import type { CaseCategory, CaseFilterParams } from "@/entities";
 import { Loading } from "@/components/Loading";
+import { usePageTitle } from "../../hooks";
 import "./Cases.scss";
 
 export const Cases: React.FC = () => {
@@ -15,6 +16,9 @@ export const Cases: React.FC = () => {
     page: 1,
     pageSize: 12,
   });
+  
+  // 设置页面标题
+  usePageTitle("装修案例 - 河南交个朋友装饰有限公司");
 
   // 初始化页面数据
   useEffect(() => {

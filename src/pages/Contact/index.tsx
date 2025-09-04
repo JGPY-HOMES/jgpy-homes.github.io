@@ -7,6 +7,7 @@ import {
   ContactMapSection,
 } from "../../modules/contact";
 import { PageLoader } from "../../components/PageLoader";
+import { usePageTitle } from "../../hooks";
 import { ContactApi } from "../../api/contact.api";
 import type { ContactPageData } from "../../entities/contact.entity";
 import "./Contact.scss";
@@ -16,6 +17,9 @@ export const Contact: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   // 联系页面数据
   const [contactData, setContactData] = useState<ContactPageData | null>(null);
+  
+  // 设置页面标题
+  usePageTitle("联系我们 - 河南交个朋友装饰有限公司");
 
   // 获取联系页面数据
   const fetchContactData = async () => {

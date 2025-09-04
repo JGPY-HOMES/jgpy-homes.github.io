@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getCaseDetail, incrementCaseViewCount } from "@/api";
 import type { CaseDetail as CaseDetailType } from "@/entities";
 import { Loading } from "@/components/Loading";
+import { usePageTitle } from "../../hooks";
 import "./CaseDetail.scss";
 
 export const CaseDetail: React.FC = () => {
@@ -11,6 +12,13 @@ export const CaseDetail: React.FC = () => {
   const [caseDetail, setCaseDetail] = useState<CaseDetailType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // 设置动态页面标题
+  usePageTitle(
+    caseDetail?.title 
+      ? `${caseDetail.title} - 河南交个朋友装饰有限公司`
+      : `案例详情 ${id || ''} - 河南交个朋友装饰有限公司`
+  );
 
   useEffect(() => {
     if (id) {
